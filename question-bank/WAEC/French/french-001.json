@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Greetings",
+    "difficulty": "easy",
+    "question": "What is the meaning of \"Bonjour\" in English?",
+    "options": {
+      "A": "Good morning",
+      "B": "Good night",
+      "C": "Goodbye",
+      "D": "Thank you"
+    },
+    "answer": "A",
+    "explanation": "\"Bonjour\" is a common French greeting meaning \"Good morning\" or \"Hello\"."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the French word for \"house\"?",
+    "options": {
+      "A": "École",
+      "B": "Maison",
+      "C": "Livre",
+      "D": "Chaise"
+    },
+    "answer": "B",
+    "explanation": "\"Maison\" means \"house\" in French."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What does \"livre\" mean in English?",
+    "options": {
+      "A": "Pen",
+      "B": "Table",
+      "C": "Book",
+      "D": "School"
+    },
+    "answer": "C",
+    "explanation": "\"Livre\" means \"book\" in French."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Numbers",
+    "difficulty": "easy",
+    "question": "What is the French word for the number 10?",
+    "options": {
+      "A": "Cinq",
+      "B": "Sept",
+      "C": "Neuf",
+      "D": "Dix"
+    },
+    "answer": "D",
+    "explanation": "The French word for 10 is \"dix\"."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Family",
+    "difficulty": "medium",
+    "question": "What does \"père\" mean in English?",
+    "options": {
+      "A": "Mother",
+      "B": "Father",
+      "C": "Brother",
+      "D": "Sister"
+    },
+    "answer": "B",
+    "explanation": "\"Père\" means \"father\" in English."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Family",
+    "difficulty": "medium",
+    "question": "What is the French word for \"mother\"?",
+    "options": {
+      "A": "Mère",
+      "B": "Frère",
+      "C": "Sœur",
+      "D": "Fille"
+    },
+    "answer": "A",
+    "explanation": "\"Mère\" means \"mother\" in French."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Days of the Week",
+    "difficulty": "easy",
+    "question": "Which French word means \"Monday\"?",
+    "options": {
+      "A": "Mardi",
+      "B": "Lundi",
+      "C": "Mercredi",
+      "D": "Jeudi"
+    },
+    "answer": "B",
+    "explanation": "\"Lundi\" is the French word for Monday."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Common Expressions",
+    "difficulty": "easy",
+    "question": "What does \"Merci\" mean?",
+    "options": {
+      "A": "Please",
+      "B": "Sorry",
+      "C": "Thank you",
+      "D": "Welcome"
+    },
+    "answer": "C",
+    "explanation": "\"Merci\" means \"Thank you\" in French."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Pronouns",
+    "difficulty": "medium",
+    "question": "Which French pronoun means \"I\"?",
+    "options": {
+      "A": "Tu",
+      "B": "Il",
+      "C": "Nous",
+      "D": "Je"
+    },
+    "answer": "D",
+    "explanation": "\"Je\" is the French first-person singular pronoun meaning \"I\"."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "French",
+    "topic": "Colours",
+    "difficulty": "easy",
+    "question": "What does \"rouge\" mean in English?",
+    "options": {
+      "A": "Blue",
+      "B": "Green",
+      "C": "Red",
+      "D": "Yellow"
+    },
+    "answer": "C",
+    "explanation": "\"Rouge\" is the French word for the colour red."
+  }
+]

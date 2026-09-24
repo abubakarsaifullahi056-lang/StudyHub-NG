@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Ekele",
+    "difficulty": "easy",
+    "question": "Kedu ihe okwu \"Ndewo\" pụtara?",
+    "options": {
+      "A": "Ekele",
+      "B": "Nri",
+      "C": "Mmiri",
+      "D": "Ụlọ"
+    },
+    "answer": "A",
+    "explanation": "\"Ndewo\" bụ okwu Igbo a na-eji ekele mmadụ."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "easy",
+    "question": "Gịnị ka okwu \"ụlọ\" pụtara n'asụsụ Bekee?",
+    "options": {
+      "A": "House",
+      "B": "School",
+      "C": "Market",
+      "D": "Farm"
+    },
+    "answer": "A",
+    "explanation": "\"Ụlọ\" pụtara house n'asụsụ Bekee."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "easy",
+    "question": "Gịnị ka okwu \"mmiri\" pụtara?",
+    "options": {
+      "A": "Food",
+      "B": "Water",
+      "C": "Fire",
+      "D": "Air"
+    },
+    "answer": "B",
+    "explanation": "\"Mmiri\" pụtara water n'asụsụ Bekee."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Ezinụlọ",
+    "difficulty": "easy",
+    "question": "Kedu ihe a na-akpọ nne?",
+    "options": {
+      "A": "Nna",
+      "B": "Nne",
+      "C": "Nwanne",
+      "D": "Nwa"
+    },
+    "answer": "B",
+    "explanation": "Nne bụ nne mmadụ, ya bụ mother n'asụsụ Bekee."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Ezinụlọ",
+    "difficulty": "easy",
+    "question": "Kedu ihe a na-akpọ nna?",
+    "options": {
+      "A": "Nne",
+      "B": "Nna",
+      "C": "Ada",
+      "D": "Nwaanyị"
+    },
+    "answer": "B",
+    "explanation": "Nna bụ father n'asụsụ Bekee."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Ọnụọgụgụ",
+    "difficulty": "easy",
+    "question": "Kedu nke bụ nọmba mbụ n'ime nhọrọ ndị a?",
+    "options": {
+      "A": "Abụọ",
+      "B": "Atọ",
+      "C": "Otu",
+      "D": "Anọ"
+    },
+    "answer": "C",
+    "explanation": "\"Otu\" bụ nọmba 1."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Okwu Ndị Na-emegiderịta",
+    "difficulty": "medium",
+    "question": "Kedu ihe bụ ihe megidere okwu \"ukwu\"?",
+    "options": {
+      "A": "Ọcha",
+      "B": "Obere",
+      "C": "Ogologo",
+      "D": "Ọma"
+    },
+    "answer": "B",
+    "explanation": "Okwu \"obere\" na-emegide \"ukwu\" n'ihe gbasara nha."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Okwu Ndị Na-emegiderịta",
+    "difficulty": "medium",
+    "question": "Kedu ihe bụ ihe megidere \"ehihie\"?",
+    "options": {
+      "A": "Ụtụtụ",
+      "B": "Anyasị",
+      "C": "Abalị",
+      "D": "Echi"
+    },
+    "answer": "C",
+    "explanation": "\"Abalị\" bụ oge na-emegide ehihie."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Agụmagụ",
+    "difficulty": "medium",
+    "question": "Kedu nke bụ otu n'ime ụdị agụmagụ Igbo?",
+    "options": {
+      "A": "Abụ",
+      "B": "Mgbakọ",
+      "C": "Sayensị",
+      "D": "Mgbakọ ego"
+    },
+    "answer": "A",
+    "explanation": "Abụ bụ otu n'ime ụdị agụmagụ Igbo."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Igbo",
+    "topic": "Ilu",
+    "difficulty": "hard",
+    "question": "Gịnị bụ otu n'ime ebumnuche ilu?",
+    "options": {
+      "A": "Ịkụzi amamihe na ndụmọdụ",
+      "B": "Ịkụzi mgbakọ naanị",
+      "C": "Ịgụ nọmba",
+      "D": "Ịkọ ọnụahịa ahịa"
+    },
+    "answer": "A",
+    "explanation": "Ilu na-enyere aka izipu amamihe, ndụmọdụ na nkuzi n'ụzọ dị mkpirikpi."
+  }
+]

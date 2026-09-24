@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Gaisuwa",
+    "difficulty": "easy",
+    "question": "Wanne ne ma'anar kalmar \"Sannu\"?",
+    "options": {
+      "A": "Gaisuwa",
+      "B": "Abinci",
+      "C": "Ruwa",
+      "D": "Gida"
+    },
+    "answer": "A",
+    "explanation": "\"Sannu\" kalma ce da ake amfani da ita wajen gaisuwa ko nuna kulawa."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "easy",
+    "question": "Menene ma'anar kalmar \"gida\"?",
+    "options": {
+      "A": "House",
+      "B": "School",
+      "C": "Market",
+      "D": "Farm"
+    },
+    "answer": "A",
+    "explanation": "\"Gida\" na nufin wurin da mutum yake zama, wato house a Turanci."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "easy",
+    "question": "Wanne ne ma'anar kalmar \"ruwa\"?",
+    "options": {
+      "A": "Fire",
+      "B": "Water",
+      "C": "Food",
+      "D": "Air"
+    },
+    "answer": "B",
+    "explanation": "\"Ruwa\" na nufin water a Turanci."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Iyali",
+    "difficulty": "easy",
+    "question": "Menene ake kira mahaifiya?",
+    "options": {
+      "A": "Uwa",
+      "B": "Yaro",
+      "C": "Dan'uwa",
+      "D": "Kaka"
+    },
+    "answer": "A",
+    "explanation": "Mahaifiya ana kiranta uwa."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Iyali",
+    "difficulty": "medium",
+    "question": "Menene ake kira mahaifi?",
+    "options": {
+      "A": "Mace",
+      "B": "Uba",
+      "C": "Yarinya",
+      "D": "Kawu"
+    },
+    "answer": "B",
+    "explanation": "Mahaifi ana kiransa uba."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Lambobi",
+    "difficulty": "easy",
+    "question": "Wanne ne lamba ta farko a cikin wadannan?",
+    "options": {
+      "A": "Biyu",
+      "B": "Uku",
+      "C": "Daya",
+      "D": "Hudu"
+    },
+    "answer": "C",
+    "explanation": "\"Daya\" ita ce lamba 1."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "medium",
+    "question": "Menene kishiyar kalmar \"babba\"?",
+    "options": {
+      "A": "Dogo",
+      "B": "Karami",
+      "C": "Fari",
+      "D": "Mai kyau"
+    },
+    "answer": "B",
+    "explanation": "Kishiyar \"babba\" ita ce \"karami\"."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "medium",
+    "question": "Menene kishiyar kalmar \"dare\"?",
+    "options": {
+      "A": "Yamma",
+      "B": "Safiya",
+      "C": "Rana",
+      "D": "Duhu"
+    },
+    "answer": "C",
+    "explanation": "A nan ana amfani da \"rana\" a matsayin kishiyar \"dare\"."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Adabi",
+    "difficulty": "medium",
+    "question": "Wanne daga cikin wadannan yana daga cikin nau'ikan adabin Hausa?",
+    "options": {
+      "A": "Wakoki",
+      "B": "Lissafi",
+      "C": "Kimiyya",
+      "D": "Lissafin kudi"
+    },
+    "answer": "A",
+    "explanation": "Wakoki suna daga cikin manyan nau'ikan adabin Hausa."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Hausa",
+    "topic": "Karin Magana",
+    "difficulty": "hard",
+    "question": "Menene muhimmiyar manufar karin magana?",
+    "options": {
+      "A": "Nishadi kawai",
+      "B": "Isar da hikima da darasi",
+      "C": "Rubuta lambobi",
+      "D": "Koyar da lissafi"
+    },
+    "answer": "B",
+    "explanation": "Karin magana na isar da hikima, nasiha ko darasi cikin gajeriyar magana."
+  }
+]

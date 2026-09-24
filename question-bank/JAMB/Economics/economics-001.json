@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Basic Economic Concepts",
+    "difficulty": "easy",
+    "question": "Economics is primarily concerned with how people",
+    "options": {
+      "A": "satisfy unlimited wants with unlimited resources",
+      "B": "allocate scarce resources among competing wants",
+      "C": "produce only agricultural goods",
+      "D": "avoid making choices"
+    },
+    "answer": "B",
+    "explanation": "Economics studies how scarce resources are allocated to satisfy competing human wants."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Opportunity Cost",
+    "difficulty": "medium",
+    "question": "The opportunity cost of choosing one alternative is the",
+    "options": {
+      "A": "money spent on all alternatives",
+      "B": "next best alternative forgone",
+      "C": "total cost of production",
+      "D": "amount of profit earned"
+    },
+    "answer": "B",
+    "explanation": "Opportunity cost is the value of the next best alternative that is sacrificed when a choice is made."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Demand",
+    "difficulty": "easy",
+    "question": "According to the law of demand, other things being equal, an increase in price usually leads to",
+    "options": {
+      "A": "an increase in quantity demanded",
+      "B": "a decrease in quantity demanded",
+      "C": "no change in quantity demanded",
+      "D": "an increase in supply only"
+    },
+    "answer": "B",
+    "explanation": "The law of demand states that, other things being equal, quantity demanded generally falls as price rises."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Supply",
+    "difficulty": "easy",
+    "question": "Which of the following would normally cause an increase in the supply of a product?",
+    "options": {
+      "A": "An increase in the cost of production",
+      "B": "A fall in technology",
+      "C": "An improvement in production technology",
+      "D": "A shortage of raw materials"
+    },
+    "answer": "C",
+    "explanation": "Improved production technology can reduce production costs or increase productivity, encouraging producers to supply more."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Market Structure",
+    "difficulty": "medium",
+    "question": "A market with only one seller is known as",
+    "options": {
+      "A": "perfect competition",
+      "B": "monopoly",
+      "C": "oligopoly",
+      "D": "monopsony"
+    },
+    "answer": "B",
+    "explanation": "A monopoly is a market structure in which a single seller supplies a product or service and faces no close competitor."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "National Income",
+    "difficulty": "medium",
+    "question": "Gross Domestic Product measures the value of",
+    "options": {
+      "A": "all goods owned by citizens anywhere in the world",
+      "B": "final goods and services produced within a country's borders during a period",
+      "C": "only agricultural products produced in a country",
+      "D": "imports purchased by consumers"
+    },
+    "answer": "B",
+    "explanation": "GDP measures the market value of final goods and services produced within a country's territory over a specified period."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Inflation",
+    "difficulty": "medium",
+    "question": "Inflation is best described as a sustained",
+    "options": {
+      "A": "fall in the general price level",
+      "B": "increase in the general price level",
+      "C": "increase in unemployment only",
+      "D": "fall in money supply only"
+    },
+    "answer": "B",
+    "explanation": "Inflation refers to a sustained increase in the general price level of goods and services, which reduces the purchasing power of money."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Money",
+    "difficulty": "easy",
+    "question": "Which of the following is a major function of money?",
+    "options": {
+      "A": "Medium of exchange",
+      "B": "Cause of scarcity",
+      "C": "Elimination of production",
+      "D": "Restriction of trade"
+    },
+    "answer": "A",
+    "explanation": "Money serves as a medium of exchange, making it easier for people to buy and sell goods and services."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "Public Finance",
+    "difficulty": "medium",
+    "question": "A tax imposed on the income of individuals is known as",
+    "options": {
+      "A": "personal income tax",
+      "B": "customs duty",
+      "C": "excise duty",
+      "D": "export duty"
+    },
+    "answer": "A",
+    "explanation": "Personal income tax is a direct tax charged on the income earned by individuals."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Economics",
+    "topic": "International Trade",
+    "difficulty": "hard",
+    "question": "A country has a comparative advantage in producing a commodity when it can produce that commodity at a",
+    "options": {
+      "A": "higher opportunity cost than another country",
+      "B": "lower opportunity cost than another country",
+      "C": "higher market price than another country",
+      "D": "lower population than another country"
+    },
+    "answer": "B",
+    "explanation": "Comparative advantage is based on opportunity cost. A country has a comparative advantage when it can produce a good at a lower opportunity cost than another country."
+  }
+]

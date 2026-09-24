@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - StudyHub NG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div class="dashboard-logo">
+        StudyHub NG Admin
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Student Dashboard</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="admin-page">
+
+    <section class="admin-heading">
+
+        <p class="small-title">
+            ADMINISTRATION
+        </p>
+
+        <h1>Question Bank Manager</h1>
+
+        <p>
+            Add and manage StudyHub NG examination questions.
+        </p>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="admin-stats">
+
+        <div class="admin-stat">
+
+            <span>📝</span>
+
+            <div>
+                <p>Total Questions</p>
+                <strong id="totalQuestions">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat">
+
+            <span>📚</span>
+
+            <div>
+                <p>WAEC Questions</p>
+                <strong id="waecQuestions">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat">
+
+            <span>🎯</span>
+
+            <div>
+                <p>JAMB Questions</p>
+                <strong id="jambQuestions">0</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADD QUESTION -->
+
+           <div class="admin-filters">
+
+    <input
+        type="text"
+        id="questionSearch"
+        placeholder="Search questions..."
+    >
+
+    <select id="filterExam">
+        <option value="">All Exams</option>
+        <option value="WAEC">WAEC</option>
+        <option value="JAMB">JAMB</option>
+    </select>
+
+    <select id="filterSubject">
+        <option value="">All Subjects</option>
+    </select>
+
+    <select id="filterDifficulty">
+        <option value="">All Difficulties</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <button id="filterBtn">
+        Search
+    </button>
+
+</div>
+  
+   
+    <section class="admin-card">
+
+        <h2>Add New Question</h2>
+
+        <form id="questionForm">
+
+            <div class="admin-form-grid">
+
+    <div>
+
+        <label for="exam">
+            Examination
+        </label>
+
+        <select id="exam" required>
+
+            <option value="WAEC">
+                WAEC
+            </option>
+
+            <option value="JAMB">
+                JAMB
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div>
+
+        <label for="subject">
+            Subject
+        </label>
+
+        <select id="subject" required>
+
+            <option value="">
+                Select subject
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div>
+
+      <label for="topic">Topic</label>
+<input
+    type="text"
+    id="topic"
+    placeholder="Example: Algebra"
+    required
+>
+
+<label for="difficulty">Difficulty</label>
+<select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium" selected>Medium</option>
+    <option value="hard">Hard</option>
+</select>
+
+<label for="explanation">Explanation</label>
+<textarea
+    id="explanation"
+    placeholder="Explain why the correct answer is correct..."
+    rows="4"
+></textarea>
+
+
+
+        <input
+            type="text"
+            id="topic"
+            placeholder="e.g. Cell Biology"
+        >
+
+    </div>
+
+
+    <div>
+
+        <label for="difficulty">
+            Difficulty
+        </label>
+
+        <select id="difficulty">
+
+            <option value="easy">
+                Easy
+            </option>
+
+            <option value="medium" selected>
+                Medium
+            </option>
+
+            <option value="hard">
+                Hard
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+                    <select id="exam" required>
+
+                        <option value="WAEC">
+                            WAEC
+                        </option>
+
+                        <option value="JAMB">
+                            JAMB
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <select id="subject" required>
+
+                        <option value="">
+                            Select subject
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <label for="question">
+                Question
+            </label>
+
+            <textarea
+                id="question"
+                rows="4"
+                placeholder="Enter the question..."
+                required
+            ></textarea>
+
+
+            <div class="admin-form-grid">
+
+                <div>
+
+                    <label for="option_a">
+                        Option A
+                    </label>
+
+                    <input
+                        type="text"
+                        id="option_a"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="option_b">
+                        Option B
+                    </label>
+
+                    <input
+                        type="text"
+                        id="option_b"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="option_c">
+                        Option C
+                    </label>
+
+                    <input
+                        type="text"
+                        id="option_c"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="option_d">
+                        Option D
+                    </label>
+
+                    <input
+                        type="text"
+                        id="option_d"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <label for="correct_answer">
+                Correct Answer
+            </label>
+            <label for="explanation">
+    Explanation
+</label>
+
+<textarea
+    id="explanation"
+    rows="4"
+    placeholder="Explain why this answer is correct..."
+></textarea>
+
+            <select id="correct_answer" required>
+
+                <option value="">
+                    Select correct answer
+                </option>
+
+                <option value="A">
+                    A
+                </option>
+
+                <option value="B">
+                    B
+                </option>
+
+                <option value="C">
+                    C
+                </option>
+
+                <option value="D">
+                    D
+                </option>
+
+            </select>
+
+
+            <button
+                type="submit"
+                class="admin-submit"
+            >
+                Add Question
+            </button>
+
+        </form>
+
+        <p id="formMessage"></p>
+
+    </section>
+
+
+    <!-- QUESTION LIST -->
+
+    <section class="admin-card">
+
+        <div class="admin-list-header">
+
+            <div>
+
+                <h2>Question Bank</h2>
+
+                <p>
+                    Manage questions already stored in the database.
+                </p>
+
+            </div>
+
+
+            <button
+                id="refreshBtn"
+                class="refresh-button"
+            >
+                Refresh
+            </button>
+
+        </div>
+
+
+        <div id="questionsList">
+
+            <p>
+                Loading questions...
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+const examSelect =
+    document.getElementById("exam");
+
+const subjectSelect =
+    document.getElementById("subject");
+
+const questionForm =
+    document.getElementById("questionForm");
+
+const questionsList =
+    document.getElementById("questionsList");
+
+const formMessage =
+    document.getElementById("formMessage");
+
+
+async function checkAdmin() {
+
+    try {
+
+        const response =
+            await fetch("/api/me");
+
+        if (!response.ok) {
+
+            window.location.href =
+                "login.html";
+
+            return false;
+        }
+
+        const data =
+            await response.json();
+
+        if (
+            !data.user ||
+            data.user.role !== "admin"
+        ) {
+
+            alert("Admin access required.");
+
+            window.location.href =
+                "dashboard.html";
+
+            return false;
+        }
+
+        return true;
+
+    } catch (error) {
+
+        console.error(error);
+
+        window.location.href =
+            "login.html";
+
+        return false;
+    }
+}
+
+
+async function loadSubjects() {
+
+    const exam =
+        examSelect.value;
+
+    subjectSelect.innerHTML =
+        "<option>Loading...</option>";
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/subjects?exam=${encodeURIComponent(exam)}`
+            );
+
+        const data =
+            await response.json();
+
+        subjectSelect.innerHTML =
+            "<option value=''>Select subject</option>";
+
+        data.subjects.forEach(subject => {
+
+            const option =
+                document.createElement("option");
+
+            option.value =
+                subject;
+
+            option.textContent =
+                subject;
+
+            subjectSelect.appendChild(option);
+
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        subjectSelect.innerHTML =
+            "<option>Unable to load subjects</option>";
+    }
+}
+
+async function loadQuestions() {
+
+    const search =
+        document.getElementById("questionSearch").value.trim();
+
+    const exam =
+        document.getElementById("filterExam").value;
+
+    const subject =
+        document.getElementById("filterSubject").value;
+
+    const difficulty =
+        document.getElementById("filterDifficulty").value;
+
+
+    const url =
+        `/api/admin/questions` +
+        `?search=${encodeURIComponent(search)}` +
+        `&exam=${encodeURIComponent(exam)}` +
+        `&subject=${encodeURIComponent(subject)}` +
+        `&difficulty=${encodeURIComponent(difficulty)}`;
+
+
+    try {
+
+        const response =
+            await fetch(url);
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok) {
+
+            alert(
+                data.message ||
+                "Unable to load questions."
+            );
+
+            return;
+        }
+
+
+        renderQuestions(data.questions || []);
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "Unable to connect to the server."
+        );
+
+    }
+
+}
+function renderQuestions(questions) {
+
+    const container =
+        document.getElementById("questionsList");
+
+
+    if (questions.length === 0) {
+
+        container.innerHTML = `
+            <div class="empty-results">
+                <h2>No questions found</h2>
+                <p>
+                    Try another search or filter.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    container.innerHTML =
+        questions.map(question => `
+
+            <div class="admin-question-card">
+
+                <div class="admin-question-top">
+
+                    <span>
+                        ${escapeHtml(question.exam)}
+                    </span>
+
+                    <span>
+                        ${escapeHtml(question.subject)}
+                    </span>
+
+                    <span>
+                        ${escapeHtml(question.difficulty)}
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    ${escapeHtml(question.question)}
+                </h3>
+
+
+                <p>
+                    Topic:
+                    ${escapeHtml(question.topic || "General")}
+                </p>
+
+
+                <p>
+                    Correct Answer:
+                    <strong>
+                        ${escapeHtml(question.correct_answer)}
+                    </strong>
+                </p>
+
+
+                <button
+                    onclick="deleteQuestion(${question.id})"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        `).join("");
+
+}
+document
+    .getElementById("filterBtn")
+    .addEventListener(
+        "click",
+        loadQuestions
+    );
+
+document
+    .getElementById("questionSearch")
+    .addEventListener(
+        "keydown",
+        event => {
+
+            if (event.key === "Enter") {
+                loadQuestions();
+            }
+
+        }
+    );
+
+
+
+questionForm.addEventListener(
+    "submit",
+    async (event) => {
+
+        event.preventDefault();
+
+        const questionData = {
+
+    exam:
+        examSelect.value,
+
+    subject:
+        subjectSelect.value,
+
+    topic:
+        document.getElementById(
+            "topic"
+        ).value.trim(),
+
+    difficulty:
+        document.getElementById(
+            "difficulty"
+        ).value,
+
+    question:
+        document.getElementById(
+            "question"
+        ).value.trim(),
+
+    option_a:
+        document.getElementById(
+            "option_a"
+        ).value.trim(),
+
+    option_b:
+        document.getElementById(
+            "option_b"
+        ).value.trim(),
+
+    option_c:
+        document.getElementById(
+            "option_c"
+        ).value.trim(),
+
+    option_d:
+        document.getElementById(
+            "option_d"
+        ).value.trim(),
+
+    correct_answer:
+        document.getElementById(
+            "correct_answer"
+        ).value,
+
+    explanation:
+        document.getElementById(
+            "explanation"
+        ).value.trim()
+
+};
+
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/admin/questions",
+                    {
+
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify(
+                                questionData
+                            )
+
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                formMessage.textContent =
+                    data.message ||
+                    "Unable to add question.";
+
+                return;
+            }
+
+
+            formMessage.textContent =
+                "Question added successfully!";
+
+
+            questionForm.reset();
+
+            await loadQuestions();
+
+        } catch (error) {
+
+            console.error(error);
+
+            formMessage.textContent =
+                "Unable to connect to server.";
+        }
+
+    }
+);
+
+
+async function deleteQuestion(id) {
+
+    const confirmDelete =
+        confirm(
+            "Are you sure you want to delete this question?"
+        );
+
+
+    if (!confirmDelete) {
+        return;
+    }
+
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/admin/questions/${id}`,
+                {
+                    method: "DELETE"
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok) {
+
+            alert(
+                data.message ||
+                "Unable to delete question."
+            );
+
+            return;
+        }
+
+
+        await loadQuestions();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "Unable to connect to the server."
+        );
+    }
+}
+
+
+examSelect.addEventListener(
+    "change",
+    loadSubjects
+);
+
+
+document.getElementById(
+    "refreshBtn"
+).addEventListener(
+    "click",
+    loadQuestions
+);
+
+
+document.getElementById(
+    "logoutBtn"
+).addEventListener(
+    "click",
+    async () => {
+
+        await fetch(
+            "/api/logout",
+            {
+                method: "POST"
+            }
+        );
+
+        window.location.href =
+            "login.html";
+    }
+);
+
+
+async function startAdmin() {
+
+    const allowed =
+        await checkAdmin();
+
+    if (!allowed) {
+        return;
+    }
+
+    await loadSubjects();
+
+    await loadQuestions();
+}
+
+
+startAdmin();
+
+</script>
+
+</body>
+</html>

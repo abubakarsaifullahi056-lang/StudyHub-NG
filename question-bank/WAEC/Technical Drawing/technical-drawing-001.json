@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Drawing Instruments",
+    "difficulty": "easy",
+    "question": "Which instrument is mainly used for drawing horizontal lines in technical drawing?",
+    "options": {
+      "A": "T-square",
+      "B": "Compass",
+      "C": "Divider",
+      "D": "Protractor"
+    },
+    "answer": "A",
+    "explanation": "A T-square is commonly used with a drawing board to draw accurate horizontal lines."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Drawing Instruments",
+    "difficulty": "easy",
+    "question": "Which instrument is used to draw circles and arcs?",
+    "options": {
+      "A": "Set square",
+      "B": "Compass",
+      "C": "T-square",
+      "D": "French curve"
+    },
+    "answer": "B",
+    "explanation": "A compass is used to draw circles and arcs of different radii."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Drawing Instruments",
+    "difficulty": "easy",
+    "question": "Which instrument is used for measuring and constructing angles?",
+    "options": {
+      "A": "Protractor",
+      "B": "Divider",
+      "C": "Drawing board",
+      "D": "Pencil sharpener"
+    },
+    "answer": "A",
+    "explanation": "A protractor is used to measure angles and construct angles of specified sizes."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Scales",
+    "difficulty": "medium",
+    "question": "What is the purpose of a scale in technical drawing?",
+    "options": {
+      "A": "To change the colour of a drawing",
+      "B": "To represent an object proportionally at a different size",
+      "C": "To sharpen pencils",
+      "D": "To erase construction lines"
+    },
+    "answer": "B",
+    "explanation": "A scale allows an object to be represented proportionally larger or smaller than its actual size."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Orthographic Projection",
+    "difficulty": "medium",
+    "question": "Which views are commonly used in orthographic projection?",
+    "options": {
+      "A": "Front, top and side views",
+      "B": "North, south and east views",
+      "C": "Inside, outside and bottom views only",
+      "D": "Circular and triangular views"
+    },
+    "answer": "A",
+    "explanation": "Orthographic projection commonly represents an object using front, top and side views."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Dimensioning",
+    "difficulty": "medium",
+    "question": "What is the main purpose of dimensioning in a technical drawing?",
+    "options": {
+      "A": "To decorate the drawing",
+      "B": "To show the measurements and sizes of an object",
+      "C": "To colour the object",
+      "D": "To remove construction lines"
+    },
+    "answer": "B",
+    "explanation": "Dimensioning provides the measurements needed to describe the size and position of features on a technical drawing."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Isometric Drawing",
+    "difficulty": "hard",
+    "question": "In an isometric drawing, the three principal axes are normally separated by what angle?",
+    "options": {
+      "A": "30 degrees",
+      "B": "60 degrees",
+      "C": "90 degrees",
+      "D": "120 degrees"
+    },
+    "answer": "D",
+    "explanation": "In an isometric projection, the three principal axes are equally spaced at 120 degrees from one another."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Geometrical Construction",
+    "difficulty": "hard",
+    "question": "Which instrument is commonly used together with a T-square to draw vertical and inclined lines?",
+    "options": {
+      "A": "Set square",
+      "B": "Compass",
+      "C": "Divider",
+      "D": "Scale rule"
+    },
+    "answer": "A",
+    "explanation": "Set squares are used with a T-square to produce accurate vertical and inclined lines."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Sectional Drawing",
+    "difficulty": "hard",
+    "question": "What is the purpose of a sectional view?",
+    "options": {
+      "A": "To show hidden internal details of an object",
+      "B": "To show only the outside colour",
+      "C": "To reduce the size of the drawing",
+      "D": "To measure angles only"
+    },
+    "answer": "A",
+    "explanation": "A sectional view represents an object as if it has been cut through, allowing internal features to be shown clearly."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Technical Drawing",
+    "topic": "Line Types",
+    "difficulty": "hard",
+    "question": "Which type of line is normally used to represent hidden edges in a technical drawing?",
+    "options": {
+      "A": "Continuous thick line",
+      "B": "Dashed line",
+      "C": "Freehand line",
+      "D": "Centre line only"
+    },
+    "answer": "B",
+    "explanation": "Dashed lines are commonly used to represent edges or features that are hidden from view."
+  }
+]

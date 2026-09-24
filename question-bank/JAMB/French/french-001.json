@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the meaning of the French word \"Bonjour\"?",
+    "options": {
+      "A": "Goodbye",
+      "B": "Good morning/Hello",
+      "C": "Thank you",
+      "D": "Good night"
+    },
+    "answer": "B",
+    "explanation": "\"Bonjour\" is commonly used to greet someone and means \"Hello\" or \"Good morning\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What does \"Merci\" mean in English?",
+    "options": {
+      "A": "Please",
+      "B": "Sorry",
+      "C": "Thank you",
+      "D": "Welcome"
+    },
+    "answer": "C",
+    "explanation": "\"Merci\" means \"Thank you\" in English."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Choose the correct French translation of \"I am a student.\"",
+    "options": {
+      "A": "Je suis étudiant.",
+      "B": "Je suis professeur.",
+      "C": "Je suis médecin.",
+      "D": "Je suis vendeur."
+    },
+    "answer": "A",
+    "explanation": "\"Je suis étudiant\" means \"I am a student.\" A female speaker may use \"Je suis étudiante.\""
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the French word for \"school\"?",
+    "options": {
+      "A": "Maison",
+      "B": "École",
+      "C": "Marché",
+      "D": "Hôpital"
+    },
+    "answer": "B",
+    "explanation": "\"École\" means \"school\" in English."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Numbers",
+    "difficulty": "easy",
+    "question": "What number does \"dix\" represent?",
+    "options": {
+      "A": "Five",
+      "B": "Eight",
+      "C": "Ten",
+      "D": "Twelve"
+    },
+    "answer": "C",
+    "explanation": "\"Dix\" is the French word for the number ten."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Choose the correct form: \"Nous ___ des élèves.\"",
+    "options": {
+      "A": "est",
+      "B": "suis",
+      "C": "sommes",
+      "D": "sont"
+    },
+    "answer": "C",
+    "explanation": "\"Nous sommes\" means \"We are.\" The verb être is conjugated as \"sommes\" with \"nous.\""
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What does \"Au revoir\" mean?",
+    "options": {
+      "A": "See you again/Goodbye",
+      "B": "Good morning",
+      "C": "Thank you",
+      "D": "Excuse me"
+    },
+    "answer": "A",
+    "explanation": "\"Au revoir\" is a French expression used when saying goodbye."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Which French article is normally used with a masculine singular noun?",
+    "options": {
+      "A": "Une",
+      "B": "Des",
+      "C": "Un",
+      "D": "Les"
+    },
+    "answer": "C",
+    "explanation": "\"Un\" is an indefinite article used with masculine singular nouns."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Vocabulary",
+    "difficulty": "medium",
+    "question": "What is the meaning of \"frère\"?",
+    "options": {
+      "A": "Sister",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Friend"
+    },
+    "answer": "B",
+    "explanation": "\"Frère\" means \"brother\" in English."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "French",
+    "topic": "Reading Comprehension",
+    "difficulty": "hard",
+    "question": "Read: \"Marie habite à Abuja et elle va à l'école chaque matin.\" Where does Marie live?",
+    "options": {
+      "A": "Lagos",
+      "B": "Kano",
+      "C": "Abuja",
+      "D": "Paris"
+    },
+    "answer": "C",
+    "explanation": "The sentence says \"Marie habite à Abuja,\" meaning \"Marie lives in Abuja.\""
+  }
+]

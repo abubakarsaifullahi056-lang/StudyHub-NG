@@ -1,0 +1,175 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Grammar",
+    "difficulty": "easy",
+    "question": "Choose the word that correctly completes the sentence: She _____ to school every day.",
+    "option_a": "go",
+    "option_b": "goes",
+    "option_c": "going",
+    "option_d": "gone",
+    "correct_answer": "B",
+    "explanation": "The subject 'She' takes the singular verb 'goes' in the simple present tense."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "Choose the word that is closest in meaning to 'happy'.",
+    "option_a": "Angry",
+    "option_b": "Sad",
+    "option_c": "Joyful",
+    "option_d": "Tired",
+    "correct_answer": "C",
+    "explanation": "Joyful means feeling or showing great happiness."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Choose the correct sentence.",
+    "option_a": "He don't like football.",
+    "option_b": "He doesn't likes football.",
+    "option_c": "He doesn't like football.",
+    "option_d": "He not like football.",
+    "correct_answer": "C",
+    "explanation": "After 'doesn't', the main verb remains in its base form: 'like'."
+  }
+]
+
+
+[
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Grammar",
+    "difficulty": "easy",
+    "question": "Choose the correct sentence.",
+    "option_a": "She go to school every day.",
+    "option_b": "She goes to school every day.",
+    "option_c": "She going to school every day.",
+    "option_d": "She gone to school every day.",
+    "correct_answer": "B",
+    "explanation": "The singular subject 'She' takes the verb 'goes' in the simple present tense."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "Choose the word that is closest in meaning to 'happy'.",
+    "option_a": "Angry",
+    "option_b": "Sad",
+    "option_c": "Joyful",
+    "option_d": "Tired",
+    "correct_answer": "C",
+    "explanation": "Joyful means feeling or showing great happiness."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Choose the correct sentence.",
+    "option_a": "He don't like football.",
+    "option_b": "He doesn't likes football.",
+    "option_c": "He doesn't like football.",
+    "option_d": "He not like football.",
+    "correct_answer": "C",
+    "explanation": "With 'doesn't', the main verb remains in its base form: 'like'."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Comprehension",
+    "difficulty": "medium",
+    "question": "What is the main purpose of a comprehension passage?",
+    "option_a": "To test the reader's understanding of a text",
+    "option_b": "To teach only spelling",
+    "option_c": "To test handwriting",
+    "option_d": "To test drawing skills",
+    "correct_answer": "A",
+    "explanation": "Comprehension questions test a reader's ability to understand and interpret a passage."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Choose the correct plural form of 'child'.",
+    "option_a": "Childs",
+    "option_b": "Childes",
+    "option_c": "Children",
+    "option_d": "Childrens",
+    "correct_answer": "C",
+    "explanation": "The correct irregular plural form of 'child' is 'children'."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "Choose the word opposite in meaning to 'ancient'.",
+    "option_a": "Old",
+    "option_b": "Modern",
+    "option_c": "Historic",
+    "option_d": "Traditional",
+    "correct_answer": "B",
+    "explanation": "Modern is the opposite of ancient."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Grammar",
+    "difficulty": "medium",
+    "question": "Choose the correct word: 'Neither Musa nor Ali ___ present.'",
+    "option_a": "are",
+    "option_b": "were",
+    "option_c": "is",
+    "option_d": "be",
+    "correct_answer": "C",
+    "explanation": "With 'neither...nor' referring to singular subjects, the singular verb 'is' is appropriate."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Parts of Speech",
+    "difficulty": "easy",
+    "question": "What part of speech is the word 'quickly'?",
+    "option_a": "Noun",
+    "option_b": "Adjective",
+    "option_c": "Adverb",
+    "option_d": "Pronoun",
+    "correct_answer": "C",
+    "explanation": "'Quickly' is an adverb because it describes how an action is performed."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Tenses",
+    "difficulty": "medium",
+    "question": "Choose the correct sentence.",
+    "option_a": "They has finished the work.",
+    "option_b": "They have finished the work.",
+    "option_c": "They having finished the work.",
+    "option_d": "They is finished the work.",
+    "correct_answer": "B",
+    "explanation": "The plural subject 'They' takes 'have' in the present perfect tense."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "English Language",
+    "topic": "Vocabulary",
+    "difficulty": "hard",
+    "question": "Choose the word closest in meaning to 'diligent'.",
+    "option_a": "Lazy",
+    "option_b": "Careless",
+    "option_c": "Hardworking",
+    "option_d": "Weak",
+    "correct_answer": "C",
+    "explanation": "A diligent person is hardworking, careful and persistent."
+  }
+]

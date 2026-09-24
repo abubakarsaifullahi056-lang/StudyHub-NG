@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Food and Nutrition",
+    "difficulty": "easy",
+    "question": "Which nutrient is mainly responsible for growth and repair of body tissues?",
+    "options": {
+      "A": "Carbohydrate",
+      "B": "Protein",
+      "C": "Vitamin",
+      "D": "Water"
+    },
+    "answer": "B",
+    "explanation": "Protein is needed for growth, maintenance, and repair of body tissues."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Food and Nutrition",
+    "difficulty": "easy",
+    "question": "Which of the following is a good source of vitamin C?",
+    "options": {
+      "A": "Orange",
+      "B": "Rice",
+      "C": "Butter",
+      "D": "Yam"
+    },
+    "answer": "A",
+    "explanation": "Citrus fruits such as oranges are good sources of vitamin C."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Meal Planning",
+    "difficulty": "medium",
+    "question": "A balanced diet is one that",
+    "options": {
+      "A": "contains only proteins",
+      "B": "contains all essential nutrients in appropriate proportions",
+      "C": "contains mostly fats",
+      "D": "contains only fruits and vegetables"
+    },
+    "answer": "B",
+    "explanation": "A balanced diet provides the essential nutrients in quantities appropriate for the body's needs."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Clothing and Textiles",
+    "difficulty": "easy",
+    "question": "Which natural fibre is obtained from the cotton plant?",
+    "options": {
+      "A": "Nylon",
+      "B": "Polyester",
+      "C": "Cotton",
+      "D": "Acrylic"
+    },
+    "answer": "C",
+    "explanation": "Cotton is a natural plant fibre obtained from the cotton plant."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Clothing Construction",
+    "difficulty": "medium",
+    "question": "Which tool is commonly used for taking body measurements when making clothes?",
+    "options": {
+      "A": "Tape measure",
+      "B": "Thimble",
+      "C": "Needle",
+      "D": "Seam ripper"
+    },
+    "answer": "A",
+    "explanation": "A flexible tape measure is used to take accurate body measurements for clothing construction."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Consumer Education",
+    "difficulty": "medium",
+    "question": "A consumer should check the expiry date of a food product mainly to",
+    "options": {
+      "A": "increase its price",
+      "B": "determine whether it is safe and suitable for use",
+      "C": "make the package heavier",
+      "D": "change its flavour"
+    },
+    "answer": "B",
+    "explanation": "Checking the expiry or best-before information helps consumers make informed decisions about the safety and quality of food."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Home Management",
+    "difficulty": "medium",
+    "question": "Which of the following is an important step in effective home management?",
+    "options": {
+      "A": "Planning",
+      "B": "Wasting resources",
+      "C": "Ignoring available resources",
+      "D": "Avoiding budgeting"
+    },
+    "answer": "A",
+    "explanation": "Planning helps a household organize its resources and activities effectively."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Food Preservation",
+    "difficulty": "medium",
+    "question": "Which method of food preservation involves removing most of the water from food?",
+    "options": {
+      "A": "Drying",
+      "B": "Boiling",
+      "C": "Steaming",
+      "D": "Grilling"
+    },
+    "answer": "A",
+    "explanation": "Drying preserves food by reducing its moisture content, which limits the growth of many microorganisms."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Household Equipment",
+    "difficulty": "easy",
+    "question": "Which appliance is primarily used for keeping food cold and slowing spoilage?",
+    "options": {
+      "A": "Iron",
+      "B": "Refrigerator",
+      "C": "Blender",
+      "D": "Electric kettle"
+    },
+    "answer": "B",
+    "explanation": "A refrigerator keeps food at a low temperature, slowing the growth of microorganisms and delaying spoilage."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Home Economics",
+    "topic": "Child Development",
+    "difficulty": "hard",
+    "question": "Which of the following is especially important for the healthy development of a young child?",
+    "options": {
+      "A": "Adequate nutrition and care",
+      "B": "Skipping meals",
+      "C": "Avoiding physical activity",
+      "D": "Sleeping only a few hours"
+    },
+    "answer": "A",
+    "explanation": "Young children require adequate nutrition, care, sleep, stimulation, and a safe environment for healthy development."
+  }
+]

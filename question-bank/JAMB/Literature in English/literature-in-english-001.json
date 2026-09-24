@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Literary Devices",
+    "difficulty": "easy",
+    "question": "Which literary device involves a direct comparison between two things using 'like' or 'as'?",
+    "options": {
+      "A": "Metaphor",
+      "B": "Simile",
+      "C": "Irony",
+      "D": "Alliteration"
+    },
+    "answer": "B",
+    "explanation": "A simile compares two different things using words such as 'like' or 'as'."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Literary Devices",
+    "difficulty": "easy",
+    "question": "Which literary device gives human qualities to non-human things?",
+    "options": {
+      "A": "Personification",
+      "B": "Pun",
+      "C": "Rhyme",
+      "D": "Euphemism"
+    },
+    "answer": "A",
+    "explanation": "Personification gives human qualities, actions, or emotions to animals, objects, or abstract ideas."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Drama",
+    "difficulty": "medium",
+    "question": "What is a drama?",
+    "options": {
+      "A": "A story written mainly to be performed",
+      "B": "A dictionary",
+      "C": "A newspaper report",
+      "D": "A scientific formula"
+    },
+    "answer": "A",
+    "explanation": "Drama is a literary form written primarily for performance by actors before an audience."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Poetry",
+    "difficulty": "medium",
+    "question": "What is a stanza in poetry?",
+    "options": {
+      "A": "The title of a poem",
+      "B": "A group of lines forming a unit in a poem",
+      "C": "The author of a poem",
+      "D": "The final word in every poem"
+    },
+    "answer": "B",
+    "explanation": "A stanza is a grouped set of lines in a poem, similar to a paragraph in prose."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Prose",
+    "difficulty": "medium",
+    "question": "What is the central character in a story usually called?",
+    "options": {
+      "A": "Protagonist",
+      "B": "Narrator",
+      "C": "Audience",
+      "D": "Critic"
+    },
+    "answer": "A",
+    "explanation": "The protagonist is the main character around whom the central action or conflict of a story develops."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Literary Devices",
+    "difficulty": "medium",
+    "question": "Which literary device involves deliberate exaggeration for emphasis?",
+    "options": {
+      "A": "Hyperbole",
+      "B": "Onomatopoeia",
+      "C": "Oxymoron",
+      "D": "Allusion"
+    },
+    "answer": "A",
+    "explanation": "Hyperbole is deliberate and often extreme exaggeration used for emphasis or effect."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Drama",
+    "difficulty": "hard",
+    "question": "What is a soliloquy?",
+    "options": {
+      "A": "A conversation between two characters",
+      "B": "A speech in which a character expresses thoughts while alone",
+      "C": "A song performed by a chorus",
+      "D": "A stage direction"
+    },
+    "answer": "B",
+    "explanation": "A soliloquy is a speech in which a character, usually alone on stage, reveals inner thoughts to the audience."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Literary Devices",
+    "difficulty": "hard",
+    "question": "Which literary device places contrasting words or ideas together to create an apparent contradiction?",
+    "options": {
+      "A": "Oxymoron",
+      "B": "Simile",
+      "C": "Alliteration",
+      "D": "Metonymy"
+    },
+    "answer": "A",
+    "explanation": "An oxymoron combines apparently contradictory terms, such as 'deafening silence'."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Narrative Techniques",
+    "difficulty": "hard",
+    "question": "What is a flashback in a narrative?",
+    "options": {
+      "A": "A sudden change of setting to another country",
+      "B": "A return to an earlier event in the story",
+      "C": "The conclusion of the story",
+      "D": "A description of the future only"
+    },
+    "answer": "B",
+    "explanation": "A flashback interrupts the chronological sequence of a narrative to present an earlier event."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Literature in English",
+    "topic": "Theme",
+    "difficulty": "hard",
+    "question": "In literature, what does the term 'theme' refer to?",
+    "options": {
+      "A": "The name of the author",
+      "B": "The main idea or underlying message explored in a work",
+      "C": "The number of chapters",
+      "D": "The location where a book was printed"
+    },
+    "answer": "B",
+    "explanation": "A theme is a central idea, subject, or message explored through the events and characters of a literary work."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Meaning of Commerce",
+    "difficulty": "easy",
+    "question": "Commerce is mainly concerned with activities involved in the",
+    "options": {
+      "A": "production of goods only",
+      "B": "distribution and exchange of goods and services",
+      "C": "consumption of goods only",
+      "D": "manufacturing of machines"
+    },
+    "answer": "B",
+    "explanation": "Commerce covers activities that facilitate the distribution and exchange of goods and services from producers to consumers."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Trade",
+    "difficulty": "easy",
+    "question": "Which of the following is a form of trade?",
+    "options": {
+      "A": "Banking",
+      "B": "Insurance",
+      "C": "Wholesale",
+      "D": "Advertising"
+    },
+    "answer": "C",
+    "explanation": "Wholesale is a form of trade involving the buying of goods in large quantities for resale."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Wholesale Trade",
+    "difficulty": "medium",
+    "question": "A wholesaler mainly buys goods from producers and sells them to",
+    "options": {
+      "A": "final consumers only",
+      "B": "retailers",
+      "C": "farmers only",
+      "D": "government workers"
+    },
+    "answer": "B",
+    "explanation": "Wholesalers usually purchase goods in large quantities from producers and resell them to retailers."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Retail Trade",
+    "difficulty": "easy",
+    "question": "A retailer sells goods mainly to",
+    "options": {
+      "A": "manufacturers",
+      "B": "wholesalers",
+      "C": "final consumers",
+      "D": "importers"
+    },
+    "answer": "C",
+    "explanation": "Retailers sell goods in relatively small quantities directly to final consumers."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Transportation",
+    "difficulty": "medium",
+    "question": "Which means of transportation is most suitable for transporting bulky goods over land?",
+    "options": {
+      "A": "Pipeline",
+      "B": "Road transport",
+      "C": "Telephone",
+      "D": "Radio"
+    },
+    "answer": "B",
+    "explanation": "Road transport is widely used to move bulky goods between locations over land, especially where flexible delivery is needed."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Banking",
+    "difficulty": "easy",
+    "question": "Which institution is primarily responsible for controlling the money supply in Nigeria?",
+    "options": {
+      "A": "Commercial bank",
+      "B": "Central bank",
+      "C": "Insurance company",
+      "D": "Cooperative society"
+    },
+    "answer": "B",
+    "explanation": "The Central Bank of Nigeria is responsible for monetary policy and regulation of the banking system."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Insurance",
+    "difficulty": "medium",
+    "question": "The main purpose of insurance is to",
+    "options": {
+      "A": "eliminate all business losses",
+      "B": "provide protection against specified risks",
+      "C": "increase the price of goods",
+      "D": "prevent people from saving money"
+    },
+    "answer": "B",
+    "explanation": "Insurance provides financial protection against specified risks in exchange for a premium."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Advertising",
+    "difficulty": "easy",
+    "question": "One major purpose of advertising is to",
+    "options": {
+      "A": "inform consumers about products",
+      "B": "stop competition",
+      "C": "reduce production completely",
+      "D": "prevent new businesses from starting"
+    },
+    "answer": "A",
+    "explanation": "Advertising provides information about products and services and can help create awareness among consumers."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Communication",
+    "difficulty": "medium",
+    "question": "Which of the following is an example of modern business communication?",
+    "options": {
+      "A": "E-mail",
+      "B": "Candle",
+      "C": "Wheelbarrow",
+      "D": "Warehouse"
+    },
+    "answer": "A",
+    "explanation": "E-mail allows businesses to exchange information quickly through electronic communication."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Commerce",
+    "topic": "Foreign Trade",
+    "difficulty": "medium",
+    "question": "The buying of goods from another country is known as",
+    "options": {
+      "A": "exporting",
+      "B": "importing",
+      "C": "retailing",
+      "D": "bartering"
+    },
+    "answer": "B",
+    "explanation": "Importing refers to buying goods or services from another country for use or resale."
+  }
+]

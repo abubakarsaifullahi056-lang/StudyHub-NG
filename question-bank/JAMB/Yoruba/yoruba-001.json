@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Èdè",
+    "difficulty": "easy",
+    "question": "Kí ni itumọ̀ ọ̀rọ̀ \"ilé\"?",
+    "options": {
+      "A": "House",
+      "B": "School",
+      "C": "Market",
+      "D": "Farm"
+    },
+    "answer": "A",
+    "explanation": "Ọ̀rọ̀ \"ilé\" túmọ̀ sí \"house\" ní èdè Gẹ̀ẹ́sì."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Èdè",
+    "difficulty": "easy",
+    "question": "Kí ni itumọ̀ ọ̀rọ̀ \"omi\"?",
+    "options": {
+      "A": "Fire",
+      "B": "Water",
+      "C": "Food",
+      "D": "Air"
+    },
+    "answer": "B",
+    "explanation": "Ọ̀rọ̀ \"omi\" túmọ̀ sí \"water\" ní èdè Gẹ̀ẹ́sì."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Gírámà",
+    "difficulty": "medium",
+    "question": "Èwo ni ọ̀rọ̀ orúkọ nínú àwọn wọ̀nyí?",
+    "options": {
+      "A": "Ṣeré",
+      "B": "Ilé",
+      "C": "Lọ",
+      "D": "Jẹ"
+    },
+    "answer": "B",
+    "explanation": "\"Ilé\" jẹ́ ọ̀rọ̀ orúkọ nítorí pé ó jẹ́ orúkọ ohun tàbí ibi."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Àṣà",
+    "difficulty": "medium",
+    "question": "Kí ni àṣà?",
+    "options": {
+      "A": "Ọ̀nà ìgbé ayé àti ìṣe tí àwọn ènìyàn ń tẹ̀lé",
+      "B": "Orúkọ ènìyàn kan",
+      "C": "Iru oúnjẹ kan",
+      "D": "Iru ọkọ̀ kan"
+    },
+    "answer": "A",
+    "explanation": "Àṣà ni àwọn ìṣe, ìgbàgbọ́ àti ọ̀nà ìgbé ayé tí ẹgbẹ́ ènìyàn kan ń tẹ̀lé."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Òwe",
+    "difficulty": "medium",
+    "question": "Kí ni òwe?",
+    "options": {
+      "A": "Ọ̀rọ̀ tí ó ní ọgbọ́n tàbí ẹ̀kọ́",
+      "B": "Orúkọ ìlú",
+      "C": "Orúkọ ènìyàn",
+      "D": "Iru orin kan"
+    },
+    "answer": "A",
+    "explanation": "Òwe jẹ́ ọ̀rọ̀ tí ó máa ń ní ọgbọ́n, ìmọ̀ràn tàbí ẹ̀kọ́ nínú."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Èdè",
+    "difficulty": "easy",
+    "question": "Kí ni itumọ̀ ọ̀rọ̀ \"bàbá\"?",
+    "options": {
+      "A": "Mother",
+      "B": "Father",
+      "C": "Brother",
+      "D": "Teacher"
+    },
+    "answer": "B",
+    "explanation": "Ọ̀rọ̀ \"bàbá\" túmọ̀ sí \"father\" ní èdè Gẹ̀ẹ́sì."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Èdè",
+    "difficulty": "medium",
+    "question": "Kí ni ọ̀rọ̀ tí ó lòdì sí \"ńlá\"?",
+    "options": {
+      "A": "Kékeré",
+      "B": "Gígùn",
+      "C": "Tuntun",
+      "D": "Dára"
+    },
+    "answer": "A",
+    "explanation": "\"Kékeré\" jẹ́ ọ̀rọ̀ tí ó lòdì sí \"ńlá\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Lítíréṣọ̀",
+    "difficulty": "hard",
+    "question": "Kí ni àfojúsùn pàtàkì ti lítíréṣọ̀?",
+    "options": {
+      "A": "Láti kọ́ni, ṣe ìdárayá àti ṣàfihàn ìrírí ènìyàn",
+      "B": "Láti ṣe ìṣirò nikan",
+      "C": "Láti kọ́ àwọn ènìyàn bí a ṣe ń wakọ̀",
+      "D": "Láti ta aṣọ"
+    },
+    "answer": "A",
+    "explanation": "Lítíréṣọ̀ lè kọ́ni, ṣe ìdárayá àti ṣàfihàn ìrírí àti ìmọ̀lára ènìyàn."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Kíkà",
+    "difficulty": "hard",
+    "question": "Kà gbolohun yìí: \"Adé lọ sí ilé-ẹ̀kọ́ ní òwúrọ̀.\" Ibo ni Adé lọ?",
+    "options": {
+      "A": "Ọjà",
+      "B": "Ilé-ẹ̀kọ́",
+      "C": "Ilé ìwòsàn",
+      "D": "Ọgbà"
+    },
+    "answer": "B",
+    "explanation": "Gbolohun náà sọ pé Adé lọ sí ilé-ẹ̀kọ́."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Yoruba",
+    "topic": "Gírámà",
+    "difficulty": "hard",
+    "question": "Èwo nínú àwọn wọ̀nyí jẹ́ ọ̀rọ̀-ìṣe?",
+    "options": {
+      "A": "Ilé",
+      "B": "Ọmọ",
+      "C": "Ṣeré",
+      "D": "Ọjà"
+    },
+    "answer": "C",
+    "explanation": "\"Ṣeré\" jẹ́ ọ̀rọ̀-ìṣe nítorí pé ó ń ṣàpèjúwe ìṣe."
+  }
+]

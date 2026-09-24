@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - StudyHub NG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div class="dashboard-logo">
+        StudyHub NG
+    </div>
+
+    <nav>
+        
+        <a href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <a href="results.html">Results</a>
+        <a href="progress.html">Progress</a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+    </nav>
+
+</header>
+
+
+<main class="profile-page">
+
+    <section class="results-hero">
+
+        <p class="small-title">
+            MY ACCOUNT
+        </p>
+
+        <h1>
+            My Profile 👤
+        </h1>
+
+        <p>
+            Manage your StudyHub NG account and view your learning statistics.
+        </p>
+
+    </section>
+
+
+    <section class="profile-grid">
+
+        <div class="profile-card">
+
+            <div class="profile-avatar">
+                👤
+            </div>
+
+            <h2 id="profileName">
+                Student
+            </h2>
+
+            <p id="profileEmail">
+                Loading...
+            </p>
+
+            <span class="profile-role">
+                Student
+            </span>
+
+        </div>
+
+
+        <div class="profile-card profile-information">
+
+            <p class="small-title">
+                ACCOUNT INFORMATION
+            </p>
+
+            <h2>
+                Personal Information
+            </h2>
+
+
+            <div class="profile-info-row">
+
+                <span>
+                    Full Name
+                </span>
+
+                <strong id="infoName">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div class="profile-info-row">
+
+                <span>
+                    Email
+                </span>
+
+                <strong id="infoEmail">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div class="profile-info-row">
+
+                <span>
+                    Account Type
+                </span>
+
+                <strong>
+                    Student
+                </strong>
+
+            </div>
+
+
+            <div class="profile-info-row">
+
+                <span>
+                    Member Since
+                </span>
+
+                <strong id="memberSince">
+                    Loading...
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="profile-statistics">
+
+        <h2>
+            Learning Statistics
+        </h2>
+
+
+        <div class="results-summary">
+
+
+            <div class="result-summary-card">
+
+                <span>📝</span>
+
+                <div>
+
+                    <p>
+                        Quizzes
+                    </p>
+
+                    <strong id="totalQuizzes">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-summary-card">
+
+                <span>📊</span>
+
+                <div>
+
+                    <p>
+                        Average
+                    </p>
+
+                    <strong id="averageScore">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-summary-card">
+
+                <span>🏆</span>
+
+                <div>
+
+                    <p>
+                        Best Score
+                    </p>
+
+                    <strong id="bestScore">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-summary-card">
+
+                <span>✅</span>
+
+                <div>
+
+                    <p>
+                        Correct
+                    </p>
+
+                    <strong id="totalCorrect">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="profile-actions">
+
+        <h2>
+            Quick Actions
+        </h2>
+
+        <div class="profile-action-grid">
+
+            <a href="practice.html">
+                📝 Start Practice
+            </a>
+
+            <a href="results.html">
+                📊 View Results
+            </a>
+
+            <a href="progress.html">
+                📈 View Progress
+            </a>
+
+            <a href="subject.html">
+                📚 Browse Subjects
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+async function loadProfile() {
+
+    try {
+
+        const userResponse =
+            await fetch("/api/me");
+
+
+        if (!userResponse.ok) {
+
+            window.location.href =
+                "login.html";
+
+            return;
+
+        }
+
+
+        const userData =
+            await userResponse.json();
+
+
+        const user =
+            userData.user;
+
+
+        document.getElementById(
+            "profileName"
+        ).textContent =
+            user.name;
+
+
+        document.getElementById(
+            "profileEmail"
+        ).textContent =
+            user.email;
+
+
+        document.getElementById(
+            "infoName"
+        ).textContent =
+            user.name;
+
+
+        document.getElementById(
+            "infoEmail"
+        ).textContent =
+            user.email;
+
+
+        if (user.created_at) {
+
+            const date =
+                new Date(user.created_at);
+
+
+            document.getElementById(
+                "memberSince"
+            ).textContent =
+                date.toLocaleDateString(
+                    "en-NG",
+                    {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric"
+                    }
+                );
+
+        } else {
+
+            document.getElementById(
+                "memberSince"
+            ).textContent =
+                "Recently";
+
+        }
+
+
+        const progressResponse =
+            await fetch("/api/progress");
+
+
+        if (progressResponse.ok) {
+
+            const progress =
+                await progressResponse.json();
+
+
+            const stats =
+                progress.stats || {};
+
+
+            document.getElementById(
+                "totalQuizzes"
+            ).textContent =
+                stats.totalQuizzes || 0;
+
+
+            document.getElementById(
+                "averageScore"
+            ).textContent =
+                (stats.averageScore || 0) + "%";
+
+
+            document.getElementById(
+                "bestScore"
+            ).textContent =
+                (stats.bestScore || 0) + "%";
+
+
+            document.getElementById(
+                "totalCorrect"
+            ).textContent =
+                stats.totalCorrect || 0;
+
+        }
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        window.location.href =
+            "login.html";
+
+    }
+
+}
+
+
+document
+    .getElementById("logoutBtn")
+    .addEventListener(
+        "click",
+        async () => {
+
+            await fetch(
+                "/api/logout",
+                {
+                    method: "POST"
+                }
+            );
+
+            window.location.href =
+                "login.html";
+
+        }
+    );
+
+
+loadProfile();
+
+</script>
+
+</body>
+
+</html>

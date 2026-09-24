@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practice Exam - StudyHub NG</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        .home-link {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .top-card {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .top-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #eef2ff;
+            padding: 9px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .timer {
+            background: #111827;
+            color: white;
+            padding: 9px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .timer.warning {
+            background: #dc2626;
+        }
+
+        .progress-container {
+            margin-top: 18px;
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #2563eb;
+            transition: width 0.3s;
+        }
+
+        .question-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .question-number {
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .question-text {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 22px;
+        }
+
+        .option {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 10px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            border-color: #2563eb;
+            background: #f8faff;
+        }
+
+        .option.selected {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .option.correct {
+            border-color: #16a34a;
+            background: #dcfce7;
+        }
+
+        .option.wrong {
+            border-color: #dc2626;
+            background: #fee2e2;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button.control {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #nextBtn {
+            background: #2563eb;
+            color: white;
+        }
+
+        #nextBtn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        #finishBtn {
+            background: #16a34a;
+            color: white;
+        }
+
+        .loading,
+        .error {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .error {
+            color: #b91c1c;
+        }
+
+        #result {
+            display: none;
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        #result h2 {
+            margin-bottom: 20px;
+        }
+
+        .score {
+            font-size: 42px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .percentage {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .result-message {
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .retry-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .saving {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px auto;
+                padding: 12px;
+            }
+
+            .question-card {
+                padding: 18px;
+            }
+
+            .question-text {
+                font-size: 18px;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            button.control {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>StudyHub NG</h1>
+
+    <a href="subjects.html" class="home-link">
+        ← Subjects
+    </a>
+</header>
+
+
+<div class="container">
+
+    <!-- TOP INFORMATION -->
+    <div class="top-card">
+
+        <div class="top-info">
+
+            <div class="badge" id="examBadge">
+                Exam: Loading...
+            </div>
+
+            <div class="badge" id="subjectBadge">
+                Subject: Loading...
+            </div>
+
+            <div class="badge" id="questionCountBadge">
+                Questions: 0
+            </div>
+
+            <div class="timer" id="timer">
+                Time: 00:00
+            </div>
+
+        </div>
+
+        <div class="progress-container">
+
+            <div
+                class="progress-bar"
+                id="progressBar">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOADING -->
+    <div
+        class="loading"
+        id="loading">
+        Loading questions...
+    </div>
+
+
+    <!-- ERROR -->
+    <div
+        class="error"
+        id="error"
+        style="display:none;">
+    </div>
+
+
+    <!-- QUIZ -->
+    <div
+        class="question-card"
+        id="quiz"
+        style="display:none;">
+
+        <div
+            class="question-number"
+            id="questionNumber">
+            Question 1
+        </div>
+
+        <div
+            class="question-text"
+            id="questionText">
+        </div>
+
+
+        <div id="options">
+
+            <button class="option" data-answer="A"></button>
+            <button class="option" data-answer="B"></button>
+            <button class="option" data-answer="C"></button>
+            <button class="option" data-answer="D"></button>
+
+        </div>
+
+
+        <div class="controls">
+
+            <button
+                class="control"
+                id="nextBtn"
+                disabled>
+                Next Question
+            </button>
+
+            <button
+                class="control"
+                id="finishBtn">
+                Finish Exam
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULT -->
+    <div id="result">
+
+        <h2>Exam Completed 🎉</h2>
+
+        <div
+            class="score"
+            id="scoreElement">
+            0 / 0
+        </div>
+
+        <div
+            class="percentage"
+            id="percentageElement">
+            0%
+        </div>
+
+        <div
+            class="result-message"
+            id="resultMessage">
+        </div>
+
+        <div
+            class="saving"
+            id="savingMessage">
+            Saving your result...
+        </div>
+
+        <br>
+
+        <button
+            class="retry-btn"
+            onclick="location.reload()">
+            Try Again
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /*
+     * ==========================================
+     * STUDYHUB NG PRACTICE SYSTEM
+     * ==========================================
+     */
+
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const exam =
+        params.get("exam");
+
+
+    const subject =
+        params.get("subject");
+
+
+    let questions = [];
+
+    let currentQuestion = 0;
+
+    let selectedAnswer = null;
+
+    let score = 0;
+
+    let timeLeft = 0;
+
+    let timerInterval = null;
+
+    let examFinished = false;
+
+
+    /*
+     * ==========================================
+     * ELEMENTS
+     * ==========================================
+     */
+
+    const loading =
+        document.getElementById("loading");
+
+    const errorBox =
+        document.getElementById("error");
+
+    const quiz =
+        document.getElementById("quiz");
+
+    const result =
+        document.getElementById("result");
+
+    const questionNumber =
+        document.getElementById("questionNumber");
+
+    const questionText =
+        document.getElementById("questionText");
+
+    const optionsContainer =
+        document.getElementById("options");
+
+    const nextBtn =
+        document.getElementById("nextBtn");
+
+    const finishBtn =
+        document.getElementById("finishBtn");
+
+    const timer =
+        document.getElementById("timer");
+
+    const progressBar =
+        document.getElementById("progressBar");
+
+    const examBadge =
+        document.getElementById("examBadge");
+
+    const subjectBadge =
+        document.getElementById("subjectBadge");
+
+    const questionCountBadge =
+        document.getElementById(
+            "questionCountBadge"
+        );
+
+
+    /*
+     * ==========================================
+     * CHECK URL
+     * ==========================================
+     */
+
+    if (!exam || !subject) {
+
+        showError(
+            "Exam or subject is missing. Please return to the Subjects page and choose a subject."
+        );
+
+    }
+    else {
+
+        examBadge.textContent =
+            "Exam: " + exam;
+
+        subjectBadge.textContent =
+            "Subject: " + subject;
+
+        loadQuestions();
+
+    }
+
+
+    /*
+     * ==========================================
+     * LOAD QUESTIONS
+     * ==========================================
+     */
+
+    async function loadQuestions() {
+
+        try {
+
+            const url =
+                `/api/questions?exam=${encodeURIComponent(exam)}&subject=${encodeURIComponent(subject)}&limit=10`;
+
+            const response =
+                await fetch(url);
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "Could not load questions."
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            /*
+             * Support both:
+             *
+             * [...]
+             *
+             * and:
+             *
+             * { questions: [...] }
+             */
+
+            if (Array.isArray(data)) {
+
+                questions = data;
+
+            }
+            else if (
+                data &&
+                Array.isArray(data.questions)
+            ) {
+
+                questions = data.questions;
+
+            }
+            else {
+
+                questions = [];
+
+            }
+
+
+            if (questions.length === 0) {
+
+                throw new Error(
+                    `No questions found for ${exam} ${subject}.`
+                );
+
+            }
+
+
+            /*
+             * Prepare every question.
+             */
+
+            questions =
+                questions.map(q => ({
+
+                    ...q,
+
+                    user_answer: null
+
+                }));
+
+
+            questionCountBadge.textContent =
+                `Questions: ${questions.length}`;
+
+
+            /*
+             * One minute per question.
+             */
+
+            timeLeft =
+                questions.length * 60;
+
+
+            loading.style.display =
+                "none";
+
+            quiz.style.display =
+                "block";
+
+
+            showQuestion();
+
+            startTimer();
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+            showError(
+                error.message ||
+                "Failed to load questions."
+            );
+
+        }
+
+    }
+
+
+    /*
+     * ==========================================
+     * SHOW QUESTION
+     * ==========================================
+     */
+
+    function showQuestion() {
+
+        if (
+            currentQuestion >=
+            questions.length
+        ) {
+
+            finishExam();
+
+            return;
+
+        }
+
+
+        const q =
+            questions[currentQuestion];
+
+
+        selectedAnswer =
+            q.user_answer || null;
+
+
+        questionNumber.textContent =
+            `Question ${currentQuestion + 1} of ${questions.length}`;
+
+
+        questionText.textContent =
+            q.question || "";
+
+
+        const optionButtons =
+            optionsContainer.querySelectorAll(
+                ".option"
+            );
+
+
+        const optionValues = {
+
+            A:
+                q.option_a ??
+                q.options?.A ??
+                "",
+
+            B:
+                q.option_b ??
+                q.options?.B ??
+                "",
+
+            C:
+                q.option_c ??
+                q.options?.C ??
+                "",
+
+            D:
+                q.option_d ??
+                q.options?.D ??
+                ""
+
+        };
+
+
+        optionButtons.forEach(button => {
+
+            const letter =
+                button.dataset.answer;
+
+
+            button.textContent =
+                `${letter}. ${optionValues[letter]}`;
+
+
+            button.classList.remove(
+                "selected",
+                "correct",
+                "wrong"
+            );
+
+
+            button.disabled = false;
+
+
+            if (
+                selectedAnswer ===
+                letter
+            ) {
+
+                button.classList.add(
+                    "selected"
+                );
+
+            }
+
+        });
+
+
+        nextBtn.disabled =
+            !selectedAnswer;
+
+
+        /*
+         * Last question changes button text.
+         */
+
+        if (
+            currentQuestion ===
+            questions.length - 1
+        ) {
+
+            nextBtn.textContent =
+                "Finish Exam";
+
+        }
+        else {
+
+            nextBtn.textContent =
+                "Next Question";
+
+        }
+
+
+        /*
+         * Progress.
+         */
+
+        const progress =
+            (
+                currentQuestion /
+                questions.length
+            ) * 100;
+
+
+        progressBar.style.width =
+            `${progress}%`;
+
+    }
+
+
+    /*
+     * ==========================================
+     * SELECT ANSWER
+     * ==========================================
+     */
+
+    optionsContainer
+        .querySelectorAll(".option")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    if (examFinished) {
+                        return;
+                    }
+
+
+                    const letter =
+                        button.dataset.answer;
+
+
+                    selectedAnswer =
+                        letter;
+
+
+                    questions[
+                        currentQuestion
+                    ].user_answer =
+                        letter;
+
+
+                    optionsContainer
+                        .querySelectorAll(".option")
+                        .forEach(option => {
+
+                            option.classList.remove(
+                                "selected"
+                            );
+
+                        });
+
+
+                    button.classList.add(
+                        "selected"
+                    );
+
+
+                    nextBtn.disabled =
+                        false;
+
+                }
+            );
+
+        });
+
+
+    /*
+     * ==========================================
+     * CHECK CURRENT ANSWER
+     * ==========================================
+     */
+
+    function checkCurrentAnswer() {
+
+        if (!selectedAnswer) {
+            return;
+        }
+
+
+        const q =
+            questions[currentQuestion];
+
+
+        const correctAnswer =
+            String(
+                q.correct_answer ??
+                q.answer ??
+                ""
+            ).toUpperCase();
+
+
+        if (
+            selectedAnswer.toUpperCase() ===
+            correctAnswer
+        ) {
+
+            score++;
+
+        }
+
+    }
+
+
+    /*
+     * ==========================================
+     * NEXT QUESTION
+     * ==========================================
+     */
+
+    nextBtn.addEventListener(
+        "click",
+        () => {
+
+            if (
+                !selectedAnswer ||
+                examFinished
+            ) {
+
+                return;
+
+            }
+
+
+            checkCurrentAnswer();
+
+
+            if (
+                currentQuestion ===
+                questions.length - 1
+            ) {
+
+                finishExam();
+
+                return;
+
+            }
+
+
+            currentQuestion++;
+
+            showQuestion();
+
+        }
+    );
+
+
+    /*
+     * ==========================================
+     * FINISH BUTTON
+     * ==========================================
+     */
+
+    finishBtn.addEventListener(
+        "click",
+        () => {
+
+            if (examFinished) {
+                return;
+            }
+
+
+            /*
+             * Count current answer only if
+             * it has not already been counted.
+             */
+
+            if (
+                selectedAnswer &&
+                currentQuestion <
+                questions.length
+            ) {
+
+                checkCurrentAnswer();
+
+            }
+
+
+            finishExam();
+
+        }
+    );
+
+
+    /*
+     * ==========================================
+     * TIMER
+     * ==========================================
+     */
+
+    function startTimer() {
+
+        updateTimer();
+
+
+        timerInterval =
+            setInterval(
+                () => {
+
+                    if (examFinished) {
+
+                        clearInterval(
+                            timerInterval
+                        );
+
+                        return;
+
+                    }
+
+
+                    timeLeft--;
+
+
+                    updateTimer();
+
+
+                    if (
+                        timeLeft <= 0
+                    ) {
+
+                        clearInterval(
+                            timerInterval
+                        );
+
+                        finishExam();
+
+                    }
+
+                },
+                1000
+            );
+
+    }
+
+
+    function updateTimer() {
+
+        if (timeLeft < 0) {
+            timeLeft = 0;
+        }
+
+
+        const minutes =
+            Math.floor(
+                timeLeft / 60
+            );
+
+
+        const seconds =
+            timeLeft % 60;
+
+
+        timer.textContent =
+            `Time: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+
+        if (timeLeft <= 60) {
+
+            timer.classList.add(
+                "warning"
+            );
+
+        }
+        else {
+
+            timer.classList.remove(
+                "warning"
+            );
+
+        }
+
+    }
+
+
+    /*
+     * ==========================================
+     * FINISH EXAM
+     * ==========================================
+     */
+
+    async function finishExam() {
+
+        if (examFinished) {
+            return;
+        }
+
+
+        examFinished = true;
+
+
+        clearInterval(
+            timerInterval
+        );
+
+
+        /*
+         * Count current answer if it exists.
+         *
+         * When the Finish button is used,
+         * this counts the current question.
+         */
+
+        if (
+            selectedAnswer &&
+            currentQuestion <
+            questions.length
+        ) {
+
+            /*
+             * Avoid counting the same question
+             * twice when Next already counted it.
+             */
+
+            if (
+                !questions[
+                    currentQuestion
+                ].answer_checked
+            ) {
+
+                checkCurrentAnswer();
+
+                questions[
+                    currentQuestion
+                ].answer_checked =
+                    true;
+
+            }
+
+        }
+
+
+        /*
+         * Make sure every answer has the
+         * user_answer property.
+         */
+
+        const answers =
+            questions.map(q => ({
+
+                question_id:
+                    q.id,
+
+                answer:
+                    q.user_answer || null
+
+            }));
+
+
+        /*
+         * Hide quiz.
+         */
+
+        quiz.style.display =
+            "none";
+
+
+        /*
+         * Show result.
+         */
+
+        result.style.display =
+            "block";
+
+
+        const total =
+            questions.length;
+
+
+        const percentage =
+            total > 0
+                ? Math.round(
+                    (score / total) * 100
+                )
+                : 0;
+
+
+        document.getElementById(
+            "scoreElement"
+        ).textContent =
+            `${score} / ${total}`;
+
+
+        document.getElementById(
+            "percentageElement"
+        ).textContent =
+            `${percentage}%`;
+
+
+        const resultMessage =
+            document.getElementById(
+                "resultMessage"
+            );
+
+
+        if (percentage >= 70) {
+
+            resultMessage.textContent =
+                "Good work! Keep practicing to improve your score.";
+
+        }
+        else if (percentage >= 50) {
+
+            resultMessage.textContent =
+                "Keep practicing. You are making progress.";
+
+        }
+        else {
+
+            resultMessage.textContent =
+                "Keep studying and try the practice again.";
+
+        }
+
+
+        /*
+         * Save result.
+         */
+
+        await saveResult(
+            answers,
+            score,
+            total
+        );
+
+    }
+
+
+    /*
+     * ==========================================
+     * SAVE RESULT
+     * ==========================================
+     */
+
+    async function saveResult(
+        answers,
+        finalScore,
+        totalQuestions
+    ) {
+
+        const savingMessage =
+            document.getElementById(
+                "savingMessage"
+            );
+
+
+        savingMessage.textContent =
+            "Saving your result...";
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/submit-quiz",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                exam:
+                                    exam,
+
+                                subject:
+                                    subject,
+
+                                answers:
+                                    answers,
+
+                                score:
+                                    finalScore,
+
+                                total_questions:
+                                    totalQuestions
+
+                            })
+                    }
+                );
+
+
+            let data = null;
+
+
+            try {
+
+                data =
+                    await response.json();
+
+            }
+            catch {
+
+                data = null;
+
+            }
+
+
+            if (!response.ok) {
+
+                console.error(
+                    "Submit quiz error:",
+                    data
+                );
+
+
+                savingMessage.textContent =
+                    "Result displayed, but the server did not save it.";
+
+                return;
+
+            }
+
+
+            console.log(
+                "Quiz result saved:",
+                data
+            );
+
+
+            savingMessage.textContent =
+                "Result saved successfully ✓";
+
+
+        }
+        catch (error) {
+
+            console.error(
+                "Could not save result:",
+                error
+            );
+
+
+            savingMessage.textContent =
+                "Result displayed, but saving failed.";
+
+        }
+
+    }
+
+
+    /*
+     * ==========================================
+     * ERROR
+     * ==========================================
+     */
+
+    function showError(message) {
+
+        loading.style.display =
+            "none";
+
+        quiz.style.display =
+            "none";
+
+        errorBox.style.display =
+            "block";
+
+        errorBox.textContent =
+            message;
+
+    }
+
+</script>
+
+</body>
+</html>

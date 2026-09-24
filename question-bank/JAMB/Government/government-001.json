@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Democracy",
+    "difficulty": "easy",
+    "question": "What is democracy?",
+    "options": {
+      "A": "Government by the military",
+      "B": "Government by the people, directly or through elected representatives",
+      "C": "Government by a hereditary king only",
+      "D": "Government by judges"
+    },
+    "answer": "B",
+    "explanation": "Democracy is a system of government in which political authority is derived from the people, usually through elections."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Constitution",
+    "difficulty": "easy",
+    "question": "What is a constitution?",
+    "options": {
+      "A": "A collection of fundamental rules and principles for governing a state",
+      "B": "A political party manifesto",
+      "C": "A newspaper",
+      "D": "A court judgment"
+    },
+    "answer": "A",
+    "explanation": "A constitution contains fundamental rules and principles that establish how a state is governed."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Separation of Powers",
+    "difficulty": "medium",
+    "question": "Which three organs are commonly associated with the separation of powers?",
+    "options": {
+      "A": "Army, Police and Navy",
+      "B": "Executive, Legislature and Judiciary",
+      "C": "Federal, State and Local",
+      "D": "President, Governor and Mayor"
+    },
+    "answer": "B",
+    "explanation": "The executive, legislature and judiciary are the three major organs associated with separation of governmental powers."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Legislature",
+    "difficulty": "medium",
+    "question": "What is one major function of the legislature?",
+    "options": {
+      "A": "Making laws",
+      "B": "Interpreting dreams",
+      "C": "Conducting religious worship",
+      "D": "Operating private businesses"
+    },
+    "answer": "A",
+    "explanation": "One of the main functions of a legislature is to make and amend laws."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Judiciary",
+    "difficulty": "medium",
+    "question": "What is a major function of the judiciary?",
+    "options": {
+      "A": "Making campaign posters",
+      "B": "Interpreting laws",
+      "C": "Collecting school fees",
+      "D": "Producing agricultural crops"
+    },
+    "answer": "B",
+    "explanation": "The judiciary interprets laws and resolves legal disputes through the courts."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Citizenship",
+    "difficulty": "easy",
+    "question": "Which of the following is a responsibility of a citizen?",
+    "options": {
+      "A": "Obeying lawful regulations",
+      "B": "Destroying public property",
+      "C": "Ignoring all laws",
+      "D": "Preventing elections"
+    },
+    "answer": "A",
+    "explanation": "Citizens have responsibilities to obey lawful rules and contribute to the orderly functioning of society."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Political Parties",
+    "difficulty": "medium",
+    "question": "What is a political party?",
+    "options": {
+      "A": "An organization formed to seek political power through elections",
+      "B": "A private school",
+      "C": "A court of law",
+      "D": "A traditional festival"
+    },
+    "answer": "A",
+    "explanation": "A political party is an organized group that seeks to gain and exercise political power, commonly through elections."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Federalism",
+    "difficulty": "hard",
+    "question": "What is federalism?",
+    "options": {
+      "A": "A system in which all powers belong to one local authority",
+      "B": "A system in which governmental powers are constitutionally divided between different levels of government",
+      "C": "A system without a constitution",
+      "D": "A system ruled only by traditional leaders"
+    },
+    "answer": "B",
+    "explanation": "Federalism divides governmental powers constitutionally between a central government and constituent units such as states."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Public Opinion",
+    "difficulty": "hard",
+    "question": "What is public opinion?",
+    "options": {
+      "A": "The views held by members of the public on issues of common interest",
+      "B": "A secret court decision",
+      "C": "A government budget document",
+      "D": "A private business contract"
+    },
+    "answer": "A",
+    "explanation": "Public opinion refers to the views or attitudes held by people about matters affecting society."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Government",
+    "topic": "Rule of Law",
+    "difficulty": "hard",
+    "question": "Which principle is central to the rule of law?",
+    "options": {
+      "A": "Everyone is subject to the law",
+      "B": "Only government officials must obey the law",
+      "C": "Courts should ignore the constitution",
+      "D": "Citizens have no legal rights"
+    },
+    "answer": "A",
+    "explanation": "The rule of law includes the principle that individuals and public authorities are subject to the law."
+  }
+]

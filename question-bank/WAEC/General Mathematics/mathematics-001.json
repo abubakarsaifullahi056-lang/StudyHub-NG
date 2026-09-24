@@ -1,0 +1,52 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "General Mathematics",
+    "question": "What is 15 × 4?",
+    "option_a": "45",
+    "option_b": "50",
+    "option_c": "60",
+    "option_d": "75",
+    "correct_answer": "C"
+  },
+  {
+    "exam": "WAEC",
+    "subject": "General Mathematics",
+    "question": "What is 144 ÷ 12?",
+    "option_a": "10",
+    "option_b": "11",
+    "option_c": "12",
+    "option_d": "14",
+    "correct_answer": "C"
+  },
+  {
+    "exam": "WAEC",
+    "subject": "General Mathematics",
+    "question": "What is 25% of 200?",
+    "option_a": "25",
+    "option_b": "40",
+    "option_c": "50",
+    "option_d": "75",
+    "correct_answer": "C"
+  },
+  {
+    "exam": "WAEC",
+    "subject": "General Mathematics",
+    "question": "If x + 7 = 15, what is x?",
+    "option_a": "6",
+    "option_b": "7",
+    "option_c": "8",
+    "option_d": "9",
+    "correct_answer": "C"
+  },
+  {
+    "exam": "WAEC",
+    "subject": "General Mathematics",
+    "question": "What is the square of 9?",
+    "option_a": "18",
+    "option_b": "27",
+    "option_c": "72",
+    "option_d": "81",
+    "correct_answer": "D"
+  }
+]

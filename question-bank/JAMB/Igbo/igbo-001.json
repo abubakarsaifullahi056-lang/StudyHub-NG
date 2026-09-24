@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "easy",
+    "question": "Gịnị ka okwu \"ụlọ\" pụtara?",
+    "options": {
+      "A": "House",
+      "B": "School",
+      "C": "Market",
+      "D": "Farm"
+    },
+    "answer": "A",
+    "explanation": "\"Ụlọ\" pụtara \"house\" n'asụsụ Bekee."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "easy",
+    "question": "Gịnị ka okwu \"mmiri\" pụtara?",
+    "options": {
+      "A": "Food",
+      "B": "Water",
+      "C": "Fire",
+      "D": "Air"
+    },
+    "answer": "B",
+    "explanation": "\"Mmiri\" pụtara \"water\" n'asụsụ Bekee."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Ụtọasụsụ",
+    "difficulty": "medium",
+    "question": "Kedu nke bụ ọtụtụ nke okwu \"onye\"?",
+    "options": {
+      "A": "Ụmụ mmadụ",
+      "B": "Ndị mmadụ",
+      "C": "Onye ahụ",
+      "D": "Ụlọ"
+    },
+    "answer": "B",
+    "explanation": "\"Ndị mmadụ\" bụ ụzọ e si egosi ọtụtụ mmadụ, ebe \"onye\" na-ezo aka n'otu mmadụ."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "easy",
+    "question": "Kedu ihe \"nne\" pụtara?",
+    "options": {
+      "A": "Father",
+      "B": "Mother",
+      "C": "Brother",
+      "D": "Sister"
+    },
+    "answer": "B",
+    "explanation": "\"Nne\" pụtara \"mother\" n'asụsụ Bekee."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Ilu",
+    "difficulty": "medium",
+    "question": "Gịnị bụ ilu?",
+    "options": {
+      "A": "Okwu nwere amamihe ma ọ bụ nkuzi",
+      "B": "Aha mmadụ naanị",
+      "C": "Aha obodo",
+      "D": "Akwụkwọ ụlọ akwụkwọ"
+    },
+    "answer": "A",
+    "explanation": "Ilu bụ okwu dị mkpirikpi nke na-eburu amamihe ma ọ bụ nkuzi."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "easy",
+    "question": "Kedu ihe \"ụlọ akwụkwọ\" pụtara?",
+    "options": {
+      "A": "Hospital",
+      "B": "School",
+      "C": "Market",
+      "D": "Church"
+    },
+    "answer": "B",
+    "explanation": "\"Ụlọ akwụkwọ\" pụtara \"school\" n'asụsụ Bekee."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Ụtọasụsụ",
+    "difficulty": "medium",
+    "question": "Kedu nke bụ aha ihe?",
+    "options": {
+      "A": "Gbaa",
+      "B": "Rie",
+      "C": "Ụlọ",
+      "D": "Gaa"
+    },
+    "answer": "C",
+    "explanation": "\"Ụlọ\" bụ aha ihe ma ọ bụ ebe, ebe okwu ndị ọzọ na-egosi omume."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Omenala",
+    "difficulty": "medium",
+    "question": "Kedu ihe bụ omenala?",
+    "options": {
+      "A": "Ụzọ ndụ na omume ndị obodo na-agbaso",
+      "B": "Aha mmadụ",
+      "C": "Ụdị nri naanị",
+      "D": "Egwuregwu bọọlụ"
+    },
+    "answer": "A",
+    "explanation": "Omenala bụ usoro ndụ, nkwenkwe, omume na ụkpụrụ nke otu obodo na-agbaso."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Okwu",
+    "difficulty": "hard",
+    "question": "Kedu nke bụ ihe megidere okwu \"ọcha\"?",
+    "options": {
+      "A": "Ojii",
+      "B": "Ọma",
+      "C": "Nnukwu",
+      "D": "Ọhụrụ"
+    },
+    "answer": "A",
+    "explanation": "\"Ojii\" bụ agba megidere \"ọcha\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Igbo",
+    "topic": "Ịgụ Akwụkwọ",
+    "difficulty": "hard",
+    "question": "Gụọ ahịrịokwu a: \"Chinedu gara ụlọ akwụkwọ n'ụtụtụ.\" Ebee ka Chinedu gara?",
+    "options": {
+      "A": "Ahịa",
+      "B": "Ụlọ ọgwụ",
+      "C": "Ụlọ akwụkwọ",
+      "D": "Ụlọ ọrụ"
+    },
+    "answer": "C",
+    "explanation": "Ahịrịokwu ahụ kwuru na Chinedu gara \"ụlọ akwụkwọ\", nke pụtara school."
+  }
+]

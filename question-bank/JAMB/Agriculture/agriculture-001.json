@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Farm Tools and Equipment",
+    "difficulty": "easy",
+    "question": "Which farm tool is most suitable for loosening soil around growing crops?",
+    "options": {
+      "A": "Cutlass",
+      "B": "Hoe",
+      "C": "Rake",
+      "D": "Wheelbarrow"
+    },
+    "answer": "B",
+    "explanation": "A hoe is commonly used for loosening soil, making ridges, and removing weeds around crops."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Soil Science",
+    "difficulty": "easy",
+    "question": "Which soil type has the highest water-holding capacity?",
+    "options": {
+      "A": "Sandy soil",
+      "B": "Clay soil",
+      "C": "Gravelly soil",
+      "D": "Stony soil"
+    },
+    "answer": "B",
+    "explanation": "Clay soil has very fine particles and small pore spaces, allowing it to retain more water than sandy soil."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Crop Production",
+    "difficulty": "medium",
+    "question": "The process of removing unwanted plants from a crop farm is known as",
+    "options": {
+      "A": "Thinning",
+      "B": "Pruning",
+      "C": "Weeding",
+      "D": "Harvesting"
+    },
+    "answer": "C",
+    "explanation": "Weeding is the removal or control of unwanted plants that compete with crops for nutrients, water, light, and space."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Farm Management",
+    "difficulty": "medium",
+    "question": "Which of the following is a fixed cost in farm production?",
+    "options": {
+      "A": "Cost of seeds",
+      "B": "Cost of fertilizer",
+      "C": "Farm building depreciation",
+      "D": "Cost of hired labour"
+    },
+    "answer": "C",
+    "explanation": "Farm buildings are fixed assets, and their depreciation is treated as a fixed cost because it does not directly vary with the level of production."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Animal Production",
+    "difficulty": "easy",
+    "question": "Which of the following animals is classified as a ruminant?",
+    "options": {
+      "A": "Pig",
+      "B": "Chicken",
+      "C": "Goat",
+      "D": "Rabbit"
+    },
+    "answer": "C",
+    "explanation": "Goats are ruminants. They have a specialized digestive system that allows them to digest fibrous plant materials through microbial fermentation."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Livestock Production",
+    "difficulty": "medium",
+    "question": "Which disease commonly affects poultry and can cause high mortality in chickens?",
+    "options": {
+      "A": "Newcastle disease",
+      "B": "Mastitis",
+      "C": "Foot rot",
+      "D": "Anthrax"
+    },
+    "answer": "A",
+    "explanation": "Newcastle disease is a contagious viral disease of poultry that can cause severe illness and high mortality."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Soil Fertility",
+    "difficulty": "medium",
+    "question": "Which nutrient is mainly associated with vigorous vegetative growth in plants?",
+    "options": {
+      "A": "Nitrogen",
+      "B": "Phosphorus",
+      "C": "Potassium",
+      "D": "Calcium"
+    },
+    "answer": "A",
+    "explanation": "Nitrogen is essential for the formation of proteins and chlorophyll and promotes healthy vegetative growth."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Farm Records",
+    "difficulty": "easy",
+    "question": "Which farm record shows money received and money spent by a farmer?",
+    "options": {
+      "A": "Farm diary",
+      "B": "Cash book",
+      "C": "Inventory record",
+      "D": "Production record"
+    },
+    "answer": "B",
+    "explanation": "A cash book records the inflow and outflow of money in a farm business."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Agricultural Economics",
+    "difficulty": "medium",
+    "question": "The reward for the use of capital in agricultural production is",
+    "options": {
+      "A": "Rent",
+      "B": "Wages",
+      "C": "Interest",
+      "D": "Profit"
+    },
+    "answer": "C",
+    "explanation": "Interest is the reward paid for the use of capital. Rent is associated with land, while wages are the reward for labour."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Agriculture",
+    "topic": "Farm Practices",
+    "difficulty": "hard",
+    "question": "Which farming practice involves growing different crops on the same piece of land in successive seasons?",
+    "options": {
+      "A": "Mixed farming",
+      "B": "Crop rotation",
+      "C": "Mixed cropping",
+      "D": "Monocropping"
+    },
+    "answer": "B",
+    "explanation": "Crop rotation involves growing different crops on the same land in a planned sequence over successive seasons. It can help maintain soil fertility and reduce some pest and disease problems."
+  }
+]

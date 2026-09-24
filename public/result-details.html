@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Result Review - StudyHub NG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div class="dashboard-logo">
+        StudyHub NG
+    </div>
+
+    <nav>
+        
+        <a href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <a href="results.html">Results</a>
+    </nav>
+
+</header>
+
+
+<main class="results-page">
+
+    <section class="results-hero">
+
+        <p class="small-title">RESULT REVIEW</p>
+
+        <h1>Practice Result</h1>
+
+        <p id="resultDescription">
+            Review your answers and learn from your mistakes.
+        </p>
+
+    </section>
+
+
+    <section id="resultDetails">
+
+        <div class="loading-results">
+            Loading result...
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+async function loadResult() {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const resultId = params.get("id");
+
+    if (!resultId) {
+
+        document.getElementById("resultDetails").innerHTML = `
+            <div class="empty-results">
+                <h2>Result not found</h2>
+                <p>No result ID was provided.</p>
+                <a href="results.html" class="practice-button">
+                    Back to Results
+                </a>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    try {
+
+        const response = await fetch(
+            `/api/results/${encodeURIComponent(resultId)}`
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            document.getElementById("resultDetails").innerHTML = `
+                <div class="empty-results">
+                    <h2>Unable to load result</h2>
+                    <p>${data.message || "Result could not be found."}</p>
+                </div>
+            `;
+
+            return;
+        }
+
+
+        const result = data.result;
+
+        document.getElementById("resultDescription").textContent =
+            `${result.exam} • ${result.subject}`;
+
+
+        document.getElementById("resultDetails").innerHTML = `
+
+            <div class="results-section">
+
+                <div class="result-review-header">
+
+                    <div>
+                        <p class="small-title">
+                            ${escapeHtml(result.exam)}
+                        </p>
+
+                        <h2>
+                            ${escapeHtml(result.subject)}
+                        </h2>
+                    </div>
+
+                    <div class="large-result-score">
+                        ${result.percentage}%
+                    </div>
+
+                </div>
+
+
+                <div class="review-stats">
+
+                    <div>
+                        <strong>${result.total_questions}</strong>
+                        <span>Questions</span>
+                    </div>
+
+                    <div>
+                        <strong>${result.correct_answers}</strong>
+                        <span>Correct</span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            ${result.total_questions - result.correct_answers}
+                        </strong>
+                        <span>Wrong</span>
+                    </div>
+
+                </div>
+
+
+                <div id="answerReview">
+
+                    <h2>Answer Review</h2>
+
+                    <div id="answerReview">
+
+    <h2>Answer Review</h2>
+
+    ${
+        data.answers.length === 0
+        ? `
+            <p>No individual answers were saved.</p>
+        `
+        : data.answers.map((answer, index) => `
+
+            <div class="answer-review-card">
+
+                <div class="answer-number">
+                    Question ${index + 1}
+                </div>
+
+                <h3>
+                    ${escapeHtml(answer.question)}
+                </h3>
+
+                <div class="answer-line">
+                    <strong>Your answer:</strong>
+                    ${escapeHtml(answer.selected_answer || "Not answered")}
+                </div>
+
+                <div class="answer-line">
+                    <strong>Correct answer:</strong>
+                    ${escapeHtml(answer.correct_answer)}
+                </div>
+
+                <div class="answer-status">
+
+                    ${
+                        answer.is_correct
+                        ? "✅ Correct"
+                        : "❌ Incorrect"
+                    }
+
+                </div>
+
+                ${
+                    answer.explanation
+                    ? `
+                        <div class="answer-explanation">
+
+                            <strong>Explanation:</strong>
+
+                            <p>
+                                ${escapeHtml(answer.explanation)}
+                            </p>
+
+                        </div>
+                    `
+                    : ""
+                }
+
+            </div>
+
+        `).join("")
+    }
+
+</div>
+
+
+                </div>
+
+            </div>
+
+        `;
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("resultDetails").innerHTML = `
+            <div class="empty-results">
+                <h2>Connection error</h2>
+                <p>
+                    Make sure the StudyHub NG server is running.
+                </p>
+            </div>
+        `;
+
+    }
+
+}
+
+
+function escapeHtml(value) {
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+loadResult();
+
+</script>
+
+</body>
+</html>

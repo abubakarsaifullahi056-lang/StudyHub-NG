@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Creation",
+    "difficulty": "easy",
+    "question": "According to the creation account in Genesis, what did God create on the first day?",
+    "options": {
+      "A": "Animals",
+      "B": "Light",
+      "C": "The sun",
+      "D": "Human beings"
+    },
+    "answer": "B",
+    "explanation": "Genesis describes God creating light on the first day of creation."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Creation",
+    "difficulty": "easy",
+    "question": "Who was the first man according to the biblical creation account?",
+    "options": {
+      "A": "Abraham",
+      "B": "Moses",
+      "C": "Adam",
+      "D": "Noah"
+    },
+    "answer": "C",
+    "explanation": "According to Genesis, Adam was the first man created by God."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "The Call of Abraham",
+    "difficulty": "easy",
+    "question": "What did God promise Abraham concerning his descendants?",
+    "options": {
+      "A": "They would become a great nation",
+      "B": "They would never leave Canaan",
+      "C": "They would become kings immediately",
+      "D": "They would never experience hardship"
+    },
+    "answer": "A",
+    "explanation": "God promised to make Abraham a great nation and to bless him and his descendants."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Moses",
+    "difficulty": "medium",
+    "question": "Where did Moses receive the Ten Commandments according to the biblical account?",
+    "options": {
+      "A": "Mount Sinai",
+      "B": "Mount Carmel",
+      "C": "Mount Zion",
+      "D": "Mount Olives"
+    },
+    "answer": "A",
+    "explanation": "The biblical account describes Moses receiving the commandments from God at Mount Sinai."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "The Life of Jesus",
+    "difficulty": "medium",
+    "question": "Who baptized Jesus according to the New Testament?",
+    "options": {
+      "A": "Peter",
+      "B": "John the Baptist",
+      "C": "Paul",
+      "D": "James"
+    },
+    "answer": "B",
+    "explanation": "John the Baptist baptized Jesus in the Jordan River."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Teachings of Jesus",
+    "difficulty": "medium",
+    "question": "Which commandment did Jesus identify as one of the greatest commandments?",
+    "options": {
+      "A": "Love your neighbour as yourself",
+      "B": "Seek political power",
+      "C": "Become wealthy",
+      "D": "Avoid helping others"
+    },
+    "answer": "A",
+    "explanation": "Jesus taught that loving one's neighbour as oneself is one of the great commandments."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Parables of Jesus",
+    "difficulty": "hard",
+    "question": "What is the main lesson of the Parable of the Good Samaritan?",
+    "options": {
+      "A": "People should help those in need regardless of social or ethnic differences",
+      "B": "Only wealthy people should receive help",
+      "C": "Travelling is always dangerous",
+      "D": "Religious leaders should avoid strangers"
+    },
+    "answer": "A",
+    "explanation": "The parable teaches compassion and love for others, including people who may be regarded as outsiders."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Death and Resurrection of Jesus",
+    "difficulty": "hard",
+    "question": "What happened on the third day after Jesus' crucifixion according to the New Testament?",
+    "options": {
+      "A": "He returned to Galilee immediately",
+      "B": "He was resurrected",
+      "C": "He was arrested again",
+      "D": "He became a Roman governor"
+    },
+    "answer": "B",
+    "explanation": "The New Testament accounts state that Jesus was resurrected on the third day after his crucifixion."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Early Christian Church",
+    "difficulty": "hard",
+    "question": "What event is traditionally associated with the beginning of the public ministry of the apostles after Jesus' ascension?",
+    "options": {
+      "A": "Pentecost",
+      "B": "The Exodus",
+      "C": "The Flood",
+      "D": "The Fall of Jericho"
+    },
+    "answer": "A",
+    "explanation": "Pentecost is associated with the coming of the Holy Spirit upon the apostles and the beginning of their powerful public witness."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Christian Religious Studies",
+    "topic": "Christian Ethics",
+    "difficulty": "hard",
+    "question": "Which Christian virtue emphasizes treating others with kindness, compassion and concern?",
+    "options": {
+      "A": "Love",
+      "B": "Greed",
+      "C": "Pride",
+      "D": "Revenge"
+    },
+    "answer": "A",
+    "explanation": "Christian teaching places strong emphasis on love, compassion and concern for others."
+  }
+]

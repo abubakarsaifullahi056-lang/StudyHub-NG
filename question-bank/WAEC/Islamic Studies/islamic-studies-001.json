@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Five Pillars of Islam",
+    "difficulty": "easy",
+    "question": "Which of the following is the first pillar of Islam?",
+    "options": {
+      "A": "Zakat",
+      "B": "Sawm",
+      "C": "Shahadah",
+      "D": "Hajj"
+    },
+    "answer": "C",
+    "explanation": "The Shahadah, the declaration of faith, is the first of the Five Pillars of Islam."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Salah",
+    "difficulty": "easy",
+    "question": "How many obligatory prayers are Muslims required to perform each day?",
+    "options": {
+      "A": "Three",
+      "B": "Four",
+      "C": "Five",
+      "D": "Six"
+    },
+    "answer": "C",
+    "explanation": "Muslims are required to perform five obligatory prayers each day."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Sawm",
+    "difficulty": "easy",
+    "question": "During which Islamic month do Muslims observe the obligatory fast?",
+    "options": {
+      "A": "Muharram",
+      "B": "Ramadan",
+      "C": "Rajab",
+      "D": "Shawwal"
+    },
+    "answer": "B",
+    "explanation": "The obligatory fast of Ramadan is observed during the ninth month of the Islamic calendar."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Zakat",
+    "difficulty": "medium",
+    "question": "What is Zakat?",
+    "options": {
+      "A": "A compulsory charitable payment by eligible Muslims",
+      "B": "A type of pilgrimage",
+      "C": "A daily prayer",
+      "D": "A method of reciting the Qur'an"
+    },
+    "answer": "A",
+    "explanation": "Zakat is an obligatory form of charity paid by eligible Muslims who possess wealth above the required threshold."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Hajj",
+    "difficulty": "medium",
+    "question": "In which city is the Ka'bah located?",
+    "options": {
+      "A": "Madinah",
+      "B": "Makkah",
+      "C": "Jerusalem",
+      "D": "Cairo"
+    },
+    "answer": "B",
+    "explanation": "The Ka'bah is located in the Masjid al-Haram in Makkah."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Qur'an",
+    "difficulty": "medium",
+    "question": "What is the Qur'an?",
+    "options": {
+      "A": "A book of Islamic history written after the Prophet's death",
+      "B": "The holy book of Islam",
+      "C": "A collection of Arabic poems",
+      "D": "A book of geography"
+    },
+    "answer": "B",
+    "explanation": "The Qur'an is the holy scripture of Islam and is regarded by Muslims as the word of Allah revealed to Prophet Muhammad."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Prophet Muhammad",
+    "difficulty": "hard",
+    "question": "In which city was Prophet Muhammad born?",
+    "options": {
+      "A": "Makkah",
+      "B": "Madinah",
+      "C": "Damascus",
+      "D": "Baghdad"
+    },
+    "answer": "A",
+    "explanation": "Prophet Muhammad was born in Makkah in the Arabian Peninsula."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Hijrah",
+    "difficulty": "hard",
+    "question": "What does Hijrah refer to in Islamic history?",
+    "options": {
+      "A": "The migration of Prophet Muhammad and his followers from Makkah to Madinah",
+      "B": "The first revelation of the Qur'an",
+      "C": "The building of the Ka'bah",
+      "D": "The conquest of Egypt"
+    },
+    "answer": "A",
+    "explanation": "Hijrah refers to the migration of Prophet Muhammad and his followers from Makkah to Madinah in 622 CE."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Hadith",
+    "difficulty": "hard",
+    "question": "What is a Hadith?",
+    "options": {
+      "A": "A report about the sayings, actions or approvals of Prophet Muhammad",
+      "B": "A chapter of the Qur'an",
+      "C": "A type of Islamic prayer",
+      "D": "A name for Islamic charity"
+    },
+    "answer": "A",
+    "explanation": "Hadith reports preserve the sayings, actions and approvals of Prophet Muhammad and are an important source of Islamic guidance."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Islamic Studies",
+    "topic": "Islamic Morality",
+    "difficulty": "hard",
+    "question": "Which quality is strongly encouraged in Islamic moral teaching?",
+    "options": {
+      "A": "Honesty",
+      "B": "Dishonesty",
+      "C": "Arrogance",
+      "D": "Deception"
+    },
+    "answer": "A",
+    "explanation": "Honesty is strongly encouraged in Islam, including truthfulness in speech and dealings with others."
+  }
+]

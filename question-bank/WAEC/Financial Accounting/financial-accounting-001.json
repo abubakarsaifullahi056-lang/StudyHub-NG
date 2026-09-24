@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Accounting Principles",
+    "difficulty": "easy",
+    "question": "The main purpose of financial accounting is to",
+    "options": {
+      "A": "prepare financial information for users",
+      "B": "employ all workers in a business",
+      "C": "advertise every product",
+      "D": "control government elections"
+    },
+    "answer": "A",
+    "explanation": "Financial accounting records, summarizes and reports financial information for users such as owners, managers and creditors."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Accounting Equation",
+    "difficulty": "easy",
+    "question": "Which of the following represents the basic accounting equation?",
+    "options": {
+      "A": "Assets = Capital + Liabilities",
+      "B": "Capital = Assets + Liabilities",
+      "C": "Liabilities = Assets + Capital",
+      "D": "Assets = Capital - Liabilities"
+    },
+    "answer": "A",
+    "explanation": "The basic accounting equation is Assets = Capital + Liabilities."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Assets",
+    "difficulty": "easy",
+    "question": "Which of the following is a current asset?",
+    "options": {
+      "A": "Building",
+      "B": "Motor vehicle",
+      "C": "Cash",
+      "D": "Machinery"
+    },
+    "answer": "C",
+    "explanation": "Cash is a current asset because it is readily available for use in the normal operations of a business."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Liabilities",
+    "difficulty": "medium",
+    "question": "Which of the following is an example of a liability?",
+    "options": {
+      "A": "Cash",
+      "B": "Stock",
+      "C": "Bank loan",
+      "D": "Furniture"
+    },
+    "answer": "C",
+    "explanation": "A bank loan is a liability because it represents an amount owed by the business."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Double Entry",
+    "difficulty": "medium",
+    "question": "In double-entry bookkeeping, every transaction is recorded in at least",
+    "options": {
+      "A": "one account",
+      "B": "two accounts",
+      "C": "three accounts",
+      "D": "four accounts"
+    },
+    "answer": "B",
+    "explanation": "The double-entry principle requires every transaction to have corresponding debit and credit entries."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Trial Balance",
+    "difficulty": "medium",
+    "question": "The main purpose of preparing a trial balance is to",
+    "options": {
+      "A": "calculate employees' salaries",
+      "B": "check the arithmetical accuracy of ledger entries",
+      "C": "determine the selling price of goods",
+      "D": "prepare advertisements"
+    },
+    "answer": "B",
+    "explanation": "A trial balance helps check whether the total debit entries equal the total credit entries in the ledger."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Profit and Loss",
+    "difficulty": "easy",
+    "question": "Gross profit is calculated as",
+    "options": {
+      "A": "Sales - Cost of goods sold",
+      "B": "Sales + Expenses",
+      "C": "Capital - Assets",
+      "D": "Assets - Liabilities"
+    },
+    "answer": "A",
+    "explanation": "Gross profit is obtained by subtracting the cost of goods sold from sales."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Depreciation",
+    "difficulty": "medium",
+    "question": "Depreciation refers to the",
+    "options": {
+      "A": "increase in the value of an asset",
+      "B": "gradual reduction in the value of an asset",
+      "C": "purchase of additional stock",
+      "D": "increase in business capital"
+    },
+    "answer": "B",
+    "explanation": "Depreciation is the gradual reduction in the value of a non-current asset due to use, age or obsolescence."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Capital",
+    "difficulty": "easy",
+    "question": "The amount invested by the owner into a business is known as",
+    "options": {
+      "A": "capital",
+      "B": "expense",
+      "C": "drawing",
+      "D": "revenue"
+    },
+    "answer": "A",
+    "explanation": "Capital is the money or other resources contributed by the owner to start or operate the business."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Financial Accounting",
+    "topic": "Drawings",
+    "difficulty": "medium",
+    "question": "When a business owner withdraws cash for personal use, it is recorded as",
+    "options": {
+      "A": "sales",
+      "B": "capital",
+      "C": "drawings",
+      "D": "purchases"
+    },
+    "answer": "C",
+    "explanation": "Cash or goods taken from a business by the owner for personal use are treated as drawings."
+  }
+]

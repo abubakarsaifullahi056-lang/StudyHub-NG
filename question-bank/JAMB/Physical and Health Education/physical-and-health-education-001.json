@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Physical Fitness",
+    "difficulty": "easy",
+    "question": "What is physical fitness?",
+    "options": {
+      "A": "The ability to perform daily activities efficiently without excessive fatigue",
+      "B": "The ability to sleep all day",
+      "C": "The ability to eat large amounts of food",
+      "D": "The ability to avoid all physical activity"
+    },
+    "answer": "A",
+    "explanation": "Physical fitness refers to the ability of the body to perform daily activities effectively and efficiently."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Components of Fitness",
+    "difficulty": "easy",
+    "question": "Which of the following is a component of physical fitness?",
+    "options": {
+      "A": "Flexibility",
+      "B": "Writing",
+      "C": "Reading",
+      "D": "Singing"
+    },
+    "answer": "A",
+    "explanation": "Flexibility is one of the recognized components of physical fitness."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Health Education",
+    "difficulty": "easy",
+    "question": "Which practice helps to prevent the spread of many infectious diseases?",
+    "options": {
+      "A": "Regular handwashing",
+      "B": "Sharing used needles",
+      "C": "Drinking unsafe water",
+      "D": "Avoiding bathing"
+    },
+    "answer": "A",
+    "explanation": "Regular handwashing with soap and clean water helps reduce the spread of many infectious diseases."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "First Aid",
+    "difficulty": "medium",
+    "question": "What is first aid?",
+    "options": {
+      "A": "Immediate care given to an injured or suddenly ill person before professional medical treatment",
+      "B": "A type of competitive sport",
+      "C": "A long-term hospital treatment",
+      "D": "A method of physical training"
+    },
+    "answer": "A",
+    "explanation": "First aid is the immediate assistance given to an injured or ill person before professional medical care is available."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Nutrition",
+    "difficulty": "medium",
+    "question": "Which nutrient is mainly responsible for growth and repair of body tissues?",
+    "options": {
+      "A": "Protein",
+      "B": "Water",
+      "C": "Mineral salts",
+      "D": "Fibre"
+    },
+    "answer": "A",
+    "explanation": "Protein is essential for growth, maintenance and repair of body tissues."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Athletics",
+    "difficulty": "medium",
+    "question": "Which of the following is a track event?",
+    "options": {
+      "A": "Long jump",
+      "B": "High jump",
+      "C": "100-metre race",
+      "D": "Shot put"
+    },
+    "answer": "C",
+    "explanation": "The 100-metre race is a track event, while long jump, high jump and shot put are field events."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Football",
+    "difficulty": "medium",
+    "question": "How many players from one team normally start a football match on the field?",
+    "options": {
+      "A": "7",
+      "B": "9",
+      "C": "11",
+      "D": "15"
+    },
+    "answer": "C",
+    "explanation": "Under the standard Laws of the Game, a football team has 11 players on the field at the start of a match."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Exercise",
+    "difficulty": "hard",
+    "question": "Which type of exercise primarily improves cardiovascular endurance?",
+    "options": {
+      "A": "Long-distance running",
+      "B": "Single heavy lift",
+      "C": "Short stretching only",
+      "D": "Standing still"
+    },
+    "answer": "A",
+    "explanation": "Activities such as long-distance running place sustained demands on the heart and lungs and can improve cardiovascular endurance."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Health",
+    "difficulty": "hard",
+    "question": "Why is adequate sleep important for physical health?",
+    "options": {
+      "A": "It supports recovery and normal body functioning",
+      "B": "It permanently replaces exercise",
+      "C": "It prevents the need for food",
+      "D": "It increases dehydration"
+    },
+    "answer": "A",
+    "explanation": "Adequate sleep supports physical recovery, normal body processes and overall health."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physical and Health Education",
+    "topic": "Personal Hygiene",
+    "difficulty": "hard",
+    "question": "Which of the following is an example of good personal hygiene?",
+    "options": {
+      "A": "Regular bathing and wearing clean clothes",
+      "B": "Sharing toothbrushes",
+      "C": "Ignoring dental care",
+      "D": "Using contaminated water"
+    },
+    "answer": "A",
+    "explanation": "Regular bathing and wearing clean clothes are important practices of personal hygiene."
+  }
+]

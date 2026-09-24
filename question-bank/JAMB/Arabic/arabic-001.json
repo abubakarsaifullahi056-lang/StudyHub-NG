@@ -1,0 +1,144 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Arabic",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the meaning of the Arabic word \"كِتَابٌ\"?",
+    "options": {
+      "A": "Pen",
+      "B": "Book",
+      "C": "School",
+      "D": "Teacher"
+    },
+    "answer": "B",
+    "explanation": "كِتَابٌ (kitābun) means \"book\" in English."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Arabic",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the meaning of \"مَدْرَسَةٌ\"?",
+    "options": {
+      "A": "Hospital",
+      "B": "Market",
+      "C": "School",
+      "D": "Mosque"
+    },
+    "answer": "C",
+    "explanation": "مَدْرَسَةٌ (madrasatun) means \"school\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Grammar",
+    "difficulty": "medium",
+    "question": "Which of the following is the Arabic word for \"teacher\"?",
+    "options": {
+      "A": "طَالِبٌ",
+      "B": "مُعَلِّمٌ",
+      "C": "كِتَابٌ",
+      "D": "بَابٌ"
+    },
+    "answer": "B",
+    "explanation": "مُعَلِّمٌ (muʿallimun) means a male teacher."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the meaning of \"بَيْتٌ\"?",
+    "options": {
+      "A": "House",
+      "B": "Road",
+      "C": "Garden",
+      "D": "River"
+    },
+    "answer": "A",
+    "explanation": "بَيْتٌ (baytun) means \"house\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Grammar",
+    "difficulty": "medium",
+    "question": "Which Arabic pronoun means \"I\"?",
+    "options": {
+      "A": "هُوَ",
+      "B": "هِيَ",
+      "C": "أَنَا",
+      "D": "نَحْنُ"
+    },
+    "answer": "C",
+    "explanation": "أَنَا (anā) is the Arabic pronoun meaning \"I\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the Arabic word for \"water\"?",
+    "options": {
+      "A": "مَاءٌ",
+      "B": "نَارٌ",
+      "C": "هَوَاءٌ",
+      "D": "تُرَابٌ"
+    },
+    "answer": "A",
+    "explanation": "مَاءٌ (mā'un) means \"water\" in Arabic."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Grammar",
+    "difficulty": "medium",
+    "question": "Which of the following is a feminine Arabic noun?",
+    "options": {
+      "A": "طَالِبٌ",
+      "B": "مُعَلِّمٌ",
+      "C": "طَالِبَةٌ",
+      "D": "وَلَدٌ"
+    },
+    "answer": "C",
+    "explanation": "طَالِبَةٌ means \"female student\" and is a feminine noun."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Vocabulary",
+    "difficulty": "easy",
+    "question": "What is the meaning of \"سَمَاءٌ\"?",
+    "options": {
+      "A": "Earth",
+      "B": "Sky",
+      "C": "Sea",
+      "D": "Mountain"
+    },
+    "answer": "B",
+    "explanation": "سَمَاءٌ (samā'un) means \"sky\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Grammar",
+    "difficulty": "medium",
+    "question": "What is the plural of \"كِتَابٌ\"?",
+    "options": {
+      "A": "كُتُبٌ",
+      "B": "كَاتِبٌ",
+      "C": "مَكْتَبٌ",
+      "D": "كِتَابَانِ"
+    },
+    "answer": "A",
+    "explanation": "كُتُبٌ (kutubun) is the broken plural form of كِتَابٌ (book)."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Vocabulary",
+    "difficulty": "medium",
+    "question": "What is the meaning of \"مَسْجِدٌ\"?",
+    "options": {
+      "A": "School",
+      "B": "Mosque",
+      "C": "Library",
+      "D": "Market"
+    },
+    "answer": "B",
+    "explanation": "مَسْجِدٌ (masjidun) means \"mosque\", a place of worship for Muslims."
+  }
+]

@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyHub NG - Practice</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+.navbar {
+    background: #0757d5;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    color: #0757d5;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background: #0757d5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0647ad;
+}
+
+.hidden {
+    display: none;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    background: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.progress-box {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #0757d5;
+}
+
+.question {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.option {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #eef4ff;
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+.result {
+    text-align: center;
+}
+
+.result h2 {
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 55px;
+    color: #0757d5;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.error {
+    background: #f8d7da;
+    color: #842029;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+
+.info {
+    background: #e7f1ff;
+    color: #084298;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+@media(max-width:600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar h1 {
+        font-size: 19px;
+    }
+
+    .navbar a {
+        margin-left: 8px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <h1>StudyHub NG</h1>
+
+    <div>
+        <a href="dashboard.html">Home</a>
+        <a href="practice.html">Practice</a>
+    </div>
+
+</div>
+
+
+<div class="container">
+
+    <!-- SETUP -->
+
+    <div class="card" id="setup">
+
+        <h2>📝 Practice Exam</h2>
+
+        <label>Choose Exam</label>
+
+        <select id="exam">
+            <option value="001" disabled>Select Exam</option>
+            <option value="JAMB">JAMB</option>
+            <option value="WAEC">WAEC</option>
+        </select>
+
+
+        <label>Choose Subject</label>
+
+        <select id="subject">
+            <option value="001" disabled>Select Exam First</option>
+        </select>
+
+
+        <label>Number of Questions</label>
+
+        <select id="amount">
+            <option value="10">10 Questions</option>
+            <option value="20">20 Questions</option>
+            <option value="30">30 Questions</option>
+            <option value="50">50 Questions</option>
+            <option value="100">100 Questions</option>
+        </select>
+
+
+        <label>Time Per Question</label>
+
+        <select id="time">
+            <option value="60">1 Minute</option>
+            <option value="120">2 Minutes</option>
+            <option value="180">3 Minutes</option>
+        </select>
+
+
+        <button id="startButton">
+            Start Practice
+        </button>
+
+
+        <div class="info">
+            Select your exam and subject, then click
+            <b>Start Practice</b>.
+        </div>
+
+
+        <div class="error" id="error"></div>
+
+    </div>
+
+
+    <!-- QUIZ -->
+
+    <div class="card hidden" id="quiz">
+
+        <div class="top">
+
+            <b id="number">
+                Question 1
+            </b>
+
+            <div class="timer" id="timer">
+                01:00
+            </div>
+
+        </div>
+
+
+        <div class="progress-box">
+
+            <div
+                class="progress"
+                id="progress">
+            </div>
+
+        </div>
+
+
+        <div
+            class="question"
+            id="question">
+        </div>
+
+
+        <div id="answers"></div>
+
+
+        <button id="nextButton">
+            Next Question
+        </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="card hidden" id="result">
+
+        <div class="result">
+
+            <h2>🎉 Exam Finished</h2>
+
+            <div
+                class="score"
+                id="percentage">
+                0%
+            </div>
+
+            <p id="resultText"></p>
+
+            <button id="againButton">
+                Practice Again
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =================================
+   SUBJECTS
+================================= */
+
+const jambSubjects = [
+    "Use of English",
+    "Mathematics",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "Agriculture",
+    "Arabic",
+    "Art",
+    "Christian Religious Studies",
+    "Commerce",
+    "Economics",
+    "French",
+    "Geography",
+    "Government",
+    "Hausa",
+    "History",
+    "Home Economics",
+    "Igbo",
+    "Islamic Studies",
+    "Literature-in-English",
+    "Music",
+    "Principles of Account",
+    "Yoruba",
+    "Computer Studies",
+    "Physical and Health Education"
+];
+
+
+const waecSubjects = [
+    "English Language",
+    "General Mathematics",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "Agricultural Science",
+    "Further Mathematics",
+    "Economics",
+    "Government",
+    "Geography",
+    "History",
+    "Christian Religious Studies",
+    "Islamic Studies",
+    "Literature in English",
+    "Commerce",
+    "Financial Accounting",
+    "Computer Studies",
+    "Civic Education",
+    "French",
+    "Hausa",
+    "Igbo",
+    "Yoruba",
+    "Home Management",
+    "Foods and Nutrition",
+    "Technical Drawing"
+];
+
+
+/* =================================
+   GET ELEMENTS
+================================= */
+
+const exam = document.getElementById("exam");
+
+const subject = document.getElementById("subject");
+
+const amount = document.getElementById("amount");
+
+const time = document.getElementById("time");
+
+const startButton =
+    document.getElementById("startButton");
+
+const nextButton =
+    document.getElementById("nextButton");
+
+const againButton =
+    document.getElementById("againButton");
+
+const setup =
+    document.getElementById("setup");
+
+const quiz =
+    document.getElementById("quiz");
+
+const result =
+    document.getElementById("result");
+
+const question =
+    document.getElementById("question");
+
+const answers =
+    document.getElementById("answers");
+
+const number =
+    document.getElementById("number");
+
+const timer =
+    document.getElementById("timer");
+
+const progress =
+    document.getElementById("progress");
+
+const error =
+    document.getElementById("error");
+
+const percentage =
+    document.getElementById("percentage");
+
+const resultText =
+    document.getElementById("resultText");
+
+
+/* =================================
+   VARIABLES
+================================= */
+
+let questions = [];
+
+let current = 0;
+
+let score = 0;
+
+let selected = "";
+
+let seconds = 60;
+
+let timerID = null;
+
+
+/* =================================
+   CHANGE EXAM
+================================= */
+
+exam.addEventListener("change", function() {
+
+    subject.innerHTML =
+        '<option value="">Select Subject</option>';
+
+    let list = [];
+
+    if (exam.value === "JAMB") {
+        list = jambSubjects;
+    }
+
+    if (exam.value === "WAEC") {
+        list = waecSubjects;
+    }
+
+    list.forEach(function(name) {
+
+        const option =
+            document.createElement("option");
+
+        option.value = name;
+
+        option.textContent = name;
+
+        subject.appendChild(option);
+
+    });
+
+});
+
+
+/* =================================
+   START EXAM
+================================= */
+
+startButton.addEventListener("click", startExam);
+
+
+async function startExam() {
+
+    error.style.display = "none";
+
+    if (exam.value === "") {
+
+        showError("Please choose JAMB or WAEC.");
+
+        return;
+    }
+
+
+    if (subject.value === "") {
+
+        showError("Please choose a subject.");
+
+        return;
+    }
+
+
+    const selectedExam =
+        exam.value;
+
+    const selectedSubject =
+        subject.value;
+
+    const limit =
+        amount.value;
+
+
+    const url =
+        "/api/questions?exam=" +
+        encodeURIComponent(selectedExam) +
+        "&subject=" +
+        encodeURIComponent(selectedSubject) +
+        "&limit=" +
+        limit;
+
+
+    try {
+
+        startButton.disabled = true;
+
+        startButton.textContent =
+            "Loading Questions...";
+
+
+        const response =
+            await fetch(url);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Server error: " +
+                response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if (!Array.isArray(data)) {
+
+            throw new Error(
+                "Questions were not returned correctly."
+            );
+
+        }
+
+
+        if (data.length === 0) {
+
+            showError(
+                "There are no questions for " +
+                selectedExam +
+                " - " +
+                selectedSubject +
+                " yet."
+            );
+
+            return;
+        }
+
+
+        questions = data;
+
+        current = 0;
+
+        score = 0;
+
+
+        setup.classList.add("hidden");
+
+        result.classList.add("hidden");
+
+        quiz.classList.remove("hidden");
+
+
+        showQuestion();
+
+    }
+
+    catch (err) {
+
+        console.error(err);
+
+        showError(
+            "Could not load questions. Check that your server is running."
+        );
+
+    }
+
+    finally {
+
+        startButton.disabled = false;
+
+        startButton.textContent =
+            "Start Practice";
+
+    }
+
+}
+
+
+/* =================================
+   SHOW QUESTION
+================================= */
+
+function showQuestion() {
+
+    clearInterval(timerID);
+
+
+    const q =
+        questions[current];
+
+
+    selected = "";
+
+
+    number.textContent =
+        "Question " +
+        (current + 1) +
+        " of " +
+        questions.length;
+
+
+    question.textContent =
+        q.question || "Question unavailable";
+
+
+    answers.innerHTML = "";
+
+
+    const choices = [
+        ["A", q.option_a],
+        ["B", q.option_b],
+        ["C", q.option_c],
+        ["D", q.option_d]
+    ];
+
+
+    choices.forEach(function(choice) {
+
+        const label =
+            document.createElement("label");
+
+        label.className =
+            "option";
+
+
+        const radio =
+            document.createElement("input");
+
+        radio.type =
+            "radio";
+
+        radio.name =
+            "answer";
+
+        radio.value =
+            choice[0];
+
+
+        radio.addEventListener(
+            "change",
+            function() {
+
+                selected =
+                    this.value;
+
+            }
+        );
+
+
+        label.appendChild(radio);
+
+        label.appendChild(
+            document.createTextNode(
+                " " +
+                choice[0] +
+                ". " +
+                (choice[1] || "")
+            )
+        );
+
+
+        answers.appendChild(label);
+
+    });
+
+
+    const percent =
+        ((current + 1) /
+        questions.length) *
+        100;
+
+
+    progress.style.width =
+        percent + "%";
+
+
+    startTimer();
+
+}
+
+
+/* =================================
+   TIMER
+================================= */
+
+function startTimer() {
+
+    clearInterval(timerID);
+
+
+    seconds =
+        Number(time.value);
+
+
+    updateTimer();
+
+
+    timerID =
+        setInterval(function() {
+
+            seconds--;
+
+            updateTimer();
+
+
+            if (seconds <= 0) {
+
+                clearInterval(timerID);
+
+                moveNext();
+
+            }
+
+        }, 1000);
+
+}
+
+
+/* =================================
+   UPDATE TIMER
+================================= */
+
+function updateTimer() {
+
+    const minutes =
+        Math.floor(seconds / 60);
+
+    const remainingSeconds =
+        seconds % 60;
+
+
+    timer.textContent =
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(remainingSeconds).padStart(2, "0");
+
+}
+
+
+/* =================================
+   NEXT QUESTION
+================================= */
+
+nextButton.addEventListener(
+    "click",
+    moveNext
+);
+
+
+function moveNext() {
+
+    clearInterval(timerID);
+
+
+    const q =
+        questions[current];
+
+
+    const correct =
+        String(
+            q.correct_answer || ""
+        ).toUpperCase();
+
+
+    if (
+        selected !== "" &&
+        selected.toUpperCase() === correct
+    ) {
+
+        score++;
+
+    }
+
+
+    current++;
+
+
+    if (current >= questions.length) {
+
+        finishExam();
+
+        return;
+
+    }
+
+
+    showQuestion();
+
+}
+
+
+/* =================================
+   FINISH
+================================= */
+
+function finishExam() {
+
+    clearInterval(timerID);
+
+
+    quiz.classList.add("hidden");
+
+    result.classList.remove("hidden");
+
+
+    const percent =
+        Math.round(
+            (score / questions.length) * 100
+        );
+
+
+    percentage.textContent =
+        percent + "%";
+
+
+    resultText.textContent =
+        "You scored " +
+        score +
+        " out of " +
+        questions.length +
+        " questions.";
+
+}
+
+
+/* =================================
+   AGAIN
+================================= */
+
+againButton.addEventListener(
+    "click",
+    function() {
+
+        clearInterval(timerID);
+
+        quiz.classList.add("hidden");
+
+        result.classList.add("hidden");
+
+        setup.classList.remove("hidden");
+
+    }
+);
+
+
+/* =================================
+   ERROR
+================================= */
+
+function showError(message) {
+
+    error.textContent =
+        message;
+
+    error.style.display =
+        "block";
+
+}
+
+</script>
+
+</body>
+</html>
+```

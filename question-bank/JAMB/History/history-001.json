@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Pre-Colonial Nigeria",
+    "difficulty": "easy",
+    "question": "Which ancient Nigerian civilisation is particularly famous for its terracotta sculptures?",
+    "options": {
+      "A": "Nok",
+      "B": "Kanem-Bornu",
+      "C": "Oyo",
+      "D": "Benin"
+    },
+    "answer": "A",
+    "explanation": "The Nok civilisation is well known for its distinctive terracotta sculptures, many of which were discovered in central Nigeria."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Pre-Colonial States",
+    "difficulty": "medium",
+    "question": "Which of the following was an important political institution in the Oyo Empire?",
+    "options": {
+      "A": "Alaafin",
+      "B": "Oba of Benin",
+      "C": "Sultan of Sokoto",
+      "D": "Emir of Kano"
+    },
+    "answer": "A",
+    "explanation": "The Alaafin was the ruler of the Oyo Empire. His authority was checked by important political institutions including the Oyo Mesi."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Jihad and Sokoto Caliphate",
+    "difficulty": "medium",
+    "question": "Who led the jihad that resulted in the establishment of the Sokoto Caliphate in the early nineteenth century?",
+    "options": {
+      "A": "Usman dan Fodio",
+      "B": "Jaja of Opobo",
+      "C": "Nana Olomu",
+      "D": "Oba Ovonramwen"
+    },
+    "answer": "A",
+    "explanation": "Usman dan Fodio led the jihad that began in 1804 and resulted in the establishment of the Sokoto Caliphate."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "European Exploration",
+    "difficulty": "medium",
+    "question": "Which European country was the first to establish sustained contact with the Nigerian coast during the era of European exploration?",
+    "options": {
+      "A": "Portugal",
+      "B": "Germany",
+      "C": "France",
+      "D": "Belgium"
+    },
+    "answer": "A",
+    "explanation": "Portuguese explorers reached the West African coast from the fifteenth century and established early European contacts with communities in the region."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Colonial Administration",
+    "difficulty": "medium",
+    "question": "Who introduced the system of indirect rule in Northern Nigeria during British colonial administration?",
+    "options": {
+      "A": "Lord Lugard",
+      "B": "Lord Macaulay",
+      "C": "Lord Mountbatten",
+      "D": "Lord Chelmsford"
+    },
+    "answer": "A",
+    "explanation": "Frederick Lord Lugard developed and applied indirect rule extensively in Northern Nigeria through existing traditional institutions."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Amalgamation",
+    "difficulty": "easy",
+    "question": "In which year were the Northern and Southern Protectorates of Nigeria amalgamated?",
+    "options": {
+      "A": "1900",
+      "B": "1914",
+      "C": "1922",
+      "D": "1939"
+    },
+    "answer": "B",
+    "explanation": "The Northern and Southern Protectorates were amalgamated with the Colony of Lagos in 1914 under Lord Lugard."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Nationalism",
+    "difficulty": "medium",
+    "question": "Which Nigerian nationalist founded the Nigerian Youth Movement in 1934?",
+    "options": {
+      "A": "Herbert Macaulay",
+      "B": "Nnamdi Azikiwe",
+      "C": "Ahmadu Bello",
+      "D": "Obafemi Awolowo"
+    },
+    "answer": "A",
+    "explanation": "Herbert Macaulay was one of the leading figures associated with the development of Nigerian nationalism and the Nigerian Youth Movement emerged in 1934."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Independence",
+    "difficulty": "easy",
+    "question": "Nigeria gained independence from British colonial rule in",
+    "options": {
+      "A": "1957",
+      "B": "1959",
+      "C": "1960",
+      "D": "1963"
+    },
+    "answer": "C",
+    "explanation": "Nigeria became an independent country on 1 October 1960."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "First Republic",
+    "difficulty": "medium",
+    "question": "Who became Nigeria's first Prime Minister at independence?",
+    "options": {
+      "A": "Nnamdi Azikiwe",
+      "B": "Abubakar Tafawa Balewa",
+      "C": "Obafemi Awolowo",
+      "D": "Ahmadu Bello"
+    },
+    "answer": "B",
+    "explanation": "Abubakar Tafawa Balewa became Nigeria's first Prime Minister in 1960."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "History",
+    "topic": "Nigerian Civil War",
+    "difficulty": "hard",
+    "question": "The Nigerian Civil War lasted from",
+    "options": {
+      "A": "1963 to 1966",
+      "B": "1966 to 1969",
+      "C": "1967 to 1970",
+      "D": "1970 to 1973"
+    },
+    "answer": "C",
+    "explanation": "The Nigerian Civil War, also known as the Nigerian-Biafran War, lasted from 1967 to 1970."
+  }
+]

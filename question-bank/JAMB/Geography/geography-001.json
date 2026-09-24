@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Map Reading",
+    "difficulty": "easy",
+    "question": "What is the main purpose of a map scale?",
+    "options": {
+      "A": "To show the direction of wind",
+      "B": "To show the relationship between distance on a map and actual distance",
+      "C": "To show population only",
+      "D": "To show rainfall only"
+    },
+    "answer": "B",
+    "explanation": "A map scale shows the relationship between a distance measured on a map and the corresponding distance on the ground."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Latitude and Longitude",
+    "difficulty": "easy",
+    "question": "Which line divides the Earth into the Northern and Southern Hemispheres?",
+    "options": {
+      "A": "Prime Meridian",
+      "B": "Tropic of Cancer",
+      "C": "Equator",
+      "D": "Tropic of Capricorn"
+    },
+    "answer": "C",
+    "explanation": "The Equator is at 0° latitude and divides the Earth into the Northern and Southern Hemispheres."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Longitude",
+    "difficulty": "medium",
+    "question": "The Prime Meridian passes through which location?",
+    "options": {
+      "A": "Greenwich",
+      "B": "Cairo",
+      "C": "Lagos",
+      "D": "Nairobi"
+    },
+    "answer": "A",
+    "explanation": "The Prime Meridian, which represents 0° longitude, passes through Greenwich in London."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Weather and Climate",
+    "difficulty": "easy",
+    "question": "Which instrument is used to measure atmospheric pressure?",
+    "options": {
+      "A": "Thermometer",
+      "B": "Rain gauge",
+      "C": "Barometer",
+      "D": "Anemometer"
+    },
+    "answer": "C",
+    "explanation": "A barometer is used to measure atmospheric pressure."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Weather and Climate",
+    "difficulty": "medium",
+    "question": "Which instrument is used to measure wind speed?",
+    "options": {
+      "A": "Anemometer",
+      "B": "Hygrometer",
+      "C": "Barometer",
+      "D": "Thermometer"
+    },
+    "answer": "A",
+    "explanation": "An anemometer measures wind speed."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Vegetation",
+    "difficulty": "medium",
+    "question": "Which vegetation type is commonly associated with areas having a long dry season and moderate rainfall?",
+    "options": {
+      "A": "Tropical rainforest",
+      "B": "Savanna",
+      "C": "Mangrove swamp",
+      "D": "Tundra"
+    },
+    "answer": "B",
+    "explanation": "Savanna vegetation commonly occurs in tropical regions with seasonal rainfall and a pronounced dry season."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Population",
+    "difficulty": "medium",
+    "question": "What is population density?",
+    "options": {
+      "A": "The number of people living in a given unit area",
+      "B": "The total number of houses in a city",
+      "C": "The number of births in a country",
+      "D": "The number of people who migrate"
+    },
+    "answer": "A",
+    "explanation": "Population density is the number of people living per unit area, commonly expressed as people per square kilometre."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Rocks",
+    "difficulty": "hard",
+    "question": "Which type of rock is formed from the cooling and solidification of molten magma or lava?",
+    "options": {
+      "A": "Sedimentary rock",
+      "B": "Metamorphic rock",
+      "C": "Igneous rock",
+      "D": "Organic rock"
+    },
+    "answer": "C",
+    "explanation": "Igneous rocks form when molten magma or lava cools and solidifies."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Agriculture",
+    "difficulty": "hard",
+    "question": "Which factor is most directly responsible for determining the type of crops that can be grown in an area?",
+    "options": {
+      "A": "Climate",
+      "B": "Road signs",
+      "C": "Political boundaries",
+      "D": "Language"
+    },
+    "answer": "A",
+    "explanation": "Climate, especially temperature and rainfall, strongly influences the crops that can grow successfully in an area."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Geography",
+    "topic": "Transportation",
+    "difficulty": "hard",
+    "question": "Which mode of transportation is generally most suitable for transporting very bulky goods over long distances by sea?",
+    "options": {
+      "A": "Air transport",
+      "B": "Water transport",
+      "C": "Motorcycle transport",
+      "D": "Pipeline transport"
+    },
+    "answer": "B",
+    "explanation": "Water transport is suitable for moving large quantities of bulky goods over long distances, especially between ports."
+  }
+]

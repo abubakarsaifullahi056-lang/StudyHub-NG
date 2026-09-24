@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Pre-Colonial West Africa",
+    "difficulty": "easy",
+    "question": "Which ancient West African empire became famous for its control of trans-Saharan trade?",
+    "options": {
+      "A": "Mali Empire",
+      "B": "Benin Kingdom",
+      "C": "Oyo Empire",
+      "D": "Kanem-Bornu Empire"
+    },
+    "answer": "A",
+    "explanation": "The Mali Empire became a major centre of trans-Saharan trade and was especially known for its wealth in gold."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Mali Empire",
+    "difficulty": "easy",
+    "question": "Who is traditionally regarded as the founder of the Mali Empire?",
+    "options": {
+      "A": "Mansa Musa",
+      "B": "Sundiata Keita",
+      "C": "Askia Muhammad",
+      "D": "Sonni Ali"
+    },
+    "answer": "B",
+    "explanation": "Sundiata Keita is traditionally regarded as the founder of the Mali Empire in the 13th century."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Songhai Empire",
+    "difficulty": "easy",
+    "question": "Which city became an important centre of learning and trade under the Songhai Empire?",
+    "options": {
+      "A": "Timbuktu",
+      "B": "Lagos",
+      "C": "Calabar",
+      "D": "Ibadan"
+    },
+    "answer": "A",
+    "explanation": "Timbuktu was an important commercial and intellectual centre in the Songhai Empire and became famous for Islamic scholarship."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "European Colonialism",
+    "difficulty": "medium",
+    "question": "What was one major reason European powers became interested in West Africa during the colonial period?",
+    "options": {
+      "A": "To obtain raw materials and expand trade",
+      "B": "To reduce international trade",
+      "C": "To stop all agricultural production",
+      "D": "To eliminate transportation"
+    },
+    "answer": "A",
+    "explanation": "European powers sought raw materials, markets and strategic advantages as they expanded their economic and political influence in Africa."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Colonial Administration",
+    "difficulty": "medium",
+    "question": "Which system of colonial administration was strongly associated with Lord Lugard in Nigeria?",
+    "options": {
+      "A": "Direct rule",
+      "B": "Indirect rule",
+      "C": "Communist rule",
+      "D": "Military dictatorship"
+    },
+    "answer": "B",
+    "explanation": "Lord Frederick Lugard is strongly associated with the use of indirect rule in British colonial administration in Nigeria."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Amalgamation of Nigeria",
+    "difficulty": "medium",
+    "question": "In which year were the Northern and Southern Protectorates of Nigeria amalgamated?",
+    "options": {
+      "A": "1900",
+      "B": "1914",
+      "C": "1922",
+      "D": "1960"
+    },
+    "answer": "B",
+    "explanation": "The Northern and Southern Protectorates were amalgamated in 1914 under British colonial administration."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Nigerian Nationalism",
+    "difficulty": "hard",
+    "question": "Which of the following was an important objective of Nigerian nationalist movements?",
+    "options": {
+      "A": "Achieving greater political participation and self-government",
+      "B": "Increasing colonial control",
+      "C": "Ending education",
+      "D": "Preventing political organizations"
+    },
+    "answer": "A",
+    "explanation": "Nigerian nationalist movements campaigned for greater political participation, constitutional reforms and eventually self-government."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Nigerian Independence",
+    "difficulty": "hard",
+    "question": "On what date did Nigeria gain independence from British colonial rule?",
+    "options": {
+      "A": "1 October 1960",
+      "B": "1 January 1960",
+      "C": "15 January 1966",
+      "D": "29 May 1999"
+    },
+    "answer": "A",
+    "explanation": "Nigeria became an independent country on 1 October 1960."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "Military Rule in Nigeria",
+    "difficulty": "hard",
+    "question": "In which year did Nigeria experience its first military coup?",
+    "options": {
+      "A": "1960",
+      "B": "1963",
+      "C": "1966",
+      "D": "1970"
+    },
+    "answer": "C",
+    "explanation": "Nigeria experienced its first military coup in January 1966."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "History",
+    "topic": "African History",
+    "difficulty": "hard",
+    "question": "Which organization was established in 1963 to promote unity and cooperation among independent African states?",
+    "options": {
+      "A": "United Nations",
+      "B": "Organization of African Unity",
+      "C": "Economic Community of West African States",
+      "D": "Commonwealth of Nations"
+    },
+    "answer": "B",
+    "explanation": "The Organization of African Unity (OAU) was established in 1963 to promote African unity, cooperation and solidarity."
+  }
+]

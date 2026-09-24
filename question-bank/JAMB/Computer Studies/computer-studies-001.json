@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Computer Fundamentals",
+    "difficulty": "easy",
+    "question": "Which part of a computer is mainly responsible for processing instructions?",
+    "options": {
+      "A": "Monitor",
+      "B": "CPU",
+      "C": "Keyboard",
+      "D": "Printer"
+    },
+    "answer": "B",
+    "explanation": "The Central Processing Unit (CPU) processes instructions and performs calculations in a computer."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Input Devices",
+    "difficulty": "easy",
+    "question": "Which of the following is an input device?",
+    "options": {
+      "A": "Monitor",
+      "B": "Printer",
+      "C": "Keyboard",
+      "D": "Speaker"
+    },
+    "answer": "C",
+    "explanation": "A keyboard is an input device because it allows users to enter data and commands into a computer."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Output Devices",
+    "difficulty": "easy",
+    "question": "Which device is commonly used to display information from a computer?",
+    "options": {
+      "A": "Monitor",
+      "B": "Mouse",
+      "C": "Keyboard",
+      "D": "Scanner"
+    },
+    "answer": "A",
+    "explanation": "A monitor is an output device that displays text, images and other information from the computer."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Memory",
+    "difficulty": "medium",
+    "question": "Which type of memory temporarily stores data and programs currently being used by the computer?",
+    "options": {
+      "A": "ROM",
+      "B": "RAM",
+      "C": "DVD",
+      "D": "Hard disk"
+    },
+    "answer": "B",
+    "explanation": "RAM provides temporary working storage for data and programs that are actively being used."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Operating Systems",
+    "difficulty": "medium",
+    "question": "Which of the following is an operating system?",
+    "options": {
+      "A": "Windows",
+      "B": "Google Chrome",
+      "C": "Microsoft Word",
+      "D": "Adobe Photoshop"
+    },
+    "answer": "A",
+    "explanation": "Windows is an operating system that manages computer hardware and provides services for applications."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Computer Networks",
+    "difficulty": "medium",
+    "question": "What does LAN stand for?",
+    "options": {
+      "A": "Large Area Network",
+      "B": "Local Area Network",
+      "C": "Long Access Network",
+      "D": "Linked Application Network"
+    },
+    "answer": "B",
+    "explanation": "LAN stands for Local Area Network, which connects devices within a relatively small geographical area."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Internet",
+    "difficulty": "medium",
+    "question": "Which protocol is commonly used to transfer web pages between a browser and a web server?",
+    "options": {
+      "A": "HTTP",
+      "B": "FTP",
+      "C": "SMTP",
+      "D": "POP3"
+    },
+    "answer": "A",
+    "explanation": "HTTP is a protocol used for communication between web browsers and web servers."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Database",
+    "difficulty": "hard",
+    "question": "What is a database?",
+    "options": {
+      "A": "An organized collection of data",
+      "B": "A computer monitor",
+      "C": "A type of keyboard",
+      "D": "A power supply"
+    },
+    "answer": "A",
+    "explanation": "A database is an organized collection of related data that can be stored, managed and retrieved."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Programming",
+    "difficulty": "hard",
+    "question": "What is an algorithm?",
+    "options": {
+      "A": "A step-by-step procedure for solving a problem",
+      "B": "A computer screen",
+      "C": "A type of printer",
+      "D": "A storage device"
+    },
+    "answer": "A",
+    "explanation": "An algorithm is a finite sequence of clear steps designed to solve a problem or perform a task."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Computer Studies",
+    "topic": "Computer Security",
+    "difficulty": "hard",
+    "question": "Which of the following is a good computer security practice?",
+    "options": {
+      "A": "Sharing passwords publicly",
+      "B": "Using strong and unique passwords",
+      "C": "Opening every unknown attachment",
+      "D": "Disabling all security updates"
+    },
+    "answer": "B",
+    "explanation": "Using strong, unique passwords helps reduce the risk of unauthorized access to accounts and systems."
+  }
+]

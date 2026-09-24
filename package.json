@@ -1,0 +1,29 @@
+{
+  "name": "studyhub-ng",
+  "version": "1.0.0",
+  "description": "StudyHub NG - Learn. Practice. Succeed.",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "node server/app.js",
+    "import-questions": "node server/import-questions.js",
+    "create-admin": "node server/create-admin.js"
+  },
+  "keywords": [
+    "education",
+    "waec",
+    "jamb",
+    "quiz",
+    "study",
+    "nigeria"
+  ],
+  "author": "StudyHub NG",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^18.0.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "sqlite3": "^5.1.7"
+  }
+}

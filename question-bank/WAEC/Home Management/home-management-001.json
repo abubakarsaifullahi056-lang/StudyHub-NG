@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Home Management",
+    "difficulty": "easy",
+    "question": "Home management is mainly concerned with the",
+    "options": {
+      "A": "effective use of family resources",
+      "B": "production of machines",
+      "C": "construction of roads",
+      "D": "manufacture of vehicles"
+    },
+    "answer": "A",
+    "explanation": "Home management involves planning and using available family resources effectively to meet household needs."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Family Resources",
+    "difficulty": "easy",
+    "question": "Which of the following is a human resource?",
+    "options": {
+      "A": "Money",
+      "B": "Furniture",
+      "C": "Time",
+      "D": "Land"
+    },
+    "answer": "C",
+    "explanation": "Time is a human resource because it is available to people and must be planned and managed effectively."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Budgeting",
+    "difficulty": "medium",
+    "question": "A household budget is a plan showing",
+    "options": {
+      "A": "only the family's possessions",
+      "B": "expected income and expenditure",
+      "C": "the number of family members only",
+      "D": "the family's daily activities only"
+    },
+    "answer": "B",
+    "explanation": "A budget estimates the income available and how it will be allocated among planned expenses."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Consumer Education",
+    "difficulty": "medium",
+    "question": "A consumer should compare prices before buying a product mainly to",
+    "options": {
+      "A": "avoid all advertisements",
+      "B": "make an informed purchasing decision",
+      "C": "increase the price of the product",
+      "D": "prevent the seller from making profit"
+    },
+    "answer": "B",
+    "explanation": "Comparing prices and product qualities helps consumers make informed purchasing decisions."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Household Cleaning",
+    "difficulty": "easy",
+    "question": "Which of the following is most suitable for removing grease from kitchen surfaces?",
+    "options": {
+      "A": "Detergent",
+      "B": "Plain water only",
+      "C": "Sand",
+      "D": "Paper"
+    },
+    "answer": "A",
+    "explanation": "Detergents are designed to help loosen and remove dirt and grease from surfaces."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Laundry",
+    "difficulty": "medium",
+    "question": "The main purpose of sorting clothes before washing is to",
+    "options": {
+      "A": "increase the amount of dirt",
+      "B": "prevent colour transfer and fabric damage",
+      "C": "make clothes heavier",
+      "D": "use more water"
+    },
+    "answer": "B",
+    "explanation": "Sorting clothes according to colour, fabric type and level of dirt helps prevent colour transfer and damage."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Clothing Care",
+    "difficulty": "easy",
+    "question": "Which appliance is commonly used to remove wrinkles from clothes?",
+    "options": {
+      "A": "Refrigerator",
+      "B": "Electric iron",
+      "C": "Blender",
+      "D": "Kettle"
+    },
+    "answer": "B",
+    "explanation": "An electric iron uses heat to remove wrinkles and creases from suitable fabrics."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Interior Decoration",
+    "difficulty": "medium",
+    "question": "Which factor is important when choosing furniture for a room?",
+    "options": {
+      "A": "The size of the room",
+      "B": "The colour of the sky",
+      "C": "The distance from a market",
+      "D": "The number of roads nearby"
+    },
+    "answer": "A",
+    "explanation": "Furniture should be selected according to the size and purpose of the room so that the space remains functional and comfortable."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Safety in the Home",
+    "difficulty": "medium",
+    "question": "Which practice can help prevent accidents in the home?",
+    "options": {
+      "A": "Leaving wet floors unattended",
+      "B": "Keeping electrical cables safely arranged",
+      "C": "Leaving knives on the floor",
+      "D": "Overloading electrical sockets"
+    },
+    "answer": "B",
+    "explanation": "Keeping electrical cables properly arranged reduces the risk of trips and other household accidents."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Home Management",
+    "topic": "Time Management",
+    "difficulty": "easy",
+    "question": "A timetable is useful in the home because it helps to",
+    "options": {
+      "A": "waste available time",
+      "B": "organize activities",
+      "C": "increase household expenses",
+      "D": "avoid planning"
+    },
+    "answer": "B",
+    "explanation": "A timetable helps organize activities and ensures that important tasks are given appropriate time."
+  }
+]

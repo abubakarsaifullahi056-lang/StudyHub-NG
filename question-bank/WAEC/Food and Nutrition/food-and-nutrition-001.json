@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Nutrients",
+    "difficulty": "easy",
+    "question": "Which nutrient is mainly responsible for growth and repair of body tissues?",
+    "options": {
+      "A": "Carbohydrate",
+      "B": "Protein",
+      "C": "Fat",
+      "D": "Water"
+    },
+    "answer": "B",
+    "explanation": "Protein is needed for growth, maintenance and repair of body tissues."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Carbohydrates",
+    "difficulty": "easy",
+    "question": "Which of the following is a major source of carbohydrate?",
+    "options": {
+      "A": "Rice",
+      "B": "Fish",
+      "C": "Egg",
+      "D": "Meat"
+    },
+    "answer": "A",
+    "explanation": "Rice contains a high proportion of carbohydrate and provides energy."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Vitamins",
+    "difficulty": "medium",
+    "question": "A deficiency of vitamin C can cause which condition?",
+    "options": {
+      "A": "Rickets",
+      "B": "Scurvy",
+      "C": "Night blindness",
+      "D": "Anaemia"
+    },
+    "answer": "B",
+    "explanation": "Vitamin C deficiency can cause scurvy, which may result in bleeding gums and poor wound healing."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Food Preservation",
+    "difficulty": "easy",
+    "question": "Which method of food preservation involves removing moisture from food?",
+    "options": {
+      "A": "Drying",
+      "B": "Boiling",
+      "C": "Steaming",
+      "D": "Grilling"
+    },
+    "answer": "A",
+    "explanation": "Drying preserves food by reducing its moisture content, which limits the growth of microorganisms."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Food Preparation",
+    "difficulty": "medium",
+    "question": "Which cooking method uses steam to cook food?",
+    "options": {
+      "A": "Frying",
+      "B": "Steaming",
+      "C": "Roasting",
+      "D": "Grilling"
+    },
+    "answer": "B",
+    "explanation": "Steaming cooks food using hot steam produced from boiling water."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Balanced Diet",
+    "difficulty": "easy",
+    "question": "A balanced diet is one that contains",
+    "options": {
+      "A": "only protein and vitamins",
+      "B": "all essential nutrients in appropriate proportions",
+      "C": "mainly carbohydrates",
+      "D": "only fruits and vegetables"
+    },
+    "answer": "B",
+    "explanation": "A balanced diet provides all essential nutrients in the right proportions for good health."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Food Hygiene",
+    "difficulty": "medium",
+    "question": "Which practice helps prevent contamination of food during preparation?",
+    "options": {
+      "A": "Using dirty utensils",
+      "B": "Leaving food uncovered",
+      "C": "Washing hands before handling food",
+      "D": "Using contaminated water"
+    },
+    "answer": "C",
+    "explanation": "Washing hands before handling food helps prevent harmful microorganisms from contaminating food."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Minerals",
+    "difficulty": "medium",
+    "question": "Which mineral is important for the formation of strong bones and teeth?",
+    "options": {
+      "A": "Calcium",
+      "B": "Sodium",
+      "C": "Iodine",
+      "D": "Chlorine"
+    },
+    "answer": "A",
+    "explanation": "Calcium is essential for the development and maintenance of strong bones and teeth."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Food Storage",
+    "difficulty": "medium",
+    "question": "Why is refrigeration useful for storing perishable foods?",
+    "options": {
+      "A": "It increases bacterial growth",
+      "B": "It slows the growth of microorganisms",
+      "C": "It removes all nutrients",
+      "D": "It makes food permanently safe"
+    },
+    "answer": "B",
+    "explanation": "Low temperatures in a refrigerator slow the growth of many microorganisms and help food remain fresh for longer."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Food and Nutrition",
+    "topic": "Fats and Oils",
+    "difficulty": "easy",
+    "question": "Which of the following is a common source of dietary fat?",
+    "options": {
+      "A": "Vegetable oil",
+      "B": "Orange",
+      "C": "Water",
+      "D": "Sugar"
+    },
+    "answer": "A",
+    "explanation": "Vegetable oils are rich sources of dietary fat and can also provide essential fatty acids."
+  }
+]

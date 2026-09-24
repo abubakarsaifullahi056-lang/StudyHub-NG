@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Progress - StudyHub NG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+</head>
+
+
+<body>
+
+
+<header class="dashboard-header">
+
+    <div class="dashboard-logo">
+        StudyHub NG
+    </div>
+
+    <nav>
+
+               <a href="dashboard.html">Dashboard</a>
+
+        <a href="practice.html">Practice</a>
+
+        <a href="results.html">Results</a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<main class="progress-page">
+
+
+    <section class="results-hero">
+
+        <p class="small-title">
+            PERFORMANCE TRACKER
+        </p>
+
+        <h1>
+            My Progress 📈
+        </h1>
+
+        <p>
+            See how your exam preparation is improving.
+        </p>
+
+    </section>
+
+
+
+    <section class="results-summary">
+
+
+        <div class="result-summary-card">
+
+            <span>📝</span>
+
+            <div>
+
+                <p>
+                    Total Quizzes
+                </p>
+
+                <strong id="totalQuizzes">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="result-summary-card">
+
+            <span>📊</span>
+
+            <div>
+
+                <p>
+                    Average Score
+                </p>
+
+                <strong id="averageScore">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="result-summary-card">
+
+            <span>🏆</span>
+
+            <div>
+
+                <p>
+                    Best Score
+                </p>
+
+                <strong id="bestScore">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="result-summary-card">
+
+            <span>✅</span>
+
+            <div>
+
+                <p>
+                    Correct Answers
+                </p>
+
+                <strong id="totalCorrect">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="results-section">
+
+
+        <div class="results-section-heading">
+
+            <div>
+
+                <p class="small-title">
+                    SUBJECT PERFORMANCE
+                </p>
+
+                <h2>
+                    Your Performance by Subject
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="subjectProgress">
+
+            <div class="loading-results">
+                Loading progress...
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script>
+
+
+async function loadProgress() {
+
+    try {
+
+        const response =
+            await fetch("/api/progress");
+
+
+        if (response.status === 401) {
+
+            window.location.href =
+                "login.html";
+
+            return;
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok) {
+
+            alert(
+                data.message ||
+                "Unable to load progress."
+            );
+
+            return;
+
+        }
+
+
+        const stats =
+            data.stats || {};
+
+
+        document.getElementById(
+            "totalQuizzes"
+        ).textContent =
+            stats.totalQuizzes || 0;
+
+
+        document.getElementById(
+            "averageScore"
+        ).textContent =
+            (stats.averageScore || 0) + "%";
+
+
+        document.getElementById(
+            "bestScore"
+        ).textContent =
+            (stats.bestScore || 0) + "%";
+
+
+        document.getElementById(
+            "totalCorrect"
+        ).textContent =
+            stats.totalCorrect || 0;
+
+
+        const subjects =
+            data.subjects || [];
+
+
+        const container =
+            document.getElementById(
+                "subjectProgress"
+            );
+
+
+        if (subjects.length === 0) {
+
+            container.innerHTML = `
+
+                <div class="empty-results">
+
+                    <div class="empty-icon">
+                        📚
+                    </div>
+
+                    <h2>
+                        No progress yet
+                    </h2>
+
+                    <p>
+                        Complete a practice quiz
+                        to start tracking your progress.
+                    </p>
+
+                    <a
+                        href="practice.html"
+                        class="practice-button"
+                    >
+                        Start Practising
+                    </a>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        container.innerHTML =
+            subjects.map(subject => `
+
+                <div class="subject-progress-card">
+
+                    <div class="subject-progress-header">
+
+                        <div>
+
+                            <h3>
+                                ${escapeHtml(
+                                    subject.subject
+                                )}
+                            </h3>
+
+                            <p>
+                                ${subject.quizzes}
+                                quiz${subject.quizzes == 1 ? "" : "zes"}
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ${subject.averageScore}%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: ${Math.min(
+                                Number(subject.averageScore) || 0,
+                                100
+                            )}%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="subject-progress-footer">
+
+                        <span>
+                            Best:
+                            <strong>
+                                ${subject.bestScore}%
+                            </strong>
+                        </span>
+
+                        <span>
+                            Correct:
+                            <strong>
+                                ${subject.totalCorrect}
+                            </strong>
+                            /
+                            ${subject.totalQuestions}
+                        </span>
+
+                    </div>
+
+                </div>
+
+            `).join("");
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById(
+            "subjectProgress"
+        ).innerHTML = `
+
+            <div class="empty-results">
+
+                <h2>
+                    Connection error
+                </h2>
+
+                <p>
+                    Make sure StudyHub NG is running.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+
+function escapeHtml(value) {
+
+    return String(value)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+
+document
+    .getElementById("logoutBtn")
+    .addEventListener(
+        "click",
+        async () => {
+
+            await fetch(
+                "/api/logout",
+                {
+                    method: "POST"
+                }
+            );
+
+            window.location.href =
+                "login.html";
+
+        }
+    );
+
+
+loadProgress();
+
+</script>
+
+
+</body>
+
+</html>

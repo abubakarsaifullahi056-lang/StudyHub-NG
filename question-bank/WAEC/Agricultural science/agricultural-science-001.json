@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Soil Science",
+    "difficulty": "easy",
+    "question": "Which soil type generally has the highest water-holding capacity?",
+    "options": {
+      "A": "Sandy soil",
+      "B": "Clay soil",
+      "C": "Gravel soil",
+      "D": "Stony soil"
+    },
+    "answer": "B",
+    "explanation": "Clay soil has very small particles and therefore holds more water than sandy soil."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Crop Production",
+    "difficulty": "easy",
+    "question": "Which of the following is a cereal crop?",
+    "options": {
+      "A": "Beans",
+      "B": "Groundnut",
+      "C": "Maize",
+      "D": "Cassava"
+    },
+    "answer": "C",
+    "explanation": "Maize is a cereal crop belonging to the grass family."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Farm Tools",
+    "difficulty": "easy",
+    "question": "Which farm tool is commonly used for loosening soil and making ridges?",
+    "options": {
+      "A": "Cutlass",
+      "B": "Hoe",
+      "C": "Rake",
+      "D": "Watering can"
+    },
+    "answer": "B",
+    "explanation": "A hoe is commonly used for loosening soil, weeding and making ridges."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Animal Production",
+    "difficulty": "medium",
+    "question": "Which of the following animals is classified as a ruminant?",
+    "options": {
+      "A": "Pig",
+      "B": "Chicken",
+      "C": "Goat",
+      "D": "Rabbit"
+    },
+    "answer": "C",
+    "explanation": "Goats are ruminants because they have a specialized digestive system with a multi-compartment stomach."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Farm Management",
+    "difficulty": "medium",
+    "question": "Which record is used to show money received and money spent on a farm?",
+    "options": {
+      "A": "Farm diary",
+      "B": "Cash book",
+      "C": "Inventory",
+      "D": "Production record"
+    },
+    "answer": "B",
+    "explanation": "A farm cash book records cash receipts and cash payments."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Agricultural Economics",
+    "difficulty": "medium",
+    "question": "What is the reward for the use of capital in agricultural production?",
+    "options": {
+      "A": "Rent",
+      "B": "Wages",
+      "C": "Interest",
+      "D": "Profit"
+    },
+    "answer": "C",
+    "explanation": "Interest is the traditional economic reward for the use of capital."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Crop Production",
+    "difficulty": "medium",
+    "question": "Which practice helps to reduce soil erosion on sloping farmland?",
+    "options": {
+      "A": "Bush burning",
+      "B": "Contour farming",
+      "C": "Overgrazing",
+      "D": "Continuous cropping"
+    },
+    "answer": "B",
+    "explanation": "Contour farming slows water movement down slopes and helps reduce soil erosion."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Animal Health",
+    "difficulty": "hard",
+    "question": "Which of the following is an important method of preventing the spread of infectious diseases among livestock?",
+    "options": {
+      "A": "Overcrowding",
+      "B": "Poor sanitation",
+      "C": "Vaccination",
+      "D": "Feeding contaminated food"
+    },
+    "answer": "C",
+    "explanation": "Vaccination helps animals develop protection against specific infectious diseases."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Farm Machinery",
+    "difficulty": "hard",
+    "question": "Which machine is primarily used for turning and preparing the soil during primary tillage?",
+    "options": {
+      "A": "Plough",
+      "B": "Sprayer",
+      "C": "Harvester",
+      "D": "Planter"
+    },
+    "answer": "A",
+    "explanation": "A plough is used mainly for primary tillage to turn and loosen the soil."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Agricultural Science",
+    "topic": "Soil Fertility",
+    "difficulty": "hard",
+    "question": "Which nutrient is mainly associated with vigorous vegetative growth in plants?",
+    "options": {
+      "A": "Nitrogen",
+      "B": "Calcium",
+      "C": "Sodium",
+      "D": "Chlorine"
+    },
+    "answer": "A",
+    "explanation": "Nitrogen is important for leaf and stem growth and is a major nutrient required by plants."
+  }
+]

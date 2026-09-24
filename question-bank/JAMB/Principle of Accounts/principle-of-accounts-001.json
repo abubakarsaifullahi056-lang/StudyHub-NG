@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Accounting Basics",
+    "difficulty": "easy",
+    "question": "What is the main purpose of accounting?",
+    "options": {
+      "A": "To record and communicate financial information",
+      "B": "To produce goods",
+      "C": "To advertise products",
+      "D": "To transport goods"
+    },
+    "answer": "A",
+    "explanation": "Accounting involves recording, classifying, summarizing and communicating financial information to users."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Accounting Equation",
+    "difficulty": "easy",
+    "question": "Which of the following is the basic accounting equation?",
+    "options": {
+      "A": "Assets = Capital + Liabilities",
+      "B": "Assets = Sales - Expenses",
+      "C": "Capital = Sales + Purchases",
+      "D": "Liabilities = Assets + Capital"
+    },
+    "answer": "A",
+    "explanation": "The basic accounting equation is Assets = Capital + Liabilities."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Assets",
+    "difficulty": "easy",
+    "question": "Which of the following is a current asset?",
+    "options": {
+      "A": "Building",
+      "B": "Motor vehicle",
+      "C": "Cash",
+      "D": "Furniture"
+    },
+    "answer": "C",
+    "explanation": "Cash is a current asset because it is readily available for use in the business."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Liabilities",
+    "difficulty": "medium",
+    "question": "Which of the following is a liability?",
+    "options": {
+      "A": "Cash",
+      "B": "Debtors",
+      "C": "Creditors",
+      "D": "Stock"
+    },
+    "answer": "C",
+    "explanation": "Creditors are persons or organizations to whom the business owes money, making them liabilities."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Double Entry",
+    "difficulty": "medium",
+    "question": "In double-entry bookkeeping, every transaction affects at least how many accounts?",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Three",
+      "D": "Four"
+    },
+    "answer": "B",
+    "explanation": "The double-entry principle requires every transaction to have a debit entry and a corresponding credit entry."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Books of Original Entry",
+    "difficulty": "medium",
+    "question": "Which book is used to record credit purchases of goods?",
+    "options": {
+      "A": "Sales journal",
+      "B": "Purchases journal",
+      "C": "Cash book",
+      "D": "Returns inward journal"
+    },
+    "answer": "B",
+    "explanation": "Credit purchases of goods for resale are recorded in the purchases journal."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Trial Balance",
+    "difficulty": "medium",
+    "question": "What is one main purpose of a trial balance?",
+    "options": {
+      "A": "To test the arithmetical accuracy of ledger entries",
+      "B": "To calculate population",
+      "C": "To advertise the business",
+      "D": "To record only cash sales"
+    },
+    "answer": "A",
+    "explanation": "A trial balance is prepared mainly to check the arithmetical equality of debit and credit balances."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Depreciation",
+    "difficulty": "hard",
+    "question": "What is depreciation?",
+    "options": {
+      "A": "An increase in the value of an asset",
+      "B": "A decrease in the value of a fixed asset over time",
+      "C": "An increase in sales",
+      "D": "A reduction in capital only"
+    },
+    "answer": "B",
+    "explanation": "Depreciation is the systematic allocation of the depreciable amount of a fixed asset over its useful life."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Profit and Loss",
+    "difficulty": "hard",
+    "question": "If revenue is greater than expenses, the business has made a:",
+    "options": {
+      "A": "Loss",
+      "B": "Profit",
+      "C": "Liability",
+      "D": "Drawings"
+    },
+    "answer": "B",
+    "explanation": "When revenue exceeds expenses, the difference represents profit."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Principle of Accounts",
+    "topic": "Capital and Drawings",
+    "difficulty": "hard",
+    "question": "What are drawings in accounting?",
+    "options": {
+      "A": "Money or goods taken by the owner for personal use",
+      "B": "Money received from customers",
+      "C": "Goods purchased on credit",
+      "D": "A business loan"
+    },
+    "answer": "A",
+    "explanation": "Drawings are cash or goods withdrawn by the owner from the business for personal use."
+  }
+]

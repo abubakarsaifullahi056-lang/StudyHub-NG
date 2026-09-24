@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Creation",
+    "difficulty": "easy",
+    "question": "According to the creation account in Genesis, what did God create on the first day?",
+    "options": {
+      "A": "The sun and moon",
+      "B": "Light",
+      "C": "Animals",
+      "D": "Human beings"
+    },
+    "answer": "B",
+    "explanation": "Genesis 1 records that God created light on the first day of creation."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Abraham",
+    "difficulty": "easy",
+    "question": "Who was the son of Abraham and Sarah?",
+    "options": {
+      "A": "Jacob",
+      "B": "Joseph",
+      "C": "Isaac",
+      "D": "Moses"
+    },
+    "answer": "C",
+    "explanation": "Isaac was the son promised by God to Abraham and Sarah."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Moses",
+    "difficulty": "medium",
+    "question": "Where did Moses receive the Ten Commandments?",
+    "options": {
+      "A": "Mount Sinai",
+      "B": "Mount Carmel",
+      "C": "Mount Zion",
+      "D": "Mount Olivet"
+    },
+    "answer": "A",
+    "explanation": "According to the biblical account, Moses received the Ten Commandments from God at Mount Sinai."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Prophets",
+    "difficulty": "medium",
+    "question": "Who challenged the prophets of Baal on Mount Carmel?",
+    "options": {
+      "A": "Elijah",
+      "B": "Isaiah",
+      "C": "Jeremiah",
+      "D": "Samuel"
+    },
+    "answer": "A",
+    "explanation": "Elijah confronted the prophets of Baal on Mount Carmel and demonstrated his faith in the God of Israel."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Jesus Christ",
+    "difficulty": "easy",
+    "question": "Where was Jesus born?",
+    "options": {
+      "A": "Nazareth",
+      "B": "Jerusalem",
+      "C": "Bethlehem",
+      "D": "Capernaum"
+    },
+    "answer": "C",
+    "explanation": "The Gospel accounts identify Bethlehem in Judea as the birthplace of Jesus."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Teachings of Jesus",
+    "difficulty": "medium",
+    "question": "Which of the following is known as the Golden Rule in Jesus' teaching?",
+    "options": {
+      "A": "Do not steal from others",
+      "B": "Do unto others as you would have them do unto you",
+      "C": "Always give money to the poor",
+      "D": "Never speak to strangers"
+    },
+    "answer": "B",
+    "explanation": "Jesus taught his followers to treat others in the way they would want others to treat them."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Parables",
+    "difficulty": "medium",
+    "question": "In the parable of the Good Samaritan, who helped the injured man?",
+    "options": {
+      "A": "A priest",
+      "B": "A Levite",
+      "C": "A Samaritan",
+      "D": "A soldier"
+    },
+    "answer": "C",
+    "explanation": "The Samaritan showed compassion by caring for the injured man after others had passed him."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Crucifixion and Resurrection",
+    "difficulty": "easy",
+    "question": "What happened to Jesus on the third day after His crucifixion, according to the New Testament?",
+    "options": {
+      "A": "He was imprisoned",
+      "B": "He was resurrected",
+      "C": "He returned to Galilee immediately",
+      "D": "He was crowned king"
+    },
+    "answer": "B",
+    "explanation": "The New Testament teaches that Jesus rose from the dead on the third day after His crucifixion."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Early Church",
+    "difficulty": "medium",
+    "question": "Who was the first Christian martyr recorded in the Acts of the Apostles?",
+    "options": {
+      "A": "Peter",
+      "B": "Paul",
+      "C": "Stephen",
+      "D": "Barnabas"
+    },
+    "answer": "C",
+    "explanation": "Stephen is described in Acts as the first Christian martyr."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Christian Religious Studies",
+    "topic": "Christian Living",
+    "difficulty": "hard",
+    "question": "According to Paul, which of the following is a fruit of the Spirit?",
+    "options": {
+      "A": "Jealousy",
+      "B": "Hatred",
+      "C": "Love",
+      "D": "Pride"
+    },
+    "answer": "C",
+    "explanation": "Paul lists love among the fruit of the Spirit in Galatians 5:22–23."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Ikini",
+    "difficulty": "easy",
+    "question": "Ewo ni itumo oro \"Bawo ni?\"?",
+    "options": {
+      "A": "How are you?",
+      "B": "Good night",
+      "C": "Thank you",
+      "D": "Goodbye"
+    },
+    "answer": "A",
+    "explanation": "\"Bawo ni?\" je ona ikini ti o tumo si \"How are you?\"."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "Kini itumo oro \"ile\" ni ede Gẹẹsi?",
+    "options": {
+      "A": "School",
+      "B": "House",
+      "C": "Market",
+      "D": "Farm"
+    },
+    "answer": "B",
+    "explanation": "\"Ile\" tumo si \"house\" ni ede Gẹẹsi."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Vocabulary",
+    "difficulty": "easy",
+    "question": "Kini itumo oro \"omi\"?",
+    "options": {
+      "A": "Fire",
+      "B": "Food",
+      "C": "Water",
+      "D": "Air"
+    },
+    "answer": "C",
+    "explanation": "\"Omi\" tumo si \"water\" ni ede Gẹẹsi."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Ebi",
+    "difficulty": "easy",
+    "question": "Kini a n pe iya eniyan?",
+    "options": {
+      "A": "Baba",
+      "B": "Iya",
+      "C": "Arakunrin",
+      "D": "Omo"
+    },
+    "answer": "B",
+    "explanation": "Iya ni a n pe obinrin ti o bi eniyan."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Ebi",
+    "difficulty": "easy",
+    "question": "Kini a n pe baba eniyan?",
+    "options": {
+      "A": "Iya",
+      "B": "Baba",
+      "C": "Arabinrin",
+      "D": "Omo"
+    },
+    "answer": "B",
+    "explanation": "Baba ni a n pe okunrin ti o bi eniyan."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Numerals",
+    "difficulty": "easy",
+    "question": "Ewo ni nọmba akọkọ ninu awon wọnyi?",
+    "options": {
+      "A": "Meji",
+      "B": "Meta",
+      "C": "Okan",
+      "D": "Merin"
+    },
+    "answer": "C",
+    "explanation": "\"Okan\" je nọmba 1 ni ede Yoruba."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Opposites",
+    "difficulty": "medium",
+    "question": "Kini odi itumo oro \"nla\"?",
+    "options": {
+      "A": "Dara",
+      "B": "Kekere",
+      "C": "Gigun",
+      "D": "Funfun"
+    },
+    "answer": "B",
+    "explanation": "\"Kekere\" je oro ti o lodi si \"nla\" nigba ti a n soro nipa iwọn."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Opposites",
+    "difficulty": "medium",
+    "question": "Kini oro ti o lodi si \"oru\"?",
+    "options": {
+      "A": "Owuro",
+      "B": "Ojo",
+      "C": "Ojo iwaju",
+      "D": "Ale"
+    },
+    "answer": "B",
+    "explanation": "\"Ojo\" nibi n tọka si daytime, ti o lodi si oru."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Literature",
+    "difficulty": "medium",
+    "question": "Ewo ninu awon wọnyi je iru iwe-kikọ Yoruba?",
+    "options": {
+      "A": "Ewi",
+      "B": "Mathematics",
+      "C": "Physics",
+      "D": "Chemistry"
+    },
+    "answer": "A",
+    "explanation": "Ewi je ọkan ninu awon iru iwe-kikọ ati litireso Yoruba."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Yoruba",
+    "topic": "Owe",
+    "difficulty": "hard",
+    "question": "Kini pataki julo ninu lilo owe?",
+    "options": {
+      "A": "Lati fi ogbon ati imo ranse",
+      "B": "Lati ko nọmba nikan",
+      "C": "Lati ka owo nikan",
+      "D": "Lati se idanwo sayensi"
+    },
+    "answer": "A",
+    "explanation": "Owe maa n gbe ogbon, imo, ikilo tabi imọran jade ni ọna kukuru."
+  }
+]

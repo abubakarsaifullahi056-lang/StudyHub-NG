@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Results - StudyHub NG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div class="dashboard-logo">
+        StudyHub NG
+    </div>
+
+    <nav>
+        
+        <a href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="results-page">
+
+    <section class="results-hero">
+
+        <p class="small-title">MY PERFORMANCE</p>
+
+        <h1>My Results 📊</h1>
+
+        <p>
+            Track your practice exams and see how your performance improves.
+        </p>
+
+    </section>
+
+
+    <section class="results-summary">
+
+        <div class="result-summary-card">
+            <span>📝</span>
+
+            <div>
+                <p>Total Quizzes</p>
+                <strong id="totalQuizzes">0</strong>
+            </div>
+        </div>
+
+
+        <div class="result-summary-card">
+            <span>📊</span>
+
+            <div>
+                <p>Average Score</p>
+                <strong id="averageScore">0%</strong>
+            </div>
+        </div>
+
+
+        <div class="result-summary-card">
+            <span>🏆</span>
+
+            <div>
+                <p>Best Score</p>
+                <strong id="bestScore">0%</strong>
+            </div>
+        </div>
+
+
+        <div class="result-summary-card">
+            <span>🎯</span>
+
+            <div>
+                <p>Target</p>
+                <strong>80%</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="results-section">
+
+        <div class="results-section-heading">
+
+            <div>
+                <p class="small-title">EXAM HISTORY</p>
+
+                <h2>Your Practice Results</h2>
+            </div>
+
+            <a href="practice.html" class="practice-button">
+                Start New Practice
+            </a>
+
+        </div>
+
+
+        <div id="resultsContainer">
+
+            <div class="loading-results">
+                Loading your results...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+async function loadResults() {
+
+    try {
+
+        const userResponse = await fetch("/api/me");
+
+        if (!userResponse.ok) {
+
+            window.location.href = "login.html";
+
+            return;
+        }
+
+
+        const response = await fetch("/api/results");
+
+        const data = await response.json();
+
+
+        if (!response.ok) {
+
+            alert(data.message || "Unable to load results.");
+
+            return;
+        }
+
+
+        const results = data.results || [];
+
+        const container =
+            document.getElementById("resultsContainer");
+
+
+        document.getElementById("totalQuizzes").textContent =
+            results.length;
+
+
+        if (results.length === 0) {
+
+            container.innerHTML = `
+
+                <div class="empty-results">
+
+                    <div class="empty-icon">📚</div>
+
+                    <h2>No results yet</h2>
+
+                    <p>
+                        Complete your first practice exam
+                        and your result will appear here.
+                    </p>
+
+                    <a href="practice.html" class="practice-button">
+                        Start Practising
+                    </a>
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        let totalPercentage = 0;
+        let bestPercentage = 0;
+
+
+        results.forEach(result => {
+
+            const percentage =
+                Number(result.percentage || 0);
+
+            totalPercentage += percentage;
+
+            if (percentage > bestPercentage) {
+
+                bestPercentage = percentage;
+
+            }
+
+        });
+
+
+        const average =
+            Math.round(totalPercentage / results.length);
+
+
+        document.getElementById("averageScore").textContent =
+            average + "%";
+
+
+        document.getElementById("bestScore").textContent =
+            bestPercentage + "%";
+
+
+        container.innerHTML = results.map(result => {
+
+            const percentage =
+                Number(result.percentage || 0);
+
+
+            let status = "Needs Improvement";
+
+            if (percentage >= 80) {
+
+                status = "Excellent";
+
+            } else if (percentage >= 60) {
+
+                status = "Good";
+
+            }
+
+
+            return `
+
+                <div class="result-history-card">
+
+                    <div class="result-main">
+
+                        <div class="result-icon">
+                            📋
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                ${escapeHtml(result.exam)}
+                                -
+                                ${escapeHtml(result.subject)}
+                            </h3>
+
+                            <p>
+                                ${result.correct_answers}
+                                correct out of
+                                ${result.total_questions}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-score">
+
+                        <strong>
+                            ${percentage}%
+                        </strong>
+
+                        <span>
+                            ${status}
+                        </span>
+
+                    </div>
+
+
+                       <div class="result-date">
+
+    ${formatDate(result.created_at)}
+
+    <br><br>
+
+    <a
+        href="result-details.html?id=${result.id}"
+        class="result-details-link"
+    >
+        View Details →
+    </a>
+
+</div>
+
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("resultsContainer").innerHTML = `
+
+            <div class="empty-results">
+
+                <h2>Unable to load results</h2>
+
+                <p>
+                    Please make sure the StudyHub NG server is running.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+function escapeHtml(value) {
+
+    return String(value)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+function formatDate(dateString) {
+
+    if (!dateString) {
+
+        return "Date unavailable";
+
+    }
+
+    const date = new Date(dateString);
+
+    if (Number.isNaN(date.getTime())) {
+
+        return dateString;
+
+    }
+
+    return date.toLocaleDateString("en-NG", {
+
+        day: "numeric",
+
+        month: "short",
+
+        year: "numeric"
+
+    });
+
+}
+
+
+document
+    .getElementById("logoutBtn")
+    .addEventListener("click", async () => {
+
+        await fetch("/api/logout", {
+            method: "POST"
+        });
+
+        window.location.href = "login.html";
+
+    });
+
+
+loadResults();
+
+</script>
+
+</body>
+</html>
+

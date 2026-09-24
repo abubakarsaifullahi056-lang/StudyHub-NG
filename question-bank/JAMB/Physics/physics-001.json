@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Motion",
+    "difficulty": "easy",
+    "question": "A car travels 120 m in 10 seconds. What is its average speed?",
+    "options": {
+      "A": "10 m/s",
+      "B": "12 m/s",
+      "C": "20 m/s",
+      "D": "1200 m/s"
+    },
+    "answer": "B",
+    "explanation": "Average speed = distance ÷ time = 120 ÷ 10 = 12 m/s."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Motion",
+    "difficulty": "medium",
+    "question": "A body starts from rest and accelerates uniformly at 2 m/s² for 5 seconds. What is its final velocity?",
+    "options": {
+      "A": "2 m/s",
+      "B": "5 m/s",
+      "C": "10 m/s",
+      "D": "25 m/s"
+    },
+    "answer": "C",
+    "explanation": "Using v = u + at, v = 0 + (2 × 5) = 10 m/s."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Force",
+    "difficulty": "easy",
+    "question": "What is the SI unit of force?",
+    "options": {
+      "A": "Joule",
+      "B": "Watt",
+      "C": "Newton",
+      "D": "Pascal"
+    },
+    "answer": "C",
+    "explanation": "The SI unit of force is the newton (N)."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Work, Energy and Power",
+    "difficulty": "medium",
+    "question": "A force of 20 N moves an object through a distance of 5 m in the direction of the force. What work is done?",
+    "options": {
+      "A": "4 J",
+      "B": "25 J",
+      "C": "100 J",
+      "D": "400 J"
+    },
+    "answer": "C",
+    "explanation": "Work = force × distance = 20 × 5 = 100 J."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Electricity",
+    "difficulty": "easy",
+    "question": "Which instrument is used to measure electric current?",
+    "options": {
+      "A": "Voltmeter",
+      "B": "Ammeter",
+      "C": "Barometer",
+      "D": "Thermometer"
+    },
+    "answer": "B",
+    "explanation": "An ammeter is used to measure electric current."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Electricity",
+    "difficulty": "medium",
+    "question": "A resistor has a resistance of 5 ohms and carries a current of 2 A. What is the potential difference across it?",
+    "options": {
+      "A": "2.5 V",
+      "B": "7 V",
+      "C": "10 V",
+      "D": "25 V"
+    },
+    "answer": "C",
+    "explanation": "Using Ohm's law V = IR = 2 × 5 = 10 V."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Waves",
+    "difficulty": "easy",
+    "question": "Which of the following is a mechanical wave?",
+    "options": {
+      "A": "Light wave",
+      "B": "Radio wave",
+      "C": "Sound wave",
+      "D": "X-ray"
+    },
+    "answer": "C",
+    "explanation": "Sound is a mechanical wave because it requires a material medium to travel."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Heat",
+    "difficulty": "medium",
+    "question": "Which instrument is commonly used to measure temperature?",
+    "options": {
+      "A": "Thermometer",
+      "B": "Ammeter",
+      "C": "Voltmeter",
+      "D": "Hydrometer"
+    },
+    "answer": "A",
+    "explanation": "A thermometer is used to measure temperature."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Optics",
+    "difficulty": "medium",
+    "question": "What type of lens is commonly used to correct short-sightedness?",
+    "options": {
+      "A": "Convex lens",
+      "B": "Concave lens",
+      "C": "Cylindrical lens only",
+      "D": "Plane glass"
+    },
+    "answer": "B",
+    "explanation": "A concave lens diverges light rays and is used to correct short-sightedness (myopia)."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Physics",
+    "topic": "Magnetism",
+    "difficulty": "hard",
+    "question": "Which device converts electrical energy into mechanical energy?",
+    "options": {
+      "A": "Electric motor",
+      "B": "Transformer",
+      "C": "Generator",
+      "D": "Cell"
+    },
+    "answer": "A",
+    "explanation": "An electric motor converts electrical energy into mechanical energy."
+  }
+]

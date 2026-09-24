@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "question": "If 2x + 5 = 15, what is the value of x?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "7",
+      "D": "10"
+    },
+    "answer": "B",
+    "explanation": "2x + 5 = 15, so 2x = 10 and x = 5."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Quadratic Equations",
+    "difficulty": "easy",
+    "question": "What are the roots of x² - 5x + 6 = 0?",
+    "options": {
+      "A": "1 and 6",
+      "B": "2 and 3",
+      "C": "-2 and -3",
+      "D": "3 and 6"
+    },
+    "answer": "B",
+    "explanation": "x² - 5x + 6 = (x - 2)(x - 3), so x = 2 or x = 3."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Sequences",
+    "difficulty": "medium",
+    "question": "Find the 10th term of the arithmetic sequence 3, 7, 11, 15, ...",
+    "options": {
+      "A": "35",
+      "B": "39",
+      "C": "43",
+      "D": "47"
+    },
+    "answer": "B",
+    "explanation": "a = 3 and d = 4. T₁₀ = a + 9d = 3 + 36 = 39."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "difficulty": "medium",
+    "question": "What is the value of sin 30°?",
+    "options": {
+      "A": "0",
+      "B": "1/2",
+      "C": "√2/2",
+      "D": "1"
+    },
+    "answer": "B",
+    "explanation": "sin 30° = 1/2."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Matrices",
+    "difficulty": "medium",
+    "question": "What is the determinant of the matrix [[2, 3], [1, 4]]?",
+    "options": {
+      "A": "5",
+      "B": "8",
+      "C": "11",
+      "D": "14"
+    },
+    "answer": "A",
+    "explanation": "The determinant is (2 × 4) - (3 × 1) = 8 - 3 = 5."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Calculus",
+    "difficulty": "medium",
+    "question": "What is the derivative of x² with respect to x?",
+    "options": {
+      "A": "x",
+      "B": "2x",
+      "C": "x²",
+      "D": "2"
+    },
+    "answer": "B",
+    "explanation": "Using the power rule, d(x²)/dx = 2x."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Vectors",
+    "difficulty": "hard",
+    "question": "If a = (2, 3) and b = (4, 1), what is a + b?",
+    "options": {
+      "A": "(6, 4)",
+      "B": "(8, 3)",
+      "C": "(2, 2)",
+      "D": "(6, 3)"
+    },
+    "answer": "A",
+    "explanation": "Add corresponding components: (2 + 4, 3 + 1) = (6, 4)."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Probability",
+    "difficulty": "hard",
+    "question": "A fair die is thrown once. What is the probability of obtaining an even number?",
+    "options": {
+      "A": "1/6",
+      "B": "1/3",
+      "C": "1/2",
+      "D": "2/3"
+    },
+    "answer": "C",
+    "explanation": "The even outcomes are 2, 4 and 6. Therefore, probability = 3/6 = 1/2."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "difficulty": "hard",
+    "question": "What is the gradient of the line passing through (2, 3) and (6, 11)?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "answer": "B",
+    "explanation": "Gradient = (11 - 3)/(6 - 2) = 8/4 = 2."
+  },
+  {
+    "exam": "WAEC",
+    "subject": "Further Mathematics",
+    "topic": "Statistics",
+    "difficulty": "hard",
+    "question": "What is the mean of 4, 6, 8, 10 and 12?",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "10"
+    },
+    "answer": "C",
+    "explanation": "Mean = (4 + 6 + 8 + 10 + 12) / 5 = 40 / 5 = 8."
+  }
+]

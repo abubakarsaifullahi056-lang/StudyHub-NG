@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Elements of Art",
+    "difficulty": "easy",
+    "question": "Which of the following is an element of art?",
+    "options": {
+      "A": "Balance",
+      "B": "Texture",
+      "C": "Harmony",
+      "D": "Unity"
+    },
+    "answer": "B",
+    "explanation": "Texture is an element of art that describes how a surface looks or feels."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Elements of Art",
+    "difficulty": "easy",
+    "question": "Which element of art refers to the path created by a moving point?",
+    "options": {
+      "A": "Line",
+      "B": "Colour",
+      "C": "Shape",
+      "D": "Texture"
+    },
+    "answer": "A",
+    "explanation": "A line is created when a point moves from one position to another."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Colour",
+    "difficulty": "medium",
+    "question": "Which of the following is a primary colour?",
+    "options": {
+      "A": "Green",
+      "B": "Orange",
+      "C": "Purple",
+      "D": "Red"
+    },
+    "answer": "D",
+    "explanation": "Red is one of the traditional primary colours, along with blue and yellow."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Drawing",
+    "difficulty": "easy",
+    "question": "The arrangement of objects in a drawing is known as",
+    "options": {
+      "A": "Composition",
+      "B": "Carving",
+      "C": "Modelling",
+      "D": "Printing"
+    },
+    "answer": "A",
+    "explanation": "Composition refers to the way visual elements are arranged within an artwork."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Sculpture",
+    "difficulty": "medium",
+    "question": "Which of the following is commonly used as a material for sculpture?",
+    "options": {
+      "A": "Clay",
+      "B": "Ink",
+      "C": "Watercolour",
+      "D": "Pastel"
+    },
+    "answer": "A",
+    "explanation": "Clay is a common sculptural material because it can be shaped and modelled easily."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Art History",
+    "difficulty": "medium",
+    "question": "The Nok culture is particularly famous for its",
+    "options": {
+      "A": "Bronze boats",
+      "B": "Terracotta sculptures",
+      "C": "Glass paintings",
+      "D": "Stone pyramids"
+    },
+    "answer": "B",
+    "explanation": "The Nok culture of Nigeria is well known for its distinctive terracotta sculptures."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Printmaking",
+    "difficulty": "medium",
+    "question": "Which process involves transferring an image from a prepared surface onto paper?",
+    "options": {
+      "A": "Printmaking",
+      "B": "Modelling",
+      "C": "Weaving",
+      "D": "Carving"
+    },
+    "answer": "A",
+    "explanation": "Printmaking involves creating an image on a surface and transferring it onto another material, commonly paper."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Design Principles",
+    "difficulty": "medium",
+    "question": "Which principle of design refers to the distribution of visual weight in an artwork?",
+    "options": {
+      "A": "Balance",
+      "B": "Rhythm",
+      "C": "Texture",
+      "D": "Colour"
+    },
+    "answer": "A",
+    "explanation": "Balance is the distribution of visual weight so that an artwork appears stable or appropriately arranged."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Nigerian Art",
+    "difficulty": "hard",
+    "question": "The Benin Kingdom is especially renowned for its historical",
+    "options": {
+      "A": "Bronze castings",
+      "B": "Glass mosaics",
+      "C": "Paper sculptures",
+      "D": "Watercolour paintings"
+    },
+    "answer": "A",
+    "explanation": "The Benin Kingdom is internationally known for its sophisticated bronze and brass castings."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Art",
+    "topic": "Art Appreciation",
+    "difficulty": "hard",
+    "question": "Which term describes the quality of an artwork that creates a sense of visual movement or repeated elements?",
+    "options": {
+      "A": "Rhythm",
+      "B": "Proportion",
+      "C": "Perspective",
+      "D": "Contrast"
+    },
+    "answer": "A",
+    "explanation": "Rhythm in art is created through repetition or arrangement of elements that produces a sense of movement."
+  }
+]

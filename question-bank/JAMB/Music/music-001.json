@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Elements of Music",
+    "difficulty": "easy",
+    "question": "Which of the following is an element of music?",
+    "options": {
+      "A": "Rhythm",
+      "B": "Architecture",
+      "C": "Sculpture",
+      "D": "Painting"
+    },
+    "answer": "A",
+    "explanation": "Rhythm is one of the fundamental elements of music."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Notation",
+    "difficulty": "easy",
+    "question": "What is used to represent musical sounds in written music?",
+    "options": {
+      "A": "Musical notation",
+      "B": "Road signs",
+      "C": "Maps",
+      "D": "Diagrams"
+    },
+    "answer": "A",
+    "explanation": "Musical notation uses symbols to represent musical sounds, rhythms and other musical information."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Pitch",
+    "difficulty": "medium",
+    "question": "What does pitch describe in music?",
+    "options": {
+      "A": "The speed of a song",
+      "B": "How high or low a sound is",
+      "C": "The loudness of a sound only",
+      "D": "The length of a musical instrument"
+    },
+    "answer": "B",
+    "explanation": "Pitch refers to the perceived highness or lowness of a musical sound."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Dynamics",
+    "difficulty": "medium",
+    "question": "What does dynamics indicate in music?",
+    "options": {
+      "A": "The loudness or softness of music",
+      "B": "The country where music originated",
+      "C": "The number of instruments",
+      "D": "The title of a song"
+    },
+    "answer": "A",
+    "explanation": "Dynamics indicate changes in the loudness or softness of musical performance."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Tempo",
+    "difficulty": "medium",
+    "question": "What is tempo?",
+    "options": {
+      "A": "The speed at which a piece of music is performed",
+      "B": "The pitch of a note",
+      "C": "The shape of an instrument",
+      "D": "The words of a song"
+    },
+    "answer": "A",
+    "explanation": "Tempo is the rate or speed at which a musical composition is performed."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Musical Instruments",
+    "difficulty": "easy",
+    "question": "Which of the following is a percussion instrument?",
+    "options": {
+      "A": "Violin",
+      "B": "Flute",
+      "C": "Drum",
+      "D": "Trumpet"
+    },
+    "answer": "C",
+    "explanation": "A drum is a percussion instrument because sound is produced by striking or hitting its surface."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Musical Instruments",
+    "difficulty": "medium",
+    "question": "Which of the following belongs to the string family?",
+    "options": {
+      "A": "Violin",
+      "B": "Flute",
+      "C": "Drum",
+      "D": "Trumpet"
+    },
+    "answer": "A",
+    "explanation": "The violin is a string instrument because its sound is produced by vibrating strings."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "African Music",
+    "difficulty": "hard",
+    "question": "Which instrument is commonly associated with traditional African music?",
+    "options": {
+      "A": "Talking drum",
+      "B": "Organ",
+      "C": "Piano",
+      "D": "Saxophone"
+    },
+    "answer": "A",
+    "explanation": "The talking drum is an important traditional instrument in several West African musical cultures."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Harmony",
+    "difficulty": "hard",
+    "question": "What is harmony in music?",
+    "options": {
+      "A": "The combination of different notes sounding together",
+      "B": "The speed of a performance",
+      "C": "The lyrics of a song",
+      "D": "The physical size of an instrument"
+    },
+    "answer": "A",
+    "explanation": "Harmony involves the combination and relationship of notes sounding simultaneously."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Music",
+    "topic": "Melody",
+    "difficulty": "hard",
+    "question": "What is melody?",
+    "options": {
+      "A": "A sequence of musical notes forming a recognizable musical line",
+      "B": "The loudness of music",
+      "C": "The physical construction of an instrument",
+      "D": "The audience at a concert"
+    },
+    "answer": "A",
+    "explanation": "A melody is an organized sequence of notes that forms a recognizable musical line."
+  }
+]

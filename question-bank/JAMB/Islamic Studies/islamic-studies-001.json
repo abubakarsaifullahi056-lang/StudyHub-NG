@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Qur'an",
+    "difficulty": "easy",
+    "question": "What is the holy book of Islam?",
+    "options": {
+      "A": "The Bible",
+      "B": "The Qur'an",
+      "C": "The Torah",
+      "D": "The Psalms"
+    },
+    "answer": "B",
+    "explanation": "The Qur'an is the holy book of Islam and is regarded by Muslims as the word of Allah."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Five Pillars of Islam",
+    "difficulty": "easy",
+    "question": "Which of the following is one of the Five Pillars of Islam?",
+    "options": {
+      "A": "Zakat",
+      "B": "Pilgrimage to Rome",
+      "C": "Baptism",
+      "D": "Confirmation"
+    },
+    "answer": "A",
+    "explanation": "Zakat, or obligatory charity, is one of the Five Pillars of Islam."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Salah",
+    "difficulty": "easy",
+    "question": "How many obligatory prayers do Muslims perform each day?",
+    "options": {
+      "A": "Three",
+      "B": "Four",
+      "C": "Five",
+      "D": "Seven"
+    },
+    "answer": "C",
+    "explanation": "Muslims are required to perform five obligatory prayers each day."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Sawm",
+    "difficulty": "medium",
+    "question": "In which month do Muslims observe the obligatory fast?",
+    "options": {
+      "A": "Muharram",
+      "B": "Ramadan",
+      "C": "Rajab",
+      "D": "Shawwal"
+    },
+    "answer": "B",
+    "explanation": "The obligatory fast of Ramadan is observed during the ninth month of the Islamic calendar."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Hajj",
+    "difficulty": "medium",
+    "question": "Where is the Ka'bah located?",
+    "options": {
+      "A": "Madinah",
+      "B": "Jerusalem",
+      "C": "Makkah",
+      "D": "Cairo"
+    },
+    "answer": "C",
+    "explanation": "The Ka'bah is located in the Masjid al-Haram in Makkah, Saudi Arabia."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Prophets",
+    "difficulty": "easy",
+    "question": "Who is regarded as the final prophet in Islam?",
+    "options": {
+      "A": "Prophet Musa",
+      "B": "Prophet Isa",
+      "C": "Prophet Ibrahim",
+      "D": "Prophet Muhammad"
+    },
+    "answer": "D",
+    "explanation": "Muslims believe Prophet Muhammad is the final prophet and messenger of Allah."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Hadith",
+    "difficulty": "medium",
+    "question": "What is a Hadith?",
+    "options": {
+      "A": "A type of mosque",
+      "B": "A report about the sayings, actions or approvals of Prophet Muhammad",
+      "C": "A chapter of the Qur'an",
+      "D": "A Muslim festival"
+    },
+    "answer": "B",
+    "explanation": "Hadith reports preserve sayings, actions and approvals attributed to Prophet Muhammad."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Zakat",
+    "difficulty": "medium",
+    "question": "What is the main purpose of Zakat?",
+    "options": {
+      "A": "To provide obligatory charity and support eligible recipients",
+      "B": "To replace Salah",
+      "C": "To celebrate Eid",
+      "D": "To mark the beginning of a new year"
+    },
+    "answer": "A",
+    "explanation": "Zakat is an obligatory form of charity intended to support eligible recipients and purify qualifying wealth."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Hijrah",
+    "difficulty": "hard",
+    "question": "What does the term Hijrah refer to in Islamic history?",
+    "options": {
+      "A": "The conquest of Egypt",
+      "B": "The migration of Prophet Muhammad and his followers from Makkah to Madinah",
+      "C": "The building of the Ka'bah",
+      "D": "The first revelation of the Qur'an"
+    },
+    "answer": "B",
+    "explanation": "Hijrah refers to the migration of Prophet Muhammad and his followers from Makkah to Madinah in 622 CE."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Islamic Studies",
+    "topic": "Islamic Morality",
+    "difficulty": "hard",
+    "question": "Which quality is strongly encouraged in Islamic moral teaching?",
+    "options": {
+      "A": "Dishonesty",
+      "B": "Arrogance",
+      "C": "Justice",
+      "D": "Deception"
+    },
+    "answer": "C",
+    "explanation": "Justice is an important moral principle in Islamic teaching and is encouraged in dealings with others."
+  }
+]

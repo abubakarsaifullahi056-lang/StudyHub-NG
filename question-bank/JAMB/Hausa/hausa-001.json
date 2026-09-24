@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "easy",
+    "question": "Menene ma'anar kalmar \"gida\"?",
+    "options": {
+      "A": "House",
+      "B": "School",
+      "C": "Market",
+      "D": "Farm"
+    },
+    "answer": "A",
+    "explanation": "Kalmar \"gida\" na nufin \"house\" a Turanci."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "easy",
+    "question": "Menene ma'anar kalmar \"ruwa\"?",
+    "options": {
+      "A": "Food",
+      "B": "Water",
+      "C": "Fire",
+      "D": "Air"
+    },
+    "answer": "B",
+    "explanation": "Kalmar \"ruwa\" na nufin \"water\" a Turanci."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Nahawu",
+    "difficulty": "medium",
+    "question": "Wanne ne jam'in kalmar \"yaro\"?",
+    "options": {
+      "A": "Yara",
+      "B": "Yarinya",
+      "C": "Yaroji",
+      "D": "Yaron"
+    },
+    "answer": "A",
+    "explanation": "\"Yara\" ita ce jam'in \"yaro\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Nahawu",
+    "difficulty": "easy",
+    "question": "Wanne daga cikin kalmomin nan suna ne?",
+    "options": {
+      "A": "gudu",
+      "B": "rubutu",
+      "C": "gida",
+      "D": "ci"
+    },
+    "answer": "C",
+    "explanation": "\"Gida\" suna ne saboda yana bayyana wani abu ko wuri."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Adabi",
+    "difficulty": "medium",
+    "question": "Menene karin magana?",
+    "options": {
+      "A": "Maganar da ake amfani da ita domin koyarwa ko bayyana hikima",
+      "B": "Sunan mutum kawai",
+      "C": "Wakar yara kawai",
+      "D": "Rubutun wasika"
+    },
+    "answer": "A",
+    "explanation": "Karin magana magana ce mai dauke da hikima ko darasi wadda ake amfani da ita wajen bayyana wani abu."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "easy",
+    "question": "Menene ma'anar kalmar \"malami\"?",
+    "options": {
+      "A": "Student",
+      "B": "Teacher",
+      "C": "Farmer",
+      "D": "Driver"
+    },
+    "answer": "B",
+    "explanation": "Kalmar \"malami\" na nufin teacher, wato mutum mai koyarwa."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Nahawu",
+    "difficulty": "medium",
+    "question": "Wanne ne kishiyar kalmar \"babba\"?",
+    "options": {
+      "A": "dogo",
+      "B": "ƙarami",
+      "C": "mai kyau",
+      "D": "fari"
+    },
+    "answer": "B",
+    "explanation": "\"Ƙarami\" ita ce kishiyar \"babba\" idan ana magana game da girma."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Kalmomi",
+    "difficulty": "easy",
+    "question": "Menene ma'anar kalmar \"rana\"?",
+    "options": {
+      "A": "Night",
+      "B": "Day",
+      "C": "Moon",
+      "D": "Rain"
+    },
+    "answer": "B",
+    "explanation": "Kalmar \"rana\" na iya nufin \"day\" ko \"sun\" gwargwadon mahallin jimla. A nan tana nufin \"day\"."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Adabi",
+    "difficulty": "hard",
+    "question": "Wanne daga cikin wadannan yana daga cikin nau'o'in adabin baka?",
+    "options": {
+      "A": "Karin magana",
+      "B": "Jarida",
+      "C": "Littafin lissafi",
+      "D": "Takardar banki"
+    },
+    "answer": "A",
+    "explanation": "Karin magana yana daga cikin nau'o'in adabin baka, tare da tatsuniya, karin magana, kacici-kacici da sauran nau'o'i."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Hausa",
+    "topic": "Nahawu",
+    "difficulty": "hard",
+    "question": "A cikin jimlar \"Ali ya tafi makaranta\", wace kalma ce take nuna aikata abu?",
+    "options": {
+      "A": "Ali",
+      "B": "ya",
+      "C": "tafi",
+      "D": "makaranta"
+    },
+    "answer": "C",
+    "explanation": "\"Tafi\" ita ce kalmar aiki a cikin jimlar domin tana nuna abin da Ali ya aikata."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Introduction to Commerce",
+    "difficulty": "easy",
+    "question": "Commerce is mainly concerned with activities involved in the",
+    "options": {
+      "A": "production of goods only",
+      "B": "distribution and exchange of goods and services",
+      "C": "consumption of goods only",
+      "D": "manufacturing of machines"
+    },
+    "answer": "B",
+    "explanation": "Commerce covers activities that facilitate the distribution and exchange of goods and services from producers to consumers."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Trade",
+    "difficulty": "easy",
+    "question": "Trade between two countries is known as",
+    "options": {
+      "A": "home trade",
+      "B": "foreign trade",
+      "C": "retail trade",
+      "D": "wholesale trade"
+    },
+    "answer": "B",
+    "explanation": "Foreign trade involves the buying and selling of goods and services between different countries."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Retail Trade",
+    "difficulty": "medium",
+    "question": "A retailer mainly sells goods",
+    "options": {
+      "A": "directly to final consumers",
+      "B": "only to manufacturers",
+      "C": "only to wholesalers",
+      "D": "only to exporters"
+    },
+    "answer": "A",
+    "explanation": "Retailers normally buy goods in relatively small quantities and sell them to final consumers."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Wholesale Trade",
+    "difficulty": "medium",
+    "question": "Which of the following is a function of a wholesaler?",
+    "options": {
+      "A": "Selling mainly to final consumers",
+      "B": "Breaking bulk",
+      "C": "Manufacturing raw materials",
+      "D": "Producing agricultural crops"
+    },
+    "answer": "B",
+    "explanation": "Breaking bulk is a function of wholesalers. They buy goods in large quantities and sell them in smaller quantities to retailers."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Banking",
+    "difficulty": "easy",
+    "question": "Which financial institution accepts deposits from customers and provides loans?",
+    "options": {
+      "A": "Commercial bank",
+      "B": "Insurance company",
+      "C": "Stock exchange",
+      "D": "Transport company"
+    },
+    "answer": "A",
+    "explanation": "Commercial banks accept deposits and provide various banking services, including loans and advances."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Insurance",
+    "difficulty": "medium",
+    "question": "The main purpose of insurance is to",
+    "options": {
+      "A": "eliminate all business losses",
+      "B": "provide protection against specified risks",
+      "C": "increase the price of goods",
+      "D": "prevent all accidents"
+    },
+    "answer": "B",
+    "explanation": "Insurance provides financial protection against specified risks in exchange for the payment of premiums."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Transportation",
+    "difficulty": "easy",
+    "question": "Which mode of transport is generally most suitable for transporting bulky goods over land?",
+    "options": {
+      "A": "Road transport",
+      "B": "Rail transport",
+      "C": "Air transport",
+      "D": "Pipeline transport"
+    },
+    "answer": "B",
+    "explanation": "Rail transport is suitable for moving large quantities of bulky goods over long distances on land."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Advertising",
+    "difficulty": "medium",
+    "question": "Which of the following is a major objective of advertising?",
+    "options": {
+      "A": "To destroy competition",
+      "B": "To inform and persuade consumers",
+      "C": "To stop production",
+      "D": "To prevent customers from comparing products"
+    },
+    "answer": "B",
+    "explanation": "Advertising provides information about products and services and can persuade consumers to consider purchasing them."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "Documents in Trade",
+    "difficulty": "medium",
+    "question": "Which document is normally issued by a seller to show the details and amount owed for goods supplied?",
+    "options": {
+      "A": "Invoice",
+      "B": "Receipt",
+      "C": "Cheque",
+      "D": "Bill of lading"
+    },
+    "answer": "A",
+    "explanation": "An invoice contains details of goods supplied, their prices, and the amount due from the buyer."
+  },
+  {
+    "exam": "JAMB",
+    "subject": "Commerce",
+    "topic": "International Trade",
+    "difficulty": "hard",
+    "question": "A country's balance of trade is the difference between its",
+    "options": {
+      "A": "total revenue and total expenditure",
+      "B": "visible exports and visible imports",
+      "C": "savings and investments",
+      "D": "production and consumption"
+    },
+    "answer": "B",
+    "explanation": "Balance of trade refers to the difference between the value of visible exports and visible imports during a given period."
+  }
+]
