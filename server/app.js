@@ -8,51 +8,32 @@ const session = require("express-session");
 const db = require("./database");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// =========================
+
+// =====================================================
 // SECURITY
-// =========================
+// =====================================================
 
 app.disable("x-powered-by");
 
 
-// =========================
-// ADMIN MIDDLEWARE
-// =========================
-
-function requireAdmin(req, res, next) {
-
-    if (!req.session.user) {
-        return res.status(401).json({
-            message: "Please login first."
-        });
-    }
-
-    if (req.session.user.role !== "admin") {
-        return res.status(403).json({
-            message: "Admin access required."
-        });
-    }
-
-    next();
-}
-
-
-// =========================
+// =====================================================
 // MIDDLEWARE
-// =========================
+// =====================================================
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-// =========================
-// SESSIONS
-// =========================
+// =====================================================
+// SESSION
+// =====================================================
 
 if (!process.env.SESSION_SECRET) {
-    console.error("ERROR: SESSION_SECRET is not set in .env");
+    console.error(
+        "ERROR: SESSION_SECRET is not set in .env"
+    );
     process.exit(1);
 }
 
@@ -72,9 +53,31 @@ app.use(
 );
 
 
-// =========================
+// =====================================================
+// ADMIN MIDDLEWARE
+// =====================================================
+
+function requireAdmin(req, res, next) {
+
+    if (!req.session.user) {
+        return res.status(401).json({
+            message: "Please login first."
+        });
+    }
+
+    if (req.session.user.role !== "admin") {
+        return res.status(403).json({
+            message: "Admin access required."
+        });
+    }
+
+    next();
+}
+
+
+// =====================================================
 // REGISTER
-// =========================
+// =====================================================
 
 app.post("/api/register", async (req, res) => {
 
@@ -88,7 +91,8 @@ app.post("/api/register", async (req, res) => {
 
         if (!name || !email || !password) {
             return res.status(400).json({
-                message: "Please fill in all fields."
+                message:
+                    "Please fill in all fields."
             });
         }
 
@@ -106,9 +110,15 @@ app.post("/api/register", async (req, res) => {
             await bcrypt.hash(password, 12);
 
         db.run(
-            `INSERT INTO users
-            (name, email, password)
-            VALUES (?, ?, ?)`,
+            `
+            INSERT INTO users
+            (
+                name,
+                email,
+                password
+            )
+            VALUES (?, ?, ?)
+            `,
             [
                 name.trim(),
                 normalizedEmail,
@@ -118,7 +128,12 @@ app.post("/api/register", async (req, res) => {
 
                 if (err) {
 
-                    if (err.message.includes("UNIQUE")) {
+                    if (
+                        err.message.includes(
+                            "UNIQUE"
+                        )
+                    ) {
+
                         return res.status(409).json({
                             message:
                                 "An account with this email already exists."
@@ -147,7 +162,8 @@ app.post("/api/register", async (req, res) => {
         console.error(error);
 
         res.status(500).json({
-            message: "Server error."
+            message:
+                "Server error."
         });
 
     }
@@ -155,9 +171,9 @@ app.post("/api/register", async (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // LOGIN
-// =========================
+// =====================================================
 
 app.post("/api/login", (req, res) => {
 
@@ -177,14 +193,16 @@ app.post("/api/login", (req, res) => {
         email.toLowerCase().trim();
 
     db.get(
-        `SELECT
+        `
+        SELECT
             id,
             name,
             email,
             password,
             role
-         FROM users
-         WHERE email = ?`,
+        FROM users
+        WHERE email = ?
+        `,
         [normalizedEmail],
         async (err, user) => {
 
@@ -193,7 +211,8 @@ app.post("/api/login", (req, res) => {
                 console.error(err);
 
                 return res.status(500).json({
-                    message: "Server error."
+                    message:
+                        "Server error."
                 });
             }
 
@@ -221,41 +240,43 @@ app.post("/api/login", (req, res) => {
                     });
                 }
 
-                // Regenerate session after successful login
-                // to help prevent session fixation.
-                req.session.regenerate((sessionError) => {
+                req.session.regenerate(
+                    (sessionError) => {
 
-                    if (sessionError) {
+                        if (sessionError) {
 
-                        console.error(
-                            "Session regeneration error:",
-                            sessionError
-                        );
+                            console.error(
+                                "Session regeneration error:",
+                                sessionError
+                            );
 
-                        return res.status(500).json({
+                            return res.status(500).json({
+                                message:
+                                    "Could not create login session."
+                            });
+                        }
+
+                        req.session.user = {
+                            id: user.id,
+                            name: user.name,
+                            email: user.email,
+                            role: user.role
+                        };
+
+                        res.json({
+                            success: true,
                             message:
-                                "Could not create login session."
+                                "Login successful."
                         });
+
                     }
-
-                    req.session.user = {
-                        id: user.id,
-                        name: user.name,
-                        email: user.email,
-                        role: user.role
-                    };
-
-                    res.json({
-                        success: true,
-                        message:
-                            "Login successful."
-                    });
-
-                });
+                );
 
             } catch (passwordError) {
 
-                console.error(passwordError);
+                console.error(
+                    passwordError
+                );
 
                 return res.status(500).json({
                     message:
@@ -270,16 +291,17 @@ app.post("/api/login", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // CURRENT USER
-// =========================
+// =====================================================
 
 app.get("/api/me", (req, res) => {
 
     if (!req.session.user) {
 
         return res.status(401).json({
-            message: "Not logged in."
+            message:
+                "Not logged in."
         });
     }
 
@@ -291,9 +313,9 @@ app.get("/api/me", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // LOGOUT
-// =========================
+// =====================================================
 
 app.post("/api/logout", (req, res) => {
 
@@ -322,13 +344,17 @@ app.post("/api/logout", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // SERVE WEBSITE
-// =========================
+// =====================================================
 
 app.use(
     express.static(
-        path.join(__dirname, "..", "public")
+        path.join(
+            __dirname,
+            "..",
+            "public"
+        )
     )
 );
 
@@ -346,9 +372,9 @@ app.get("/", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // STATUS
-// =========================
+// =====================================================
 
 app.get("/api/status", (req, res) => {
 
@@ -361,9 +387,9 @@ app.get("/api/status", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // EXAMS
-// =========================
+// =====================================================
 
 app.get("/api/exams", (req, res) => {
 
@@ -375,40 +401,48 @@ app.get("/api/exams", (req, res) => {
         ORDER BY exam ASC
     `;
 
-    db.all(sql, [], (err, rows) => {
+    db.all(
+        sql,
+        [],
+        (err, rows) => {
 
-        if (err) {
+            if (err) {
 
-            console.error(
-                "Exam loading error:",
-                err
-            );
+                console.error(
+                    "Exam loading error:",
+                    err
+                );
 
-            return res.status(500).json({
-                message:
-                    "Unable to load exams."
+                return res.status(500).json({
+                    message:
+                        "Unable to load exams."
+                });
+            }
+
+            res.json({
+                success: true,
+                exams:
+                    rows.map(
+                        row => row.exam
+                    )
             });
+
         }
-
-        res.json({
-            success: true,
-            exams:
-                rows.map(row => row.exam)
-        });
-
-    });
+    );
 
 });
 
 
-// =========================
+// =====================================================
 // SUBJECTS
-// =========================
+// =====================================================
 
 app.get("/api/subjects", (req, res) => {
 
     const exam =
-        String(req.query.exam || "").trim();
+        String(
+            req.query.exam || ""
+        ).trim();
 
     if (!exam) {
 
@@ -448,7 +482,9 @@ app.get("/api/subjects", (req, res) => {
             res.json({
                 success: true,
                 subjects:
-                    rows.map(row => row.subject)
+                    rows.map(
+                        row => row.subject
+                    )
             });
 
         }
@@ -457,17 +493,21 @@ app.get("/api/subjects", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // TOPICS
-// =========================
+// =====================================================
 
 app.get("/api/topics", (req, res) => {
 
     const exam =
-        String(req.query.exam || "").trim();
+        String(
+            req.query.exam || ""
+        ).trim();
 
     const subject =
-        String(req.query.subject || "").trim();
+        String(
+            req.query.subject || ""
+        ).trim();
 
     if (!exam || !subject) {
 
@@ -489,7 +529,10 @@ app.get("/api/topics", (req, res) => {
 
     db.all(
         sql,
-        [exam, subject],
+        [
+            exam,
+            subject
+        ],
         (err, rows) => {
 
             if (err) {
@@ -507,7 +550,9 @@ app.get("/api/topics", (req, res) => {
 
             res.json({
                 topics:
-                    rows.map(row => row.topic)
+                    rows.map(
+                        row => row.topic
+                    )
             });
 
         }
@@ -516,26 +561,37 @@ app.get("/api/topics", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // QUESTIONS
-// =========================
+// =====================================================
 
 app.get("/api/questions", (req, res) => {
 
     const exam =
-        String(req.query.exam || "").trim();
+        String(
+            req.query.exam || ""
+        ).trim();
 
     const subject =
-        String(req.query.subject || "").trim();
+        String(
+            req.query.subject || ""
+        ).trim();
 
     const topic =
-        String(req.query.topic || "").trim();
+        String(
+            req.query.topic || ""
+        ).trim();
 
     const difficulty =
-        String(req.query.difficulty || "").trim();
+        String(
+            req.query.difficulty || ""
+        ).trim();
 
     let limit =
-        parseInt(req.query.limit, 10);
+        parseInt(
+            req.query.limit,
+            10
+        );
 
     if (!exam || !subject) {
 
@@ -634,14 +690,15 @@ app.get("/api/questions", (req, res) => {
 });
 
 
-// =========================
+// =====================================================
 // SUBMIT QUIZ
-// =========================
+// =====================================================
 
 app.post(
     "/api/submit-quiz",
     (req, res) => {
 
+        // Make sure user is logged in
         if (!req.session.user) {
 
             return res.status(401).json({
@@ -660,6 +717,7 @@ app.post(
             answers
         } = req.body;
 
+        // Validate submission
         if (
             !exam ||
             !subject ||
@@ -710,7 +768,10 @@ app.post(
 
                 if (err) {
 
-                    console.error(err);
+                    console.error(
+                        "Answer checking error:",
+                        err
+                    );
 
                     return res.status(500).json({
                         message:
@@ -729,6 +790,7 @@ app.post(
                     });
                 }
 
+                // Create answer map
                 const answerMap = {};
 
                 questions.forEach(
@@ -742,6 +804,7 @@ app.post(
                     }
                 );
 
+                // Calculate score
                 let correctAnswers = 0;
 
                 questionIds.forEach(
@@ -758,7 +821,7 @@ app.post(
                             String(
                                 answerMap[
                                     questionId
-                                ]
+                                ] || ""
                             )
                             .trim()
                             .toUpperCase();
@@ -786,6 +849,24 @@ app.post(
                         ) * 100
                     );
 
+                const score =
+                    correctAnswers;
+
+                // =================================================
+                // SAVE RESULT
+                // =================================================
+                //
+                // Your existing SQLite database requires:
+                //
+                // total_questions
+                // correct_answers
+                // percentage
+                // score
+                // total
+                //
+                // So we save BOTH total_questions and total.
+                // =================================================
+
                 db.run(
                     `
                     INSERT INTO results
@@ -795,9 +876,11 @@ app.post(
                         subject,
                         total_questions,
                         correct_answers,
-                        percentage
+                        percentage,
+                        score,
+                        total
                     )
-                    VALUES (?, ?, ?, ?, ?, ?)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                     `,
                     [
                         userId,
@@ -805,24 +888,33 @@ app.post(
                         subject,
                         totalQuestions,
                         correctAnswers,
-                        percentage
+                        percentage,
+                        score,
+                        totalQuestions
                     ],
                     function (resultError) {
 
                         if (resultError) {
 
                             console.error(
+                                "Result save error:",
                                 resultError
                             );
 
                             return res.status(500).json({
                                 message:
-                                    "Unable to save result."
+                                    "Unable to save result.",
+                                error:
+                                    resultError.message
                             });
                         }
 
                         const resultId =
                             this.lastID;
+
+                        // =================================================
+                        // SAVE INDIVIDUAL ANSWERS
+                        // =================================================
 
                         const insertAnswer =
                             db.prepare(`
@@ -836,6 +928,9 @@ app.post(
                                 )
                                 VALUES (?, ?, ?, ?, ?)
                             `);
+
+                        let answerInsertError =
+                            null;
 
                         questionIds.forEach(
                             (questionId, index) => {
@@ -852,7 +947,7 @@ app.post(
                                     String(
                                         answerMap[
                                             questionId
-                                        ]
+                                        ] || ""
                                     )
                                     .trim()
                                     .toUpperCase();
@@ -868,7 +963,19 @@ app.post(
                                     questionId,
                                     selectedAnswer,
                                     correctAnswer,
-                                    isCorrect
+                                    isCorrect,
+                                    (answerError) => {
+
+                                        if (
+                                            answerError &&
+                                            !answerInsertError
+                                        ) {
+
+                                            answerInsertError =
+                                                answerError;
+                                        }
+
+                                    }
                                 );
 
                             }
@@ -877,10 +984,15 @@ app.post(
                         insertAnswer.finalize(
                             (finalizeError) => {
 
-                                if (finalizeError) {
+                                if (
+                                    finalizeError ||
+                                    answerInsertError
+                                ) {
 
                                     console.error(
-                                        finalizeError
+                                        "Quiz answer save error:",
+                                        finalizeError ||
+                                        answerInsertError
                                     );
 
                                     return res.status(500).json({
@@ -889,12 +1001,24 @@ app.post(
                                     });
                                 }
 
+                                // =================================================
+                                // SUCCESS
+                                // =================================================
+
                                 res.json({
+                                    success: true,
+
                                     message:
                                         "Quiz submitted successfully.",
+
                                     resultId,
+
                                     totalQuestions,
+
                                     correctAnswers,
+
+                                    score,
+
                                     percentage
                                 });
 
@@ -911,9 +1035,9 @@ app.post(
 );
 
 
-// =========================
-// STUDENT RESULT
-// =========================
+// =====================================================
+// STUDENT RESULT DETAILS
+// =====================================================
 
 app.get(
     "/api/results/:id",
@@ -949,6 +1073,8 @@ app.get(
                 total_questions,
                 correct_answers,
                 percentage,
+                score,
+                total,
                 created_at
             FROM results
             WHERE id = ?
@@ -965,7 +1091,10 @@ app.get(
 
                 if (err) {
 
-                    console.error(err);
+                    console.error(
+                        "Result loading error:",
+                        err
+                    );
 
                     return res.status(500).json({
                         message:
@@ -1010,6 +1139,7 @@ app.get(
                         if (answerError) {
 
                             console.error(
+                                "Answer review error:",
                                 answerError
                             );
 
@@ -1020,6 +1150,7 @@ app.get(
                         }
 
                         res.json({
+                            success: true,
                             result,
                             answers
                         });
@@ -1034,175 +1165,202 @@ app.get(
 );
 
 
-// =========================
+// =====================================================
 // ALL STUDENT RESULTS
-// =========================
+// =====================================================
 
-app.get("/api/results", (req, res) => {
+app.get(
+    "/api/results",
+    (req, res) => {
 
-    if (!req.session.user) {
+        if (!req.session.user) {
 
-        return res.status(401).json({
-            message:
-                "Please login first."
-        });
-    }
-
-    db.all(
-        `SELECT
-            id,
-            exam,
-            subject,
-            total_questions,
-            correct_answers,
-            percentage,
-            created_at
-         FROM results
-         WHERE user_id = ?
-         ORDER BY created_at DESC`,
-        [req.session.user.id],
-        (err, results) => {
-
-            if (err) {
-
-                console.error(err);
-
-                return res.status(500).json({
-                    message:
-                        "Could not load results."
-                });
-            }
-
-            res.json({
-                success: true,
-                results
+            return res.status(401).json({
+                message:
+                    "Please login first."
             });
-
         }
-    );
 
-});
+        db.all(
+            `
+            SELECT
+                id,
+                exam,
+                subject,
+                total_questions,
+                correct_answers,
+                percentage,
+                score,
+                total,
+                created_at
+            FROM results
+            WHERE user_id = ?
+            ORDER BY created_at DESC
+            `,
+            [req.session.user.id],
+            (err, results) => {
 
+                if (err) {
 
-// =========================
-// PROGRESS
-// =========================
+                    console.error(
+                        "Results loading error:",
+                        err
+                    );
 
-app.get("/api/progress", (req, res) => {
+                    return res.status(500).json({
+                        message:
+                            "Could not load results."
+                    });
+                }
 
-    if (!req.session.user) {
+                res.json({
+                    success: true,
+                    results
+                });
 
-        return res.status(401).json({
-            message:
-                "Please login first."
-        });
+            }
+        );
+
     }
+);
 
-    const userId =
-        req.session.user.id;
 
-    const statsSql = `
-        SELECT
-            COUNT(*) AS totalQuizzes,
-            COALESCE(
-                SUM(total_questions),
-                0
-            ) AS totalQuestions,
-            COALESCE(
-                SUM(correct_answers),
-                0
-            ) AS totalCorrect,
-            COALESCE(
-                ROUND(AVG(percentage)),
-                0
-            ) AS averageScore,
-            COALESCE(
-                MAX(percentage),
-                0
-            ) AS bestScore
-        FROM results
-        WHERE user_id = ?
-    `;
+// =====================================================
+// PROGRESS
+// =====================================================
 
-    const subjectSql = `
-        SELECT
-            subject,
-            COUNT(*) AS quizzes,
-            COALESCE(
-                SUM(total_questions),
-                0
-            ) AS totalQuestions,
-            COALESCE(
-                SUM(correct_answers),
-                0
-            ) AS totalCorrect,
-            COALESCE(
-                ROUND(AVG(percentage)),
-                0
-            ) AS averageScore,
-            COALESCE(
-                MAX(percentage),
-                0
-            ) AS bestScore
-        FROM results
-        WHERE user_id = ?
-        GROUP BY subject
-        ORDER BY averageScore DESC
-    `;
+app.get(
+    "/api/progress",
+    (req, res) => {
 
-    db.get(
-        statsSql,
-        [userId],
-        (err, stats) => {
+        if (!req.session.user) {
 
-            if (err) {
+            return res.status(401).json({
+                message:
+                    "Please login first."
+            });
+        }
 
-                console.error(
-                    "Progress stats error:",
-                    err
+        const userId =
+            req.session.user.id;
+
+        const statsSql = `
+            SELECT
+                COUNT(*) AS totalQuizzes,
+
+                COALESCE(
+                    SUM(total_questions),
+                    0
+                ) AS totalQuestions,
+
+                COALESCE(
+                    SUM(correct_answers),
+                    0
+                ) AS totalCorrect,
+
+                COALESCE(
+                    ROUND(AVG(percentage)),
+                    0
+                ) AS averageScore,
+
+                COALESCE(
+                    MAX(percentage),
+                    0
+                ) AS bestScore
+
+            FROM results
+            WHERE user_id = ?
+        `;
+
+        const subjectSql = `
+            SELECT
+                subject,
+
+                COUNT(*) AS quizzes,
+
+                COALESCE(
+                    SUM(total_questions),
+                    0
+                ) AS totalQuestions,
+
+                COALESCE(
+                    SUM(correct_answers),
+                    0
+                ) AS totalCorrect,
+
+                COALESCE(
+                    ROUND(AVG(percentage)),
+                    0
+                ) AS averageScore,
+
+                COALESCE(
+                    MAX(percentage),
+                    0
+                ) AS bestScore
+
+            FROM results
+
+            WHERE user_id = ?
+
+            GROUP BY subject
+
+            ORDER BY averageScore DESC
+        `;
+
+        db.get(
+            statsSql,
+            [userId],
+            (err, stats) => {
+
+                if (err) {
+
+                    console.error(
+                        "Progress stats error:",
+                        err
+                    );
+
+                    return res.status(500).json({
+                        message:
+                            "Unable to load progress."
+                    });
+                }
+
+                db.all(
+                    subjectSql,
+                    [userId],
+                    (subjectError, subjects) => {
+
+                        if (subjectError) {
+
+                            console.error(
+                                "Subject progress error:",
+                                subjectError
+                            );
+
+                            return res.status(500).json({
+                                message:
+                                    "Unable to load subject progress."
+                            });
+                        }
+
+                        res.json({
+                            stats,
+                            subjects
+                        });
+
+                    }
                 );
 
-                return res.status(500).json({
-                    message:
-                        "Unable to load progress."
-                });
             }
+        );
 
-            db.all(
-                subjectSql,
-                [userId],
-                (subjectError, subjects) => {
-
-                    if (subjectError) {
-
-                        console.error(
-                            "Subject progress error:",
-                            subjectError
-                        );
-
-                        return res.status(500).json({
-                            message:
-                                "Unable to load subject progress."
-                        });
-                    }
-
-                    res.json({
-                        stats,
-                        subjects
-                    });
-
-                }
-            );
-
-        }
-    );
-
-});
+    }
+);
 
 
-// =========================
+// =====================================================
 // ADMIN - ADD QUESTION
-// =========================
+// =====================================================
 
 app.post(
     "/api/admin/questions",
@@ -1246,8 +1404,12 @@ app.post(
                 .toUpperCase();
 
         if (
-            !["A", "B", "C", "D"]
-                .includes(normalizedAnswer)
+            ![
+                "A",
+                "B",
+                "C",
+                "D"
+            ].includes(normalizedAnswer)
         ) {
 
             return res.status(400).json({
@@ -1257,7 +1419,8 @@ app.post(
         }
 
         db.run(
-            `INSERT INTO questions
+            `
+            INSERT INTO questions
             (
                 exam,
                 subject,
@@ -1271,19 +1434,26 @@ app.post(
                 correct_answer,
                 explanation
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            `,
             [
                 String(exam).trim(),
                 String(subject).trim(),
-                topic ? String(topic).trim() : "",
-                difficulty ? String(difficulty).trim() : "",
+                topic
+                    ? String(topic).trim()
+                    : "",
+                difficulty
+                    ? String(difficulty).trim()
+                    : "",
                 String(question).trim(),
                 String(option_a).trim(),
                 String(option_b).trim(),
                 String(option_c).trim(),
                 String(option_d).trim(),
                 normalizedAnswer,
-                explanation ? String(explanation).trim() : ""
+                explanation
+                    ? String(explanation).trim()
+                    : ""
             ],
             function (err) {
 
@@ -1311,9 +1481,9 @@ app.post(
 );
 
 
-// =========================
+// =====================================================
 // ADMIN - VIEW QUESTIONS
-// =========================
+// =====================================================
 
 app.get(
     "/api/admin/questions",
@@ -1377,31 +1547,33 @@ app.get(
                 searchValue,
                 searchValue
             );
-
         }
 
         if (exam) {
 
-            sql += ` AND exam = ?`;
+            sql += `
+                AND exam = ?
+            `;
 
             params.push(exam);
-
         }
 
         if (subject) {
 
-            sql += ` AND subject = ?`;
+            sql += `
+                AND subject = ?
+            `;
 
             params.push(subject);
-
         }
 
         if (difficulty) {
 
-            sql += ` AND difficulty = ?`;
+            sql += `
+                AND difficulty = ?
+            `;
 
             params.push(difficulty);
-
         }
 
         sql += `
@@ -1439,9 +1611,9 @@ app.get(
 );
 
 
-// =========================
+// =====================================================
 // ADMIN - DELETE QUESTION
-// =========================
+// =====================================================
 
 app.delete(
     "/api/admin/questions/:id",
@@ -1449,7 +1621,10 @@ app.delete(
     (req, res) => {
 
         const id =
-            parseInt(req.params.id, 10);
+            parseInt(
+                req.params.id,
+                10
+            );
 
         if (!Number.isInteger(id)) {
 
@@ -1460,7 +1635,10 @@ app.delete(
         }
 
         db.run(
-            `DELETE FROM questions WHERE id = ?`,
+            `
+            DELETE FROM questions
+            WHERE id = ?
+            `,
             [id],
             function (err) {
 
@@ -1495,14 +1673,17 @@ app.delete(
 );
 
 
-// =========================
+// =====================================================
 // START SERVER
-// =========================
+// =====================================================
 
-app.listen(PORT, () => {
+app.listen(
+    PORT,
+    () => {
 
-    console.log(
-        `StudyHub NG running at http://localhost:${PORT}`
-    );
+        console.log(
+            `StudyHub NG running at http://localhost:${PORT}`
+        );
 
-});
+    }
+);
