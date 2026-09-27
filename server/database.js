@@ -1,8 +1,7 @@
 const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
 
-const databasePath = path.join(__dirname, "..", "studyhub.db");
-
+const databasePath = process.env.DB_PATH || path.join(__dirname, "..", "data", "studyhub.db");
 const db = new sqlite3.Database(databasePath, (err) => {
     if (err) {
         console.error("Database connection failed:", err.message);
