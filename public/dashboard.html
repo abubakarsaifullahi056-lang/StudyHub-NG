@@ -1,19 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard - StudyHub NG</title>
 
-    <title>Student Dashboard - StudyHub NG</title>
+<link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/style.css">
+<style>
+
+.dashboard-header{
+    background:#0b5ed7;
+    color:white;
+    padding:18px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.dashboard-logo{
+    font-size:25px;
+    font-weight:800;
+}
+
+.dashboard-header nav{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.dashboard-header nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.dashboard-header button{
+    border:0;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.new-dashboard{
+    width:min(1100px,92%);
+    margin:35px auto;
+}
+
+.dashboard-welcome{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.small-title{
+    color:#0b5ed7;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.dashboard-welcome h1{
+    margin:8px 0;
+    font-size:32px;
+}
+
+.practice-button{
+    display:inline-block;
+    background:#0b5ed7;
+    color:white;
+    text-decoration:none;
+    padding:13px 20px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.dashboard-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin:25px 0;
+}
+
+.dashboard-stat{
+    background:white;
+    padding:22px;
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.dashboard-stat > span{
+    font-size:30px;
+}
+
+.dashboard-stat p{
+    color:#667085;
+    margin-bottom:5px;
+}
+
+.dashboard-stat strong{
+    font-size:25px;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.main-dashboard-card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    text-decoration:none;
+    color:#172033;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+
+.main-dashboard-card:hover{
+    transform:translateY(-2px);
+}
+
+.card-icon{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.main-dashboard-card h2{
+    margin-bottom:10px;
+}
+
+.main-dashboard-card p{
+    color:#667085;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+.main-dashboard-card span{
+    color:#0b5ed7;
+    font-weight:bold;
+}
+
+.quick-section{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:18px;
+}
+
+.quick-grid a{
+    padding:15px;
+    background:#eef6ff;
+    color:#0b5ed7;
+    text-decoration:none;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.dashboard-message{
+    margin-top:15px;
+    padding:12px;
+    border-radius:10px;
+    background:#eef6ff;
+    color:#0b5ed7;
+}
+
+@media(max-width:800px){
+
+    .dashboard-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .dashboard-stats,
+    .dashboard-cards,
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-header nav{
+        width:100%;
+        flex-wrap:wrap;
+    }
+
+}
+
+</style>
 
 </head>
-
 
 <body>
 
@@ -23,20 +226,13 @@
         StudyHub NG
     </div>
 
-
     <nav>
 
-        <a href="dashboard.html">
-            Home
-        </a>
+        <a href="dashboard.html">Home</a>
 
-        <a href="practice.html">
-            Practice
-        </a>
+        <a href="practice.html">Practice</a>
 
-        <a href="results.html">
-            Results
-        </a>
+        <a href="results.html">Results</a>
 
         <button id="logoutBtn">
             Logout
@@ -49,281 +245,235 @@
 
 <main class="new-dashboard">
 
-    <!-- Welcome -->
 
-    <section class="dashboard-welcome">
+<section class="dashboard-welcome">
+
+    <div>
+
+        <p class="small-title">
+            STUDENT DASHBOARD
+        </p>
+
+        <h1>
+            Welcome back,
+            <span id="studentName">Student</span> 👋
+        </h1>
+
+        <p>
+            Keep practising and improve your exam score.
+        </p>
+
+    </div>
+
+    <a href="practice.html" class="practice-button">
+        Start Practice
+    </a>
+
+</section>
+
+
+<section class="dashboard-stats">
+
+    <div class="dashboard-stat">
+
+        <span>📝</span>
 
         <div>
 
-            <p class="small-title">
-                STUDENT DASHBOARD
-            </p>
+            <p>Quizzes</p>
 
-            <h1>
-                Welcome back,
-                <span id="studentName">
-                    Student
-                </span> 👋
-            </h1>
-
-            <p>
-                Keep practising and improve your exam score.
-            </p>
+            <strong id="totalQuizzes">
+                0
+            </strong>
 
         </div>
 
-
-        <a href="practice.html"
-           class="practice-button">
-
-            Start Practice
-
-        </a>
-
-    </section>
+    </div>
 
 
-    <!-- Statistics -->
+    <div class="dashboard-stat">
 
-    <section class="dashboard-stats">
+        <span>📊</span>
 
-        <div class="dashboard-stat">
+        <div>
 
-            <span>
-                📝
-            </span>
+            <p>Average Score</p>
 
-            <div>
-
-                <p>
-                    Quizzes
-                </p>
-
-                <strong id="totalQuizzes">
-                    0
-                </strong>
-
-            </div>
+            <strong id="averageScore">
+                0%
+            </strong>
 
         </div>
 
+    </div>
 
-        <div class="dashboard-stat">
 
-            <span>
-                📊
-            </span>
+    <div class="dashboard-stat">
 
-            <div>
+        <span>🏆</span>
 
-                <p>
-                    Average Score
-                </p>
+        <div>
 
-                <strong id="averageScore">
-                    0%
-                </strong>
+            <p>Best Score</p>
 
-            </div>
+            <strong id="bestScore">
+                0%
+            </strong>
 
         </div>
 
+    </div>
 
-        <div class="dashboard-stat">
 
-            <span>
-                🏆
-            </span>
+    <div class="dashboard-stat">
 
-            <div>
+        <span>🎯</span>
 
-                <p>
-                    Best Score
-                </p>
+        <div>
 
-                <strong id="bestScore">
-                    0%
-                </strong>
+            <p>Goal</p>
 
-            </div>
+            <strong>80%</strong>
 
         </div>
 
+    </div>
 
-        <div class="dashboard-stat">
-
-            <span>
-                🎯
-            </span>
-
-            <div>
-
-                <p>
-                    Goal
-                </p>
-
-                <strong>
-                    80%
-                </strong>
-
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- Main cards -->
+<section class="dashboard-cards">
 
-    <section class="dashboard-cards">
+    <a href="practice.html" class="main-dashboard-card">
 
-
-        <a href="practice.html"
-           class="main-dashboard-card">
-
-            <div class="card-icon">
-                📝
-            </div>
-
-            <h2>
-                Practice Questions
-            </h2>
-
-            <p>
-                Practice WAEC and JAMB questions
-                across many subjects.
-            </p>
-
-            <span>
-                Start practising →
-            </span>
-
-        </a>
-
-
-        <a href="results.html"
-           class="main-dashboard-card">
-
-            <div class="card-icon">
-                📊
-            </div>
-
-            <h2>
-                My Results
-            </h2>
-
-            <p>
-                Review your scores and see how
-                your performance is improving.
-            </p>
-
-            <span>
-                View results →
-            </span>
-
-        </a>
-
-
-        <a href="practice.html"
-           class="main-dashboard-card">
-
-            <div class="card-icon">
-                🎯
-            </div>
-
-            <h2>
-                Exam Preparation
-            </h2>
-
-            <p>
-                Prepare for your upcoming examination
-                with targeted practice.
-            </p>
-
-            <span>
-                Prepare now →
-            </span>
-
-        </a>
-
-
-        <div class="main-dashboard-card">
-
-            <div class="card-icon">
-                🏆
-            </div>
-
-            <h2>
-                Achievements
-            </h2>
-
-            <p>
-                Complete more quizzes and unlock
-                StudyHub achievements.
-            </p>
-
-            <span>
-                Coming soon
-            </span>
-
-        </div>
-
-
-    </section>
-
-
-    <!-- Quick links -->
-
-    <section class="quick-section">
+        <div class="card-icon">📝</div>
 
         <h2>
-            Quick Access
+            Practice Questions
         </h2>
 
+        <p>
+            Practice WAEC and JAMB questions
+            across many subjects.
+        </p>
 
-        <div class="quick-grid">
+        <span>
+            Start practising →
+        </span>
 
-            <a href="practice.html">
-                WAEC Practice
-            </a>
-
-            <a href="practice.html">
-                JAMB Practice
-            </a>
-
-            <a href="results.html">
-                My Results
-            </a>
-
-            <a href="index.html#subjects">
-                All Subjects
-            </a>
-                <a href="progress.html">
-        My Progress
     </a>
 
-    <a href="profile.html">
-        My Profile
+
+    <a href="results.html" class="main-dashboard-card">
+
+        <div class="card-icon">📊</div>
+
+        <h2>
+            My Results
+        </h2>
+
+        <p>
+            Review your scores and see how
+            your performance is improving.
+        </p>
+
+        <span>
+            View results →
+        </span>
+
     </a>
 
-        </div>
 
-    </section>
+    <a href="practice.html" class="main-dashboard-card">
+
+        <div class="card-icon">🎯</div>
+
+        <h2>
+            Exam Preparation
+        </h2>
+
+        <p>
+            Prepare for your upcoming examination
+            with targeted practice.
+        </p>
+
+        <span>
+            Prepare now →
+        </span>
+
+    </a>
+
+
+    <div class="main-dashboard-card">
+
+        <div class="card-icon">🏆</div>
+
+        <h2>
+            Achievements
+        </h2>
+
+        <p>
+            Complete more quizzes and unlock
+            StudyHub achievements.
+        </p>
+
+        <span>
+            Coming soon
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="quick-section">
+
+    <h2>
+        Quick Access
+    </h2>
+
+    <div class="quick-grid">
+
+        <a href="practice.html">
+            WAEC Practice
+        </a>
+
+        <a href="practice.html">
+            JAMB Practice
+        </a>
+
+        <a href="results.html">
+            My Results
+        </a>
+
+        <a href="practice.html">
+            All Subjects
+        </a>
+
+    </div>
+
+</section>
+
+
+<div id="dashboardMessage"
+     class="dashboard-message hidden">
+</div>
+
 
 </main>
 
 
 <script>
 
-async function loadDashboard() {
+async function loadDashboard(){
 
-    try {
+    try{
 
         const userResponse =
             await fetch("/api/me");
 
 
-        if (!userResponse.ok) {
+        if(!userResponse.ok){
 
             window.location.href =
                 "login.html";
@@ -337,47 +487,89 @@ async function loadDashboard() {
             await userResponse.json();
 
 
-        document.getElementById(
-            "studentName"
-        ).textContent =
-            userData.user.name;
+        if(userData.user){
+
+            document.getElementById(
+                "studentName"
+            ).textContent =
+                userData.user.name;
+
+        }
 
 
         const progressResponse =
             await fetch("/api/progress");
 
 
-        if (progressResponse.ok) {
+        if(!progressResponse.ok){
 
-            const progress =
-                await progressResponse.json();
+            console.log(
+                "Progress API returned:",
+                progressResponse.status
+            );
 
-
-            document.getElementById(
-                "totalQuizzes"
-            ).textContent =
-                progress.stats.totalQuizzes;
-
-
-            document.getElementById(
-                "averageScore"
-            ).textContent =
-                progress.stats.averageScore + "%";
-
-
-            document.getElementById(
-                "bestScore"
-            ).textContent =
-                progress.stats.bestScore + "%";
+            return;
 
         }
 
-    } catch (error) {
 
-        console.error(error);
+        const data =
+            await progressResponse.json();
 
-        window.location.href =
-            "login.html";
+
+        console.log(
+            "Progress:",
+            data
+        );
+
+
+        /*
+          Support the current API format:
+
+          {
+            stats:{
+              totalQuizzes,
+              averageScore,
+              bestScore
+            }
+          }
+        */
+
+        const stats =
+            data.stats || data;
+
+
+        document.getElementById(
+            "totalQuizzes"
+        ).textContent =
+            Number(
+                stats.totalQuizzes || 0
+            );
+
+
+        document.getElementById(
+            "averageScore"
+        ).textContent =
+            Number(
+                stats.averageScore || 0
+            ) + "%";
+
+
+        document.getElementById(
+            "bestScore"
+        ).textContent =
+            Number(
+                stats.bestScore || 0
+            ) + "%";
+
+
+    }
+    catch(error){
+
+        console.error(
+            "Dashboard error:",
+            error
+        );
 
     }
 
@@ -385,23 +577,23 @@ async function loadDashboard() {
 
 
 document
-    .getElementById("logoutBtn")
-    .addEventListener(
-        "click",
-        async () => {
+.getElementById("logoutBtn")
+.addEventListener(
+    "click",
+    async () => {
 
-            await fetch(
-                "/api/logout",
-                {
-                    method: "POST"
-                }
-            );
+        await fetch(
+            "/api/logout",
+            {
+                method:"POST"
+            }
+        );
 
-            window.location.href =
-                "login.html";
+        window.location.href =
+            "login.html";
 
-        }
-    );
+    }
+);
 
 
 loadDashboard();
@@ -409,5 +601,4 @@ loadDashboard();
 </script>
 
 </body>
-
 </html>

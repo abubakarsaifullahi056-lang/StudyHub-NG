@@ -1,13 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Admin - StudyHub NG</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+
+        .dashboard-header {
+            background: #0b5ed7;
+            color: white;
+            padding: 16px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .dashboard-header nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .dashboard-header nav a:hover {
+            text-decoration: underline;
+        }
+
+        #logoutBtn {
+            border: none;
+            background: white;
+            color: #0b5ed7;
+            padding: 9px 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* PAGE */
+
+        .admin-page {
+            width: min(1200px, 94%);
+            margin: 35px auto;
+        }
+
+        .admin-heading {
+            margin-bottom: 25px;
+        }
+
+        .small-title {
+            color: #0b5ed7;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 7px;
+        }
+
+        .admin-heading h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .admin-heading > p:last-child {
+            color: #667085;
+        }
+
+        /* STATISTICS */
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .admin-stat {
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .admin-stat > span {
+            font-size: 32px;
+        }
+
+        .admin-stat p {
+            color: #667085;
+            margin-bottom: 5px;
+        }
+
+        .admin-stat strong {
+            font-size: 25px;
+        }
+
+        /* CARDS */
+
+        .admin-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .admin-card h2 {
+            margin-bottom: 8px;
+        }
+
+        /* FORM */
+
+        .admin-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin: 17px 0 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid #ccd3df;
+            border-radius: 9px;
+            padding: 12px;
+            font-size: 15px;
+            font-family: inherit;
+            background: white;
+            color: #172033;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0b5ed7;
+            box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+        }
+
+        .admin-submit {
+            width: 100%;
+            border: none;
+            background: #0b5ed7;
+            color: white;
+            padding: 14px;
+            border-radius: 9px;
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .admin-submit:hover {
+            background: #084db3;
+        }
+
+        .admin-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #formMessage {
+            margin-top: 15px;
+            font-weight: 700;
+        }
+
+        .success-message {
+            color: #087443;
+        }
+
+        .error-message {
+            color: #b42318;
+        }
+
+        /* FILTERS */
+
+        .admin-filters {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr 1fr auto;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .admin-filters button {
+            border: none;
+            background: #0b5ed7;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 9px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* LIST HEADER */
+
+        .admin-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .admin-list-header p {
+            color: #667085;
+            margin-top: 5px;
+        }
+
+        .refresh-button {
+            border: none;
+            background: #e8f1ff;
+            color: #0b5ed7;
+            padding: 11px 17px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* QUESTIONS */
+
+        .admin-question-card {
+            border: 1px solid #e1e6ef;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #fbfcfe;
+        }
+
+        .admin-question-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 13px;
+        }
+
+        .question-badge {
+            display: inline-block;
+            background: #eaf2ff;
+            color: #0b5ed7;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .difficulty-easy {
+            background: #eafaf1;
+            color: #087443;
+        }
+
+        .difficulty-medium {
+            background: #fff7e6;
+            color: #9a6700;
+        }
+
+        .difficulty-hard {
+            background: #fff0f0;
+            color: #b42318;
+        }
+
+        .admin-question-card h3 {
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .question-detail {
+            color: #667085;
+            margin: 7px 0;
+        }
+
+        .question-explanation {
+            background: #eef6ff;
+            border-left: 4px solid #0b5ed7;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 6px;
+        }
+
+        .delete-button {
+            border: none;
+            background: #dc3545;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .delete-button:hover {
+            background: #bb2d3b;
+        }
+
+        .empty-results {
+            text-align: center;
+            padding: 40px 15px;
+            color: #667085;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 30px;
+            color: #667085;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .admin-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-filters {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .admin-filters input {
+                grid-column: 1 / -1;
+            }
+
+            .admin-filters button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .admin-page {
+                width: 92%;
+                margin: 25px auto;
+            }
+
+            .admin-heading h1 {
+                font-size: 26px;
+            }
+
+            .admin-card {
+                padding: 20px;
+            }
+
+            .admin-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-filters {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-filters input {
+                grid-column: auto;
+            }
+
+            .admin-list-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .dashboard-header {
+                align-items: flex-start;
+            }
+
+            .dashboard-header nav {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,6 +426,8 @@
 
 
 <main class="admin-page">
+
+    <!-- HEADING -->
 
     <section class="admin-heading">
 
@@ -86,55 +486,21 @@
     </section>
 
 
-    <!-- ADD QUESTION -->
+    <!-- FILTERS -->
 
-           <div class="admin-filters">
+    <section class="admin-filters">
 
-    <input
-        type="text"
-        id="questionSearch"
-        placeholder="Search questions..."
-    >
+        <input
+            type="text"
+            id="questionSearch"
+            placeholder="Search questions..."
+        >
 
-    <select id="filterExam">
-        <option value="">All Exams</option>
-        <option value="WAEC">WAEC</option>
-        <option value="JAMB">JAMB</option>
-    </select>
+        <select id="filterExam">
 
-    <select id="filterSubject">
-        <option value="">All Subjects</option>
-    </select>
-
-    <select id="filterDifficulty">
-        <option value="">All Difficulties</option>
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-    </select>
-
-    <button id="filterBtn">
-        Search
-    </button>
-
-</div>
-  
-   
-    <section class="admin-card">
-
-        <h2>Add New Question</h2>
-
-        <form id="questionForm">
-
-            <div class="admin-form-grid">
-
-    <div>
-
-        <label for="exam">
-            Examination
-        </label>
-
-        <select id="exam" required>
+            <option value="">
+                All Exams
+            </option>
 
             <option value="WAEC">
                 WAEC
@@ -146,74 +512,27 @@
 
         </select>
 
-    </div>
 
-
-    <div>
-
-        <label for="subject">
-            Subject
-        </label>
-
-        <select id="subject" required>
+        <select id="filterSubject">
 
             <option value="">
-                Select subject
+                All Subjects
             </option>
 
         </select>
 
-    </div>
 
+        <select id="filterDifficulty">
 
-    <div>
-
-      <label for="topic">Topic</label>
-<input
-    type="text"
-    id="topic"
-    placeholder="Example: Algebra"
-    required
->
-
-<label for="difficulty">Difficulty</label>
-<select id="difficulty">
-    <option value="easy">Easy</option>
-    <option value="medium" selected>Medium</option>
-    <option value="hard">Hard</option>
-</select>
-
-<label for="explanation">Explanation</label>
-<textarea
-    id="explanation"
-    placeholder="Explain why the correct answer is correct..."
-    rows="4"
-></textarea>
-
-
-
-        <input
-            type="text"
-            id="topic"
-            placeholder="e.g. Cell Biology"
-        >
-
-    </div>
-
-
-    <div>
-
-        <label for="difficulty">
-            Difficulty
-        </label>
-
-        <select id="difficulty">
+            <option value="">
+                All Difficulties
+            </option>
 
             <option value="easy">
                 Easy
             </option>
 
-            <option value="medium" selected>
+            <option value="medium">
                 Medium
             </option>
 
@@ -223,10 +542,29 @@
 
         </select>
 
-    </div>
 
-</div>
+        <button id="filterBtn">
+            Search
+        </button>
 
+    </section>
+
+
+    <!-- ADD QUESTION -->
+
+    <section class="admin-card">
+
+        <h2>Add New Question</h2>
+
+        <form id="questionForm">
+
+            <div class="admin-form-grid">
+
+                <div>
+
+                    <label for="exam">
+                        Examination
+                    </label>
 
                     <select id="exam" required>
 
@@ -252,7 +590,52 @@
                     <select id="subject" required>
 
                         <option value="">
-                            Select subject
+                            Loading subjects...
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-form-grid">
+
+                <div>
+
+                    <label for="topic">
+                        Topic
+                    </label>
+
+                    <input
+                        type="text"
+                        id="topic"
+                        placeholder="Example: Algebra"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="difficulty">
+                        Difficulty
+                    </label>
+
+                    <select id="difficulty">
+
+                        <option value="easy">
+                            Easy
+                        </option>
+
+                        <option value="medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="hard">
+                            Hard
                         </option>
 
                     </select>
@@ -285,6 +668,7 @@
                     <input
                         type="text"
                         id="option_a"
+                        placeholder="Enter option A"
                         required
                     >
 
@@ -300,6 +684,7 @@
                     <input
                         type="text"
                         id="option_b"
+                        placeholder="Enter option B"
                         required
                     >
 
@@ -315,6 +700,7 @@
                     <input
                         type="text"
                         id="option_c"
+                        placeholder="Enter option C"
                         required
                     >
 
@@ -330,6 +716,7 @@
                     <input
                         type="text"
                         id="option_d"
+                        placeholder="Enter option D"
                         required
                     >
 
@@ -341,15 +728,6 @@
             <label for="correct_answer">
                 Correct Answer
             </label>
-            <label for="explanation">
-    Explanation
-</label>
-
-<textarea
-    id="explanation"
-    rows="4"
-    placeholder="Explain why this answer is correct..."
-></textarea>
 
             <select id="correct_answer" required>
 
@@ -376,14 +754,27 @@
             </select>
 
 
+            <label for="explanation">
+                Explanation
+            </label>
+
+            <textarea
+                id="explanation"
+                rows="4"
+                placeholder="Explain why the correct answer is correct..."
+            ></textarea>
+
+
             <button
                 type="submit"
                 class="admin-submit"
+                id="addQuestionBtn"
             >
                 Add Question
             </button>
 
         </form>
+
 
         <p id="formMessage"></p>
 
@@ -419,9 +810,9 @@
 
         <div id="questionsList">
 
-            <p>
+            <div class="loading">
                 Loading questions...
-            </p>
+            </div>
 
         </div>
 
@@ -432,347 +823,812 @@
 
 <script>
 
-const examSelect =
-    document.getElementById("exam");
+    /* =========================================
+       ELEMENTS
+    ========================================= */
 
-const subjectSelect =
-    document.getElementById("subject");
+    const examSelect =
+        document.getElementById("exam");
 
-const questionForm =
-    document.getElementById("questionForm");
+    const subjectSelect =
+        document.getElementById("subject");
 
-const questionsList =
-    document.getElementById("questionsList");
+    const questionForm =
+        document.getElementById("questionForm");
 
-const formMessage =
-    document.getElementById("formMessage");
+    const questionsList =
+        document.getElementById("questionsList");
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+    const addQuestionBtn =
+        document.getElementById("addQuestionBtn");
+
+    const filterExam =
+        document.getElementById("filterExam");
+
+    const filterSubject =
+        document.getElementById("filterSubject");
+
+    const filterDifficulty =
+        document.getElementById("filterDifficulty");
 
 
-async function checkAdmin() {
+    /* =========================================
+       ESCAPE HTML
+    ========================================= */
 
-    try {
+    function escapeHtml(value) {
 
-        const response =
-            await fetch("/api/me");
+        if (value === null || value === undefined) {
+            return "";
+        }
 
-        if (!response.ok) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =========================================
+       CHECK ADMIN
+    ========================================= */
+
+    async function checkAdmin() {
+
+        try {
+
+            const response =
+                await fetch("/api/me");
+
+            if (!response.ok) {
+
+                window.location.href =
+                    "login.html";
+
+                return false;
+            }
+
+
+            const data =
+                await response.json();
+
+
+            if (
+                !data.user ||
+                data.user.role !== "admin"
+            ) {
+
+                alert("Admin access required.");
+
+                window.location.href =
+                    "dashboard.html";
+
+                return false;
+            }
+
+
+            return true;
+
+        } catch (error) {
+
+            console.error(
+                "Admin check error:",
+                error
+            );
 
             window.location.href =
                 "login.html";
 
             return false;
         }
-
-        const data =
-            await response.json();
-
-        if (
-            !data.user ||
-            data.user.role !== "admin"
-        ) {
-
-            alert("Admin access required.");
-
-            window.location.href =
-                "dashboard.html";
-
-            return false;
-        }
-
-        return true;
-
-    } catch (error) {
-
-        console.error(error);
-
-        window.location.href =
-            "login.html";
-
-        return false;
     }
-}
 
 
-async function loadSubjects() {
+    /* =========================================
+       LOAD ADD-QUESTION SUBJECTS
+    ========================================= */
 
-    const exam =
-        examSelect.value;
+    async function loadSubjects() {
 
-    subjectSelect.innerHTML =
-        "<option>Loading...</option>";
-
-    try {
-
-        const response =
-            await fetch(
-                `/api/subjects?exam=${encodeURIComponent(exam)}`
-            );
-
-        const data =
-            await response.json();
+        const exam =
+            examSelect.value;
 
         subjectSelect.innerHTML =
-            "<option value=''>Select subject</option>";
+            "<option value=''>Loading subjects...</option>";
 
-        data.subjects.forEach(subject => {
+        try {
 
-            const option =
-                document.createElement("option");
-
-            option.value =
-                subject;
-
-            option.textContent =
-                subject;
-
-            subjectSelect.appendChild(option);
-
-        });
-
-    } catch (error) {
-
-        console.error(error);
-
-        subjectSelect.innerHTML =
-            "<option>Unable to load subjects</option>";
-    }
-}
-
-async function loadQuestions() {
-
-    const search =
-        document.getElementById("questionSearch").value.trim();
-
-    const exam =
-        document.getElementById("filterExam").value;
-
-    const subject =
-        document.getElementById("filterSubject").value;
-
-    const difficulty =
-        document.getElementById("filterDifficulty").value;
+            const response =
+                await fetch(
+                    "/api/subjects?exam=" +
+                    encodeURIComponent(exam)
+                );
 
 
-    const url =
-        `/api/admin/questions` +
-        `?search=${encodeURIComponent(search)}` +
-        `&exam=${encodeURIComponent(exam)}` +
-        `&subject=${encodeURIComponent(subject)}` +
-        `&difficulty=${encodeURIComponent(difficulty)}`;
+            const data =
+                await response.json();
 
 
-    try {
+            if (!response.ok) {
 
-        const response =
-            await fetch(url);
-
-
-        const data =
-            await response.json();
-
-
-        if (!response.ok) {
-
-            alert(
-                data.message ||
-                "Unable to load questions."
-            );
-
-            return;
-        }
-
-
-        renderQuestions(data.questions || []);
-
-
-    } catch (error) {
-
-        console.error(error);
-
-        alert(
-            "Unable to connect to the server."
-        );
-
-    }
-
-}
-function renderQuestions(questions) {
-
-    const container =
-        document.getElementById("questionsList");
-
-
-    if (questions.length === 0) {
-
-        container.innerHTML = `
-            <div class="empty-results">
-                <h2>No questions found</h2>
-                <p>
-                    Try another search or filter.
-                </p>
-            </div>
-        `;
-
-        return;
-    }
-
-
-    container.innerHTML =
-        questions.map(question => `
-
-            <div class="admin-question-card">
-
-                <div class="admin-question-top">
-
-                    <span>
-                        ${escapeHtml(question.exam)}
-                    </span>
-
-                    <span>
-                        ${escapeHtml(question.subject)}
-                    </span>
-
-                    <span>
-                        ${escapeHtml(question.difficulty)}
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    ${escapeHtml(question.question)}
-                </h3>
-
-
-                <p>
-                    Topic:
-                    ${escapeHtml(question.topic || "General")}
-                </p>
-
-
-                <p>
-                    Correct Answer:
-                    <strong>
-                        ${escapeHtml(question.correct_answer)}
-                    </strong>
-                </p>
-
-
-                <button
-                    onclick="deleteQuestion(${question.id})"
-                >
-                    Delete
-                </button>
-
-            </div>
-
-        `).join("");
-
-}
-document
-    .getElementById("filterBtn")
-    .addEventListener(
-        "click",
-        loadQuestions
-    );
-
-document
-    .getElementById("questionSearch")
-    .addEventListener(
-        "keydown",
-        event => {
-
-            if (event.key === "Enter") {
-                loadQuestions();
+                throw new Error(
+                    data.message ||
+                    "Unable to load subjects."
+                );
             }
 
+
+            subjectSelect.innerHTML =
+                "<option value=''>Select subject</option>";
+
+
+            const subjects =
+                Array.isArray(data.subjects)
+                    ? data.subjects
+                    : [];
+
+
+            subjects.forEach(subject => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value =
+                    subject;
+
+                option.textContent =
+                    subject;
+
+                subjectSelect.appendChild(
+                    option
+                );
+
+            });
+
+        } catch (error) {
+
+            console.error(
+                "Subject loading error:",
+                error
+            );
+
+            subjectSelect.innerHTML =
+                "<option value=''>Unable to load subjects</option>";
+
         }
-    );
+    }
 
 
+    /* =========================================
+       LOAD FILTER SUBJECTS
+    ========================================= */
 
-questionForm.addEventListener(
-    "submit",
-    async (event) => {
+    async function loadFilterSubjects() {
 
-        event.preventDefault();
+        const exam =
+            filterExam.value;
 
-        const questionData = {
 
-    exam:
-        examSelect.value,
+        filterSubject.innerHTML =
+            "<option value=''>All Subjects</option>";
 
-    subject:
-        subjectSelect.value,
 
-    topic:
-        document.getElementById(
-            "topic"
-        ).value.trim(),
-
-    difficulty:
-        document.getElementById(
-            "difficulty"
-        ).value,
-
-    question:
-        document.getElementById(
-            "question"
-        ).value.trim(),
-
-    option_a:
-        document.getElementById(
-            "option_a"
-        ).value.trim(),
-
-    option_b:
-        document.getElementById(
-            "option_b"
-        ).value.trim(),
-
-    option_c:
-        document.getElementById(
-            "option_c"
-        ).value.trim(),
-
-    option_d:
-        document.getElementById(
-            "option_d"
-        ).value.trim(),
-
-    correct_answer:
-        document.getElementById(
-            "correct_answer"
-        ).value,
-
-    explanation:
-        document.getElementById(
-            "explanation"
-        ).value.trim()
-
-};
-
+        if (!exam) {
+            return;
+        }
 
 
         try {
 
             const response =
                 await fetch(
-                    "/api/admin/questions",
+                    "/api/subjects?exam=" +
+                    encodeURIComponent(exam)
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+                return;
+            }
+
+
+            const subjects =
+                Array.isArray(data.subjects)
+                    ? data.subjects
+                    : [];
+
+
+            subjects.forEach(subject => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value =
+                    subject;
+
+                option.textContent =
+                    subject;
+
+                filterSubject.appendChild(
+                    option
+                );
+
+            });
+
+        } catch (error) {
+
+            console.error(
+                "Filter subjects error:",
+                error
+            );
+        }
+    }
+
+
+    /* =========================================
+       LOAD QUESTIONS
+    ========================================= */
+
+    async function loadQuestions() {
+
+        questionsList.innerHTML =
+            "<div class='loading'>Loading questions...</div>";
+
+
+        const search =
+            document
+                .getElementById("questionSearch")
+                .value
+                .trim();
+
+
+        const exam =
+            filterExam.value;
+
+
+        const subject =
+            filterSubject.value;
+
+
+        const difficulty =
+            filterDifficulty.value;
+
+
+        const url =
+            "/api/admin/questions" +
+            "?search=" +
+            encodeURIComponent(search) +
+            "&exam=" +
+            encodeURIComponent(exam) +
+            "&subject=" +
+            encodeURIComponent(subject) +
+            "&difficulty=" +
+            encodeURIComponent(difficulty);
+
+
+        try {
+
+            const response =
+                await fetch(url);
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.message ||
+                    "Unable to load questions."
+                );
+            }
+
+
+            const questions =
+                Array.isArray(data.questions)
+                    ? data.questions
+                    : [];
+
+
+            renderQuestions(questions);
+
+            updateStatistics(questions);
+
+
+        } catch (error) {
+
+            console.error(
+                "Question loading error:",
+                error
+            );
+
+
+            questionsList.innerHTML = `
+                <div class="empty-results">
+                    <h2>Unable to load questions</h2>
+                    <p>${escapeHtml(error.message)}</p>
+                </div>
+            `;
+
+        }
+    }
+
+
+    /* =========================================
+       STATISTICS
+    ========================================= */
+
+    function updateStatistics(questions) {
+
+        const total =
+            questions.length;
+
+
+        const waec =
+            questions.filter(
+                question =>
+                    String(question.exam).toUpperCase() === "WAEC"
+            ).length;
+
+
+        const jamb =
+            questions.filter(
+                question =>
+                    String(question.exam).toUpperCase() === "JAMB"
+            ).length;
+
+
+        document.getElementById(
+            "totalQuestions"
+        ).textContent = total;
+
+
+        document.getElementById(
+            "waecQuestions"
+        ).textContent = waec;
+
+
+        document.getElementById(
+            "jambQuestions"
+        ).textContent = jamb;
+
+    }
+
+
+    /* =========================================
+       RENDER QUESTIONS
+    ========================================= */
+
+    function renderQuestions(questions) {
+
+        if (questions.length === 0) {
+
+            questionsList.innerHTML = `
+                <div class="empty-results">
+
+                    <h2>No questions found</h2>
+
+                    <p>
+                        Try another search or filter,
+                        or add a new question.
+                    </p>
+
+                </div>
+            `;
+
+            return;
+        }
+
+
+        questionsList.innerHTML =
+            questions.map(question => {
+
+                const difficulty =
+                    String(
+                        question.difficulty ||
+                        "medium"
+                    ).toLowerCase();
+
+
+                return `
+
+                    <div class="admin-question-card">
+
+                        <div class="admin-question-top">
+
+                            <span class="question-badge">
+                                ${escapeHtml(question.exam)}
+                            </span>
+
+                            <span class="question-badge">
+                                ${escapeHtml(question.subject)}
+                            </span>
+
+                            <span class="
+                                question-badge
+                                difficulty-${escapeHtml(difficulty)}
+                            ">
+                                ${escapeHtml(difficulty)}
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            ${escapeHtml(
+                                question.question
+                            )}
+                        </h3>
+
+
+                        <p class="question-detail">
+                            <strong>Topic:</strong>
+                            ${escapeHtml(
+                                question.topic ||
+                                "General"
+                            )}
+                        </p>
+
+
+                        <p class="question-detail">
+                            <strong>A:</strong>
+                            ${escapeHtml(
+                                question.option_a
+                            )}
+                        </p>
+
+
+                        <p class="question-detail">
+                            <strong>B:</strong>
+                            ${escapeHtml(
+                                question.option_b
+                            )}
+                        </p>
+
+
+                        <p class="question-detail">
+                            <strong>C:</strong>
+                            ${escapeHtml(
+                                question.option_c
+                            )}
+                        </p>
+
+
+                        <p class="question-detail">
+                            <strong>D:</strong>
+                            ${escapeHtml(
+                                question.option_d
+                            )}
+                        </p>
+
+
+                        <p class="question-detail">
+
+                            <strong>
+                                Correct Answer:
+                            </strong>
+
+                            ${escapeHtml(
+                                question.correct_answer
+                            )}
+
+                        </p>
+
+
+                        ${
+                            question.explanation
+                            ? `
+                                <div class="question-explanation">
+
+                                    <strong>
+                                        Explanation:
+                                    </strong>
+
+                                    ${escapeHtml(
+                                        question.explanation
+                                    )}
+
+                                </div>
+                            `
+                            : ""
+                        }
+
+
+                        <button
+                            class="delete-button"
+                            onclick="deleteQuestion(${Number(question.id)})"
+                        >
+                            Delete
+                        </button>
+
+                    </div>
+
+                `;
+
+            }).join("");
+
+    }
+
+
+    /* =========================================
+       ADD QUESTION
+    ========================================= */
+
+    questionForm.addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+
+            formMessage.textContent = "";
+            formMessage.className = "";
+
+
+            const questionData = {
+
+                exam:
+                    examSelect.value,
+
+                subject:
+                    subjectSelect.value,
+
+                topic:
+                    document
+                        .getElementById("topic")
+                        .value
+                        .trim(),
+
+                difficulty:
+                    document
+                        .getElementById("difficulty")
+                        .value,
+
+                question:
+                    document
+                        .getElementById("question")
+                        .value
+                        .trim(),
+
+                option_a:
+                    document
+                        .getElementById("option_a")
+                        .value
+                        .trim(),
+
+                option_b:
+                    document
+                        .getElementById("option_b")
+                        .value
+                        .trim(),
+
+                option_c:
+                    document
+                        .getElementById("option_c")
+                        .value
+                        .trim(),
+
+                option_d:
+                    document
+                        .getElementById("option_d")
+                        .value
+                        .trim(),
+
+                correct_answer:
+                    document
+                        .getElementById("correct_answer")
+                        .value,
+
+                explanation:
+                    document
+                        .getElementById("explanation")
+                        .value
+                        .trim()
+
+            };
+
+
+            if (!questionData.exam) {
+
+                showFormError(
+                    "Please select an examination."
+                );
+
+                return;
+            }
+
+
+            if (!questionData.subject) {
+
+                showFormError(
+                    "Please select a subject."
+                );
+
+                return;
+            }
+
+
+            if (!questionData.topic) {
+
+                showFormError(
+                    "Please enter a topic."
+                );
+
+                return;
+            }
+
+
+            addQuestionBtn.disabled = true;
+
+            addQuestionBtn.textContent =
+                "Adding Question...";
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "/api/admin/questions",
+                        {
+
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body:
+                                JSON.stringify(
+                                    questionData
+                                )
+
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.message ||
+                        "Unable to add question."
+                    );
+                }
+
+
+                formMessage.textContent =
+                    "Question added successfully!";
+
+
+                formMessage.className =
+                    "success-message";
+
+
+                questionForm.reset();
+
+
+                /*
+                    Keep the current exam selected
+                    after resetting the form.
+                */
+
+                examSelect.value =
+                    questionData.exam;
+
+
+                await loadSubjects();
+
+
+                subjectSelect.value =
+                    questionData.subject;
+
+
+                await loadQuestions();
+
+
+                /*
+                    Scroll to question list
+                */
+
+                document
+                    .getElementById("questionsList")
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+
+            } catch (error) {
+
+                console.error(
+                    "Add question error:",
+                    error
+                );
+
+
+                showFormError(
+                    error.message ||
+                    "Unable to connect to server."
+                );
+
+            } finally {
+
+                addQuestionBtn.disabled =
+                    false;
+
+                addQuestionBtn.textContent =
+                    "Add Question";
+
+            }
+
+        }
+    );
+
+
+    /* =========================================
+       FORM ERROR
+    ========================================= */
+
+    function showFormError(message) {
+
+        formMessage.textContent =
+            message;
+
+        formMessage.className =
+            "error-message";
+
+    }
+
+
+    /* =========================================
+       DELETE QUESTION
+    ========================================= */
+
+    async function deleteQuestion(id) {
+
+        if (!Number.isInteger(Number(id))) {
+
+            alert(
+                "Invalid question ID."
+            );
+
+            return;
+        }
+
+
+        const confirmDelete =
+            confirm(
+                "Are you sure you want to delete this question?"
+            );
+
+
+        if (!confirmDelete) {
+            return;
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/admin/questions/" +
+                    Number(id),
                     {
-
-                        method: "POST",
-
-                        headers: {
-                            "Content-Type":
-                                "application/json"
-                        },
-
-                        body:
-                            JSON.stringify(
-                                questionData
-                            )
-
+                        method: "DELETE"
                     }
                 );
 
@@ -783,135 +1639,167 @@ questionForm.addEventListener(
 
             if (!response.ok) {
 
-                formMessage.textContent =
+                throw new Error(
                     data.message ||
-                    "Unable to add question.";
-
-                return;
+                    "Unable to delete question."
+                );
             }
 
 
-            formMessage.textContent =
-                "Question added successfully!";
-
-
-            questionForm.reset();
-
             await loadQuestions();
+
 
         } catch (error) {
 
-            console.error(error);
+            console.error(
+                "Delete question error:",
+                error
+            );
 
-            formMessage.textContent =
-                "Unable to connect to server.";
+
+            alert(
+                error.message ||
+                "Unable to connect to server."
+            );
+
         }
 
     }
-);
 
 
-async function deleteQuestion(id) {
+    /* =========================================
+       FILTER EVENTS
+    ========================================= */
 
-    const confirmDelete =
-        confirm(
-            "Are you sure you want to delete this question?"
+    document
+        .getElementById("filterBtn")
+        .addEventListener(
+            "click",
+            loadQuestions
         );
 
 
-    if (!confirmDelete) {
-        return;
-    }
+    document
+        .getElementById("refreshBtn")
+        .addEventListener(
+            "click",
+            loadQuestions
+        );
 
 
-    try {
+    filterExam.addEventListener(
+        "change",
+        async function() {
 
-        const response =
-            await fetch(
-                `/api/admin/questions/${id}`,
-                {
-                    method: "DELETE"
+            await loadFilterSubjects();
+
+            await loadQuestions();
+
+        }
+    );
+
+
+    filterSubject.addEventListener(
+        "change",
+        loadQuestions
+    );
+
+
+    filterDifficulty.addEventListener(
+        "change",
+        loadQuestions
+    );
+
+
+    document
+        .getElementById("questionSearch")
+        .addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    event.preventDefault();
+
+                    loadQuestions();
+
                 }
-            );
+
+            }
+        );
 
 
-        const data =
-            await response.json();
+    /* =========================================
+       EXAM CHANGE
+    ========================================= */
+
+    examSelect.addEventListener(
+        "change",
+        loadSubjects
+    );
 
 
-        if (!response.ok) {
+    /* =========================================
+       LOGOUT
+    ========================================= */
 
-            alert(
-                data.message ||
-                "Unable to delete question."
-            );
+    document
+        .getElementById("logoutBtn")
+        .addEventListener(
+            "click",
+            async function() {
 
+                try {
+
+                    await fetch(
+                        "/api/logout",
+                        {
+                            method: "POST"
+                        }
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "Logout error:",
+                        error
+                    );
+
+                }
+
+
+                window.location.href =
+                    "login.html";
+
+            }
+        );
+
+
+    /* =========================================
+       START ADMIN
+    ========================================= */
+
+    async function startAdmin() {
+
+        const allowed =
+            await checkAdmin();
+
+
+        if (!allowed) {
             return;
         }
 
 
+        await loadSubjects();
+
+        await loadFilterSubjects();
+
         await loadQuestions();
 
-    } catch (error) {
-
-        console.error(error);
-
-        alert(
-            "Unable to connect to the server."
-        );
-    }
-}
-
-
-examSelect.addEventListener(
-    "change",
-    loadSubjects
-);
-
-
-document.getElementById(
-    "refreshBtn"
-).addEventListener(
-    "click",
-    loadQuestions
-);
-
-
-document.getElementById(
-    "logoutBtn"
-).addEventListener(
-    "click",
-    async () => {
-
-        await fetch(
-            "/api/logout",
-            {
-                method: "POST"
-            }
-        );
-
-        window.location.href =
-            "login.html";
-    }
-);
-
-
-async function startAdmin() {
-
-    const allowed =
-        await checkAdmin();
-
-    if (!allowed) {
-        return;
     }
 
-    await loadSubjects();
 
-    await loadQuestions();
-}
-
-
-startAdmin();
+    startAdmin();
 
 </script>
 

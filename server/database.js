@@ -13,7 +13,9 @@ const db = new sqlite3.Database(databasePath, (err) => {
 
 db.serialize(() => {
 
+    // =========================
     // USERS
+    // =========================
     db.run(`
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,7 +27,9 @@ db.serialize(() => {
         )
     `);
 
+    // =========================
     // QUESTIONS
+    // =========================
     db.run(`
         CREATE TABLE IF NOT EXISTS questions (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +48,9 @@ db.serialize(() => {
         )
     `);
 
+    // =========================
     // RESULTS
+    // =========================
     db.run(`
         CREATE TABLE IF NOT EXISTS results (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -54,53 +60,131 @@ db.serialize(() => {
             total_questions INTEGER NOT NULL,
             correct_answers INTEGER NOT NULL,
             percentage INTEGER NOT NULL,
+            score INTEGER NOT NULL DEFAULT 0,
+            total INTEGER NOT NULL DEFAULT 0,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (user_id) REFERENCES users(id)
         )
     `);
 
-// REMOVE EXISTING DUPLICATE QUESTIONS
-db.run(`
-    DELETE FROM questions
-    WHERE id NOT IN (
-        SELECT MIN(id)
-        FROM questions
-        GROUP BY exam, subject, question
-    )
-`, (err) => {
+    // =========================
+    // RESULTS MIGRATION
+    // =========================
+    db.all(`PRAGMA table_info(results)`, (err, columns) => {
 
-    if (err) {
-        console.error(
-            "Duplicate question cleanup error:",
-            err.message
-        );
-    } else {
-        console.log(
-            "Duplicate questions cleaned successfully."
-        );
-    }
+        if (err) {
+            console.error(
+                "Could not check results table:",
+                err.message
+            );
+            return;
+        }
 
-});
-// PREVENT FUTURE DUPLICATE QUESTIONS
-db.run(`
-    CREATE UNIQUE INDEX IF NOT EXISTS unique_question
-    ON questions (exam, subject, question)
-`, (err) => {
+        const columnNames = columns.map(column => column.name);
 
-    if (err) {
-        console.error(
-            "Question unique index error:",
-            err.message
-        );
-    } else {
-        console.log(
-            "Question duplicate protection enabled."
-        );
-    }
+        // Add score if old database does not have it
+        if (!columnNames.includes("score")) {
 
-});
+            db.run(`
+                ALTER TABLE results
+                ADD COLUMN score INTEGER NOT NULL DEFAULT 0
+            `, (error) => {
 
+                if (error) {
+                    console.error(
+                        "Could not add score column:",
+                        error.message
+                    );
+                } else {
+                    console.log(
+                        "Results score column added."
+                    );
+                }
+
+            });
+        }
+
+        // Add total if old database does not have it
+        if (!columnNames.includes("total")) {
+
+            db.run(`
+                ALTER TABLE results
+                ADD COLUMN total INTEGER NOT NULL DEFAULT 0
+            `, (error) => {
+
+                if (error) {
+                    console.error(
+                        "Could not add total column:",
+                        error.message
+                    );
+                } else {
+                    console.log(
+                        "Results total column added."
+                    );
+                }
+
+            });
+        }
+
+    });
+
+    // =========================
+    // REMOVE DUPLICATE QUESTIONS
+    // =========================
+    db.run(`
+        DELETE FROM questions
+        WHERE id NOT IN (
+            SELECT MIN(id)
+            FROM questions
+            GROUP BY exam, subject, question
+        )
+    `, (err) => {
+
+        if (err) {
+
+            console.error(
+                "Duplicate question cleanup error:",
+                err.message
+            );
+
+        } else {
+
+            console.log(
+                "Duplicate questions cleaned successfully."
+            );
+
+        }
+
+    });
+
+    // =========================
+    // PREVENT FUTURE DUPLICATES
+    // =========================
+    db.run(`
+        CREATE UNIQUE INDEX IF NOT EXISTS unique_question
+        ON questions (exam, subject, question)
+    `, (err) => {
+
+        if (err) {
+
+            console.error(
+                "Question unique index error:",
+                err.message
+            );
+
+        } else {
+
+            console.log(
+                "Question duplicate protection enabled."
+            );
+
+        }
+
+    });
+
+    // =========================
     // QUIZ ANSWERS
+    // =========================
     db.run(`
         CREATE TABLE IF NOT EXISTS quiz_answers (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -115,7 +199,10 @@ db.run(`
         )
     `);
 
-    console.log("Users, questions, results and quiz answers tables ready.");
+    console.log(
+        "Users, questions, results and quiz answers tables ready."
+    );
+
 });
 
 module.exports = db;

@@ -33,6 +33,85 @@ function findJsonFiles(folder) {
     return results;
 }
 
+/*
+    Converts different question formats into the format
+    required by the StudyHub NG database.
+
+    Supported format 1:
+
+    {
+        "exam": "JAMB",
+        "subject": "Biology",
+        "question": "...",
+        "option_a": "...",
+        "option_b": "...",
+        "option_c": "...",
+        "option_d": "...",
+        "correct_answer": "B"
+    }
+
+    Supported format 2:
+
+    {
+        "exam": "JAMB",
+        "subject": "Biology",
+        "question": "...",
+        "options": {
+            "A": "...",
+            "B": "...",
+            "C": "...",
+            "D": "..."
+        },
+        "answer": "B"
+    }
+*/
+
+function normalizeQuestion(q) {
+    const options = q.options || {};
+
+    const normalized = {
+        exam: q.exam,
+        subject: q.subject,
+        topic: q.topic || "",
+        difficulty: q.difficulty || "medium",
+        question: q.question || q.question_text || q.text,
+
+        option_a:
+            q.option_a ||
+            q.optionA ||
+            options.A ||
+            options.a,
+
+        option_b:
+            q.option_b ||
+            q.optionB ||
+            options.B ||
+            options.b,
+
+        option_c:
+            q.option_c ||
+            q.optionC ||
+            options.C ||
+            options.c,
+
+        option_d:
+            q.option_d ||
+            q.optionD ||
+            options.D ||
+            options.d,
+
+        correct_answer:
+            q.correct_answer ||
+            q.correctAnswer ||
+            q.answer ||
+            q.correct_option,
+
+        explanation: q.explanation || ""
+    };
+
+    return normalized;
+}
+
 function importFile(filePath) {
     return new Promise((resolve) => {
         const relativePath = path.relative(questionBankPath, filePath);
@@ -48,13 +127,21 @@ function importFile(filePath) {
             const content = fs.readFileSync(filePath, "utf8");
             questions = JSON.parse(content);
         } catch (error) {
-            console.log(`Could not read ${relativePath}: ${error.message}`);
+            console.log(
+                `Could not read ${relativePath}: ${error.message}`
+            );
+
+            totalSkipped++;
             resolve();
             return;
         }
 
         if (!Array.isArray(questions)) {
-            console.log(`${relativePath} must contain an array of questions.`);
+            console.log(
+                `${relativePath} must contain an array of questions.`
+            );
+
+            totalSkipped++;
             resolve();
             return;
         }
@@ -79,7 +166,6 @@ function importFile(filePath) {
 
         let imported = 0;
         let skipped = 0;
-
         let pending = questions.length;
 
         if (pending === 0) {
@@ -87,10 +173,13 @@ function importFile(filePath) {
                 console.log(`${relativePath}: 0 questions`);
                 resolve();
             });
+
             return;
         }
 
-        questions.forEach((q, index) => {
+        questions.forEach((originalQuestion, index) => {
+            const q = normalizeQuestion(originalQuestion);
+
             const requiredFields = [
                 "exam",
                 "subject",
@@ -103,8 +192,9 @@ function importFile(filePath) {
             ];
 
             const missing = requiredFields.filter(
-                field =>
-                    !q[field] ||
+                (field) =>
+                    q[field] === undefined ||
+                    q[field] === null ||
                     String(q[field]).trim() === ""
             );
 
@@ -129,7 +219,7 @@ function importFile(filePath) {
 
             if (!["A", "B", "C", "D"].includes(answer)) {
                 console.log(
-                    `Skipped question ${index + 1}: invalid correct answer`
+                    `Skipped question ${index + 1}: invalid correct answer "${q.correct_answer}"`
                 );
 
                 skipped++;
@@ -142,25 +232,14 @@ function importFile(filePath) {
                 return;
             }
 
-            const difficulty = String(
+            let difficulty = String(
                 q.difficulty || "medium"
             )
                 .trim()
                 .toLowerCase();
 
             if (!["easy", "medium", "hard"].includes(difficulty)) {
-                console.log(
-                    `Skipped question ${index + 1}: invalid difficulty`
-                );
-
-                skipped++;
-                pending--;
-
-                if (pending === 0) {
-                    finish();
-                }
-
-                return;
+                difficulty = "medium";
             }
 
             stmt.run(
@@ -180,6 +259,7 @@ function importFile(filePath) {
                         console.log(
                             `Question ${index + 1} error: ${error.message}`
                         );
+
                         skipped++;
                     } else if (this.changes === 1) {
                         imported++;
@@ -187,6 +267,7 @@ function importFile(filePath) {
                         console.log(
                             `Question ${index + 1}: duplicate skipped`
                         );
+
                         skipped++;
                     }
 
@@ -225,6 +306,7 @@ async function startImport() {
 
     if (!fs.existsSync(questionBankPath)) {
         console.log("Question bank folder does not exist.");
+
         db.close();
         process.exit(1);
     }
@@ -237,6 +319,7 @@ async function startImport() {
 
     if (totalFiles === 0) {
         console.log("No JSON question files found.");
+
         db.close();
         process.exit(0);
     }
