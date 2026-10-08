@@ -1,399 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>StudyHub NG - Practice</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7fb;
-  color:#172033;
-  min-height:100vh;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    min-height:100vh;
 }
 
 header{
-  background:#0b5ed7;
-  color:white;
-  padding:16px 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  flex-wrap:wrap;
+    background:#0b5ed7;
+    color:white;
+    padding:16px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:800;
+    font-size:24px;
+    font-weight:800;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:18px;
-  font-weight:600;
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:600;
 }
 
 .container{
-  width:min(900px,92%);
-  margin:35px auto;
+    width:min(900px,92%);
+    margin:35px auto;
 }
 
 .card{
-  background:white;
-  border-radius:16px;
-  padding:28px;
-  box-shadow:0 8px 30px rgba(0,0,0,.08);
-  margin-bottom:20px;
+    background:white;
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    margin-bottom:20px;
 }
 
 h1{
-  font-size:30px;
-  margin-bottom:8px;
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 h2{
-  margin-bottom:12px;
+    margin-bottom:12px;
 }
 
 .subtitle{
-  color:#667085;
-  margin-bottom:25px;
+    color:#667085;
+    margin-bottom:25px;
 }
 
 label{
-  display:block;
-  font-weight:700;
-  margin:18px 0 8px;
+    display:block;
+    font-weight:700;
+    margin:18px 0 8px;
 }
 
 select{
-  width:100%;
-  padding:13px;
-  border:1px solid #ccd3df;
-  border-radius:10px;
-  font-size:16px;
-  background:white;
+    width:100%;
+    padding:13px;
+    border:1px solid #ccd3df;
+    border-radius:10px;
+    font-size:16px;
+    background:white;
 }
 
 button{
-  border:0;
-  border-radius:10px;
-  padding:13px 20px;
-  font-size:16px;
-  font-weight:700;
-  cursor:pointer;
+    border:0;
+    border-radius:10px;
+    padding:13px 20px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
 }
 
 .primary{
-  background:#0b5ed7;
-  color:white;
+    background:#0b5ed7;
+    color:white;
 }
 
 .secondary{
-  background:#e9eef6;
-  color:#172033;
+    background:#e9eef6;
+    color:#172033;
 }
 
 button:disabled{
-  opacity:.5;
-  cursor:not-allowed;
+    opacity:.5;
+    cursor:not-allowed;
 }
 
 .actions{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  margin-top:25px;
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:25px;
 }
 
 .hidden{
-  display:none!important;
+    display:none!important;
 }
 
 .error{
-  background:#fff1f2;
-  color:#b42318;
-  border:1px solid #fda4af;
-  padding:12px;
-  border-radius:10px;
-  margin-top:15px;
+    background:#fff1f2;
+    color:#b42318;
+    border:1px solid #fda4af;
+    padding:12px;
+    border-radius:10px;
+    margin-top:15px;
 }
 
 .info{
-  background:#eef6ff;
-  border:1px solid #bfdbfe;
-  padding:14px;
-  border-radius:10px;
-  margin-top:18px;
+    background:#eef6ff;
+    border:1px solid #bfdbfe;
+    padding:14px;
+    border-radius:10px;
+    margin-top:18px;
 }
 
 .topbar{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
-  margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
 }
 
 .badge{
-  background:#e8f1ff;
-  color:#0b5ed7;
-  padding:8px 12px;
-  border-radius:20px;
-  font-weight:700;
+    background:#e8f1ff;
+    color:#0b5ed7;
+    padding:8px 12px;
+    border-radius:20px;
+    font-weight:700;
 }
 
 .progress{
-  height:9px;
-  background:#e5e7eb;
-  border-radius:20px;
-  overflow:hidden;
-  margin:15px 0 25px;
+    height:9px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0 25px;
 }
 
 .progress-bar{
-  height:100%;
-  width:0;
-  background:#0b5ed7;
-  transition:.3s;
+    height:100%;
+    width:0;
+    background:#0b5ed7;
+    transition:.3s;
 }
 
 .question{
-  font-size:21px;
-  line-height:1.5;
-  font-weight:700;
-  margin-bottom:22px;
+    font-size:21px;
+    line-height:1.5;
+    font-weight:700;
+    margin-bottom:22px;
 }
 
 .option{
-  display:block;
-  width:100%;
-  text-align:left;
-  background:#f8fafc;
-  border:2px solid #e2e8f0;
-  margin:10px 0;
-  color:#172033;
+    display:block;
+    width:100%;
+    text-align:left;
+    background:#f8fafc;
+    border:2px solid #e2e8f0;
+    margin:10px 0;
+    color:#172033;
 }
 
 .option:hover{
-  border-color:#0b5ed7;
+    border-color:#0b5ed7;
 }
 
 .option.selected{
-  border-color:#0b5ed7;
-  background:#eaf2ff;
+    border-color:#0b5ed7;
+    background:#eaf2ff;
 }
 
 .result{
-  text-align:center;
+    text-align:center;
 }
 
 .score{
-  font-size:52px;
-  font-weight:800;
-  color:#0b5ed7;
-  margin:15px 0;
+    font-size:52px;
+    font-weight:800;
+    color:#0b5ed7;
+    margin:15px 0;
 }
 
 .result p{
-  margin:8px 0;
-  color:#667085;
+    margin:8px 0;
+    color:#667085;
 }
 
 .loading{
-  color:#667085;
-  font-size:14px;
-  margin-top:8px;
+    color:#667085;
+    font-size:14px;
+    margin-top:8px;
+}
+
+.exam-choice{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-bottom:10px;
+}
+
+.exam-button{
+    background:white;
+    color:#172033;
+    border:2px solid #d0d7e2;
+    padding:20px;
+    text-align:left;
+    border-radius:12px;
+}
+
+.exam-button strong{
+    display:block;
+    font-size:19px;
+    margin-bottom:6px;
+}
+
+.exam-button span{
+    display:block;
+    color:#667085;
+    font-size:14px;
+    font-weight:normal;
+}
+
+.exam-button:hover{
+    border-color:#0b5ed7;
+}
+
+.exam-button.selected{
+    border-color:#0b5ed7;
+    background:#eef5ff;
 }
 
 @media(max-width:600px){
 
-  .card{
-    padding:20px;
-  }
+    .card{
+        padding:20px;
+    }
 
-  h1{
-    font-size:25px;
-  }
+    h1{
+        font-size:25px;
+    }
 
-  .question{
-    font-size:18px;
-  }
+    .question{
+        font-size:18px;
+    }
 
-  .actions{
-    flex-direction:column;
-  }
+    .actions{
+        flex-direction:column;
+    }
 
-  .actions button{
-    width:100%;
-  }
+    .actions button{
+        width:100%;
+    }
 
-  nav{
-    width:100%;
-  }
+    nav{
+        width:100%;
+    }
 
-  nav a{
-    margin:0 12px 0 0;
-  }
+    nav a{
+        margin:0 12px 0 0;
+    }
+
+    .exam-choice{
+        grid-template-columns:1fr;
+    }
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-  <div class="logo">
-    StudyHub NG
-  </div>
+    <div class="logo">
+        StudyHub NG
+    </div>
 
-  <nav>
-    <a href="dashboard.html">Home</a>
-    <a href="practice.html">Practice</a>
-    <a href="results.html">Results</a>
-  </nav>
+    <nav>
+        <a href="dashboard.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="results.html">Results</a>
+    </nav>
 
 </header>
 
 
 <main class="container">
 
-  <!-- =========================
-       SETUP
-  ========================== -->
 
-  <section id="setupCard" class="card">
+<!-- ==================================================
+     SETUP
+================================================== -->
+
+<section id="setupCard" class="card">
 
     <h1>Practice Exam</h1>
 
     <p class="subtitle">
-      Choose an examination and subject, then start practicing.
+        Choose JAMB or WAEC, select a subject, and start practicing.
     </p>
 
 
-    <label for="exam">
-      Examination
+    <label>
+        Choose Examination
     </label>
 
-    <select id="exam">
 
-      <option value="">
-        Select examination
-      </option>
+    <div class="exam-choice">
 
-      <option value="JAMB">
-        JAMB
-      </option>
+        <button
+            type="button"
+            id="jambButton"
+            class="exam-button"
+        >
 
-      <option value="WAEC">
-        WAEC
-      </option>
+            <strong>JAMB Practice</strong>
 
-    </select>
+            <span>
+                Practice JAMB examination questions
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            id="waecButton"
+            class="exam-button"
+        >
+
+            <strong>WAEC Practice</strong>
+
+            <span>
+                Practice WAEC examination questions
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- Hidden value used by JavaScript -->
+
+    <input
+        type="hidden"
+        id="exam"
+        value=""
+    >
+
+
+    <div
+        id="selectedExamText"
+        class="info hidden"
+    ></div>
 
 
     <label for="subject">
-      Subject
+        Subject
     </label>
 
-    <select id="subject" disabled>
 
-      <option value="">
-        Select examination first
-      </option>
+    <select
+        id="subject"
+        disabled
+    >
+
+        <option value="">
+            Select JAMB or WAEC first
+        </option>
 
     </select>
 
 
-    <div id="subjectLoading" class="loading hidden">
-      Loading subjects...
+    <div
+        id="subjectLoading"
+        class="loading hidden"
+    >
+        Loading subjects...
     </div>
 
 
     <label for="limit">
-      Number of Questions
+        Number of Questions
     </label>
+
 
     <select id="limit">
 
-      <option value="10">
-        10 Questions
-      </option>
+        <option value="10">
+            10 Questions
+        </option>
 
-      <option value="20">
-        20 Questions
-      </option>
+        <option value="20">
+            20 Questions
+        </option>
 
-      <option value="30">
-        30 Questions
-      </option>
+        <option value="30">
+            30 Questions
+        </option>
 
-      <option value="50">
-        50 Questions
-      </option>
+        <option value="50">
+            50 Questions
+        </option>
 
-      <option value="100">
-        100 Questions
-      </option>
+        <option value="100">
+            100 Questions
+        </option>
 
     </select>
 
 
     <button
-      id="startBtn"
-      class="primary"
-      style="margin-top:25px;width:100%"
+        id="startBtn"
+        class="primary"
+        style="margin-top:25px;width:100%"
     >
-      Start Practice
+        Start Practice
     </button>
 
 
-    <div id="errorBox" class="error hidden"></div>
+    <div
+        id="errorBox"
+        class="error hidden"
+    ></div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       QUIZ
-  ========================== -->
+<!-- ==================================================
+     QUIZ
+================================================== -->
 
-  <section id="quizCard" class="card hidden">
+<section
+    id="quizCard"
+    class="card hidden"
+>
 
     <div class="topbar">
 
-      <span id="examBadge" class="badge">
-        JAMB
-      </span>
+        <span
+            id="examBadge"
+            class="badge"
+        >
+            JAMB
+        </span>
 
-      <span id="questionCounter" class="badge">
-        Question 1 of 10
-      </span>
+
+        <span
+            id="questionCounter"
+            class="badge"
+        >
+            Question 1 of 10
+        </span>
 
     </div>
 
 
     <div class="progress">
 
-      <div
-        id="progressBar"
-        class="progress-bar"
-      ></div>
+        <div
+            id="progressBar"
+            class="progress-bar"
+        ></div>
 
     </div>
 
 
     <div
-      id="questionText"
-      class="question"
+        id="questionText"
+        class="question"
     ></div>
 
 
@@ -402,44 +504,47 @@ button:disabled{
 
     <div class="actions">
 
-      <button
-        id="prevBtn"
-        class="secondary"
-      >
-        Previous
-      </button>
+        <button
+            id="prevBtn"
+            class="secondary"
+        >
+            Previous
+        </button>
 
-      <button
-        id="nextBtn"
-        class="primary"
-      >
-        Next
-      </button>
+
+        <button
+            id="nextBtn"
+            class="primary"
+        >
+            Next
+        </button>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       RESULT
-  ========================== -->
+<!-- ==================================================
+     RESULT
+================================================== -->
 
-  <section
+<section
     id="resultCard"
     class="card result hidden"
-  >
+>
 
     <h2>
-      Practice Complete 🎉
+        Practice Complete 🎉
     </h2>
 
+
     <div
-      id="scoreText"
-      class="score"
+        id="scoreText"
+        class="score"
     >
-      0%
+        0%
     </div>
+
 
     <p id="resultDetails"></p>
 
@@ -448,51 +553,65 @@ button:disabled{
 
     <div class="actions">
 
-      <button
-        id="reviewBtn"
-        class="secondary"
-      >
-        Review Answers
-      </button>
+        <button
+            id="reviewBtn"
+            class="secondary"
+        >
+            Review Answers
+        </button>
 
-      <button
-        id="restartBtn"
-        class="primary"
-      >
-        Try Again
-      </button>
+
+        <button
+            id="restartBtn"
+            class="primary"
+        >
+            Try Again
+        </button>
 
     </div>
 
-  </section>
+</section>
+
 
 </main>
 
 
 <script>
 
-// ==========================================
-// STUDYHUB NG PRACTICE SYSTEM
-// ==========================================
+/* =====================================================
+   STUDYHUB NG PRACTICE
+===================================================== */
 
 let questions = [];
+
 let answers = [];
 
 let currentQuestion = 0;
+
 let score = 0;
 
 let selectedExam = "";
+
 let selectedSubject = "";
 
 let lastResultId = null;
 
 
-// ==========================================
-// GET HTML ELEMENTS
-// ==========================================
+/* =====================================================
+   ELEMENTS
+===================================================== */
 
-const examSelect =
+const examInput =
     document.getElementById("exam");
+
+const jambButton =
+    document.getElementById("jambButton");
+
+const waecButton =
+    document.getElementById("waecButton");
+
+const selectedExamText =
+    document.getElementById("selectedExamText");
 
 const subjectSelect =
     document.getElementById("subject");
@@ -555,41 +674,39 @@ const restartBtn =
     document.getElementById("restartBtn");
 
 
-// ==========================================
-// PAGE LOAD
-// ==========================================
+/* =====================================================
+   PAGE LOAD
+===================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
-    async function () {
+    async function(){
 
         const loggedIn =
             await checkLogin();
 
-        if (!loggedIn) {
+        if(!loggedIn){
             return;
         }
 
         setupEvents();
 
-        await loadExams();
-
     }
 );
 
 
-// ==========================================
-// CHECK LOGIN
-// ==========================================
+/* =====================================================
+   LOGIN CHECK
+===================================================== */
 
-async function checkLogin() {
+async function checkLogin(){
 
-    try {
+    try{
 
         const response =
             await fetch("/api/me");
 
-        if (!response.ok) {
+        if(!response.ok){
 
             window.location.href =
                 "/login.html";
@@ -597,17 +714,9 @@ async function checkLogin() {
             return false;
         }
 
-        const data =
-            await response.json();
-
-        console.log(
-            "Logged in:",
-            data.user
-        );
-
         return true;
 
-    } catch (error) {
+    }catch(error){
 
         console.error(
             "Login check error:",
@@ -623,22 +732,27 @@ async function checkLogin() {
 }
 
 
-// ==========================================
-// SETUP EVENTS
-// ==========================================
+/* =====================================================
+   EVENTS
+===================================================== */
 
-function setupEvents() {
+function setupEvents(){
 
-    examSelect.addEventListener(
-        "change",
-        async function () {
+    jambButton.addEventListener(
+        "click",
+        function(){
 
-            selectedExam =
-                examSelect.value.trim();
+            chooseExam("JAMB");
 
-            await loadSubjects(
-                selectedExam
-            );
+        }
+    );
+
+
+    waecButton.addEventListener(
+        "click",
+        function(){
+
+            chooseExam("WAEC");
 
         }
     );
@@ -676,106 +790,77 @@ function setupEvents() {
 }
 
 
-// ==========================================
-// LOAD EXAMS
-// ==========================================
+/* =====================================================
+   CHOOSE EXAM
+===================================================== */
 
-async function loadExams() {
+async function chooseExam(exam){
 
-    try {
+    selectedExam = exam;
 
-        const response =
-            await fetch(
-                "/api/exams"
-            );
-
-        const data =
-            await response.json();
-
-        if (!response.ok) {
-
-            throw new Error(
-                data.message ||
-                "Unable to load exams."
-            );
-
-        }
-
-        let exams = [];
-
-        if (
-            Array.isArray(data.exams)
-        ) {
-
-            exams = data.exams;
-
-        } else if (
-            Array.isArray(data)
-        ) {
-
-            exams = data;
-
-        }
+    examInput.value = exam;
 
 
-        examSelect.innerHTML =
-            `<option value="">
-                Select examination
-            </option>`;
+    jambButton.classList.remove(
+        "selected"
+    );
+
+    waecButton.classList.remove(
+        "selected"
+    );
 
 
-        exams.forEach(
-            function (exam) {
+    if(exam === "JAMB"){
 
-                const option =
-                    document.createElement(
-                        "option"
-                    );
-
-                option.value =
-                    exam;
-
-                option.textContent =
-                    exam;
-
-                examSelect.appendChild(
-                    option
-                );
-
-            }
-        );
-
-
-    } catch (error) {
-
-        console.error(
-            "Load exams error:",
-            error
-        );
-
-        showError(
-            "Unable to load examinations."
+        jambButton.classList.add(
+            "selected"
         );
 
     }
+
+
+    if(exam === "WAEC"){
+
+        waecButton.classList.add(
+            "selected"
+        );
+
+    }
+
+
+    selectedExamText.textContent =
+        `${exam} Practice selected`;
+
+    selectedExamText.classList.remove(
+        "hidden"
+    );
+
+
+    await loadSubjects(exam);
+
 }
 
 
-// ==========================================
-// LOAD SUBJECTS
-// ==========================================
+/* =====================================================
+   LOAD SUBJECTS
+===================================================== */
 
-async function loadSubjects(exam) {
+async function loadSubjects(exam){
 
     subjectSelect.innerHTML =
         `<option value="">
-            Select examination first
+            Loading subjects...
         </option>`;
 
     subjectSelect.disabled = true;
 
 
-    if (!exam) {
+    if(!exam){
+
+        subjectSelect.innerHTML =
+            `<option value="">
+                Select JAMB or WAEC first
+            </option>`;
 
         return;
     }
@@ -786,7 +871,7 @@ async function loadSubjects(exam) {
     );
 
 
-    try {
+    try{
 
         const response =
             await fetch(
@@ -798,7 +883,7 @@ async function loadSubjects(exam) {
             await response.json();
 
 
-        if (!response.ok) {
+        if(!response.ok){
 
             throw new Error(
                 data.message ||
@@ -811,16 +896,16 @@ async function loadSubjects(exam) {
         let subjects = [];
 
 
-        if (
+        if(
             Array.isArray(data.subjects)
-        ) {
+        ){
 
             subjects =
                 data.subjects;
 
-        } else if (
+        }else if(
             Array.isArray(data)
-        ) {
+        ){
 
             subjects =
                 data;
@@ -835,7 +920,7 @@ async function loadSubjects(exam) {
 
 
         subjects.forEach(
-            function (subject) {
+            function(subject){
 
                 const option =
                     document.createElement(
@@ -856,48 +941,65 @@ async function loadSubjects(exam) {
         );
 
 
+        if(subjects.length === 0){
+
+            subjectSelect.innerHTML =
+                `<option value="">
+                    No subjects found
+                </option>`;
+
+            showError(
+                `No ${exam} subjects were found in the question database yet.`
+            );
+
+        }
+
+
         subjectSelect.disabled =
             false;
 
 
-    } catch (error) {
+    }catch(error){
 
         console.error(
-            "Load subjects error:",
+            "Subject loading error:",
             error
         );
+
 
         subjectSelect.innerHTML =
             `<option value="">
                 Unable to load subjects
             </option>`;
 
+
         showError(
             "Unable to load subjects."
         );
 
 
-    } finally {
+    }finally{
 
         subjectLoading.classList.add(
             "hidden"
         );
 
     }
+
 }
 
 
-// ==========================================
-// START PRACTICE
-// ==========================================
+/* =====================================================
+   START PRACTICE
+===================================================== */
 
-async function startPractice() {
+async function startPractice(){
 
     hideError();
 
 
     selectedExam =
-        examSelect.value.trim();
+        examInput.value.trim();
 
 
     selectedSubject =
@@ -911,17 +1013,17 @@ async function startPractice() {
         );
 
 
-    if (!selectedExam) {
+    if(!selectedExam){
 
         showError(
-            "Please select an examination."
+            "Please choose JAMB Practice or WAEC Practice."
         );
 
         return;
     }
 
 
-    if (!selectedSubject) {
+    if(!selectedSubject){
 
         showError(
             "Please select a subject."
@@ -937,7 +1039,7 @@ async function startPractice() {
         "Loading Questions...";
 
 
-    try {
+    try{
 
         const url =
             `/api/questions?exam=${encodeURIComponent(selectedExam)}` +
@@ -959,13 +1061,7 @@ async function startPractice() {
             await response.json();
 
 
-        console.log(
-            "Question response:",
-            data
-        );
-
-
-        if (!response.ok) {
+        if(!response.ok){
 
             throw new Error(
                 data.message ||
@@ -975,41 +1071,38 @@ async function startPractice() {
         }
 
 
-        if (
+        if(
             Array.isArray(data.questions)
-        ) {
+        ){
 
             questions =
                 data.questions;
 
-        } else if (
+        }else if(
             Array.isArray(data)
-        ) {
+        ){
 
             questions =
                 data;
 
-        } else {
+        }else{
 
-            questions =
-                [];
+            questions = [];
 
         }
 
 
-        if (
+        if(
             questions.length === 0
-        ) {
+        ){
 
             showError(
-                "No questions were found for this subject."
+                `No questions were found for ${selectedExam} - ${selectedSubject}.`
             );
 
             return;
         }
 
-
-        // Reset quiz
 
         currentQuestion = 0;
 
@@ -1021,27 +1114,19 @@ async function startPractice() {
             ).fill("");
 
 
-        // Set badge
-
         examBadge.textContent =
             `${selectedExam} - ${selectedSubject}`;
 
-
-        // Hide setup
 
         setupCard.classList.add(
             "hidden"
         );
 
 
-        // Hide result
-
         resultCard.classList.add(
             "hidden"
         );
 
-
-        // Show quiz
 
         quizCard.classList.remove(
             "hidden"
@@ -1051,12 +1136,19 @@ async function startPractice() {
         renderQuestion();
 
 
-    } catch (error) {
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+
+    }catch(error){
 
         console.error(
             "Start practice error:",
             error
         );
+
 
         showError(
             error.message ||
@@ -1064,7 +1156,7 @@ async function startPractice() {
         );
 
 
-    } finally {
+    }finally{
 
         startBtn.disabled = false;
 
@@ -1072,19 +1164,19 @@ async function startPractice() {
             "Start Practice";
 
     }
+
 }
 
 
-// ==========================================
-// RENDER QUESTION
-// ==========================================
+/* =====================================================
+   RENDER QUESTION
+===================================================== */
 
-function renderQuestion() {
+function renderQuestion(){
 
-    if (
+    if(
         questions.length === 0
-    ) {
-
+    ){
         return;
     }
 
@@ -1093,19 +1185,14 @@ function renderQuestion() {
         questions[currentQuestion];
 
 
-    if (!question) {
-
+    if(!question){
         return;
     }
 
 
-    // Question counter
-
     questionCounter.textContent =
         `Question ${currentQuestion + 1} of ${questions.length}`;
 
-
-    // Progress bar
 
     const progress =
         (
@@ -1118,8 +1205,6 @@ function renderQuestion() {
         `${progress}%`;
 
 
-    // Question text
-
     questionText.textContent =
         question.question ||
         question.question_text ||
@@ -1127,35 +1212,30 @@ function renderQuestion() {
         "Question unavailable";
 
 
-    // Clear options
-
     optionsContainer.innerHTML =
         "";
 
-
-    // Get options
 
     const options =
         getOptions(question);
 
 
     const letters =
-        ["A", "B", "C", "D"];
+        ["A","B","C","D"];
 
 
     letters.forEach(
-        function (letter) {
+        function(letter){
 
             const value =
                 options[letter];
 
 
-            if (
+            if(
                 value === undefined ||
                 value === null ||
                 value === ""
-            ) {
-
+            ){
                 return;
             }
 
@@ -1178,10 +1258,10 @@ function renderQuestion() {
                 `${letter}. ${value}`;
 
 
-            if (
+            if(
                 answers[currentQuestion] ===
                 letter
-            ) {
+            ){
 
                 button.classList.add(
                     "selected"
@@ -1192,7 +1272,7 @@ function renderQuestion() {
 
             button.addEventListener(
                 "click",
-                function () {
+                function(){
 
                     selectAnswer(
                         letter
@@ -1215,11 +1295,11 @@ function renderQuestion() {
 }
 
 
-// ==========================================
-// GET OPTIONS
-// ==========================================
+/* =====================================================
+   OPTIONS
+===================================================== */
 
-function getOptions(question) {
+function getOptions(question){
 
     const nested =
         question.options || {};
@@ -1256,55 +1336,43 @@ function getOptions(question) {
             ""
 
     };
+
 }
 
 
-// ==========================================
-// SELECT ANSWER
-// ==========================================
+/* =====================================================
+   SELECT ANSWER
+===================================================== */
 
-function selectAnswer(letter) {
+function selectAnswer(letter){
 
     answers[currentQuestion] =
         letter;
-
 
     renderQuestion();
 
 }
 
 
-// ==========================================
-// NAVIGATION
-// ==========================================
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-function updateNavigation() {
-
-    // Previous
+function updateNavigation(){
 
     prevBtn.disabled =
         currentQuestion === 0;
 
 
-    // Last question
-
-    if (
+    if(
         currentQuestion ===
         questions.length - 1
-    ) {
+    ){
 
         nextBtn.textContent =
             "Finish Exam";
 
-        nextBtn.classList.remove(
-            "primary"
-        );
-
-        nextBtn.classList.add(
-            "primary"
-        );
-
-    } else {
+    }else{
 
         nextBtn.textContent =
             "Next";
@@ -1314,55 +1382,52 @@ function updateNavigation() {
 }
 
 
-// ==========================================
-// NEXT / FINISH
-// ==========================================
+/* =====================================================
+   NEXT QUESTION
+===================================================== */
 
-async function nextQuestion() {
+async function nextQuestion(){
 
-    if (
+    if(
         currentQuestion <
         questions.length - 1
-    ) {
+    ){
 
         currentQuestion++;
 
         renderQuestion();
 
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            top:0,
+            behavior:"smooth"
         });
 
         return;
     }
 
 
-    // Last question
-    // Submit the exam
-
     await finishExam();
 
 }
 
 
-// ==========================================
-// PREVIOUS
-// ==========================================
+/* =====================================================
+   PREVIOUS QUESTION
+===================================================== */
 
-function previousQuestion() {
+function previousQuestion(){
 
-    if (
+    if(
         currentQuestion > 0
-    ) {
+    ){
 
         currentQuestion--;
 
         renderQuestion();
 
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            top:0,
+            behavior:"smooth"
         });
 
     }
@@ -1370,15 +1435,15 @@ function previousQuestion() {
 }
 
 
-// ==========================================
-// FINISH EXAM
-// ==========================================
+/* =====================================================
+   FINISH EXAM
+===================================================== */
 
-async function finishExam() {
+async function finishExam(){
 
-    if (
+    if(
         questions.length === 0
-    ) {
+    ){
 
         showError(
             "There are no questions to submit."
@@ -1388,11 +1453,9 @@ async function finishExam() {
     }
 
 
-    // Count unanswered
-
     const unanswered =
         questions.filter(
-            function (_, index) {
+            function(_,index){
 
                 return !answers[index];
 
@@ -1400,9 +1463,9 @@ async function finishExam() {
         ).length;
 
 
-    if (
+    if(
         unanswered > 0
-    ) {
+    ){
 
         const confirmed =
             confirm(
@@ -1410,32 +1473,26 @@ async function finishExam() {
             );
 
 
-        if (!confirmed) {
-
+        if(!confirmed){
             return;
-
         }
 
     }
 
 
-    nextBtn.disabled =
-        true;
+    nextBtn.disabled = true;
 
-    prevBtn.disabled =
-        true;
+    prevBtn.disabled = true;
 
     nextBtn.textContent =
         "Submitting...";
 
 
-    try {
-
-        // Question IDs from database
+    try{
 
         const questionIds =
             questions.map(
-                function (question) {
+                function(question){
 
                     return Number(
                         question.id
@@ -1445,11 +1502,9 @@ async function finishExam() {
             );
 
 
-        // Answers
-
         const submittedAnswers =
             questions.map(
-                function (_, index) {
+                function(_,index){
 
                     return (
                         answers[index] ||
@@ -1460,11 +1515,9 @@ async function finishExam() {
             );
 
 
-        // Check IDs
-
-        if (
+        if(
             questionIds.some(
-                function (id) {
+                function(id){
 
                     return !Number.isInteger(
                         id
@@ -1472,7 +1525,7 @@ async function finishExam() {
 
                 }
             )
-        ) {
+        ){
 
             throw new Error(
                 "A question has an invalid database ID."
@@ -1481,20 +1534,18 @@ async function finishExam() {
         }
 
 
-        // Submit
-
         const response =
             await fetch(
                 "/api/submit-quiz",
                 {
-                    method: "POST",
+                    method:"POST",
 
-                    headers: {
+                    headers:{
                         "Content-Type":
                             "application/json"
                     },
 
-                    body: JSON.stringify({
+                    body:JSON.stringify({
 
                         exam:
                             selectedExam,
@@ -1518,17 +1569,11 @@ async function finishExam() {
             await response.json();
 
 
-        console.log(
-            "Submit response:",
-            data
-        );
+        if(!response.ok){
 
-
-        if (!response.ok) {
-
-            if (
+            if(
                 response.status === 401
-            ) {
+            ){
 
                 alert(
                     "Your login session has expired. Please login again."
@@ -1548,8 +1593,6 @@ async function finishExam() {
 
         }
 
-
-        // Save result information
 
         score =
             Number(
@@ -1574,9 +1617,7 @@ async function finishExam() {
             data.resultId || null;
 
 
-        // Save result ID in browser
-
-        if (lastResultId) {
+        if(lastResultId){
 
             sessionStorage.setItem(
                 "lastResultId",
@@ -1586,49 +1627,39 @@ async function finishExam() {
         }
 
 
-        // Hide quiz
-
         quizCard.classList.add(
             "hidden"
         );
 
-
-        // Show result
 
         resultCard.classList.remove(
             "hidden"
         );
 
 
-        // Score
-
         scoreText.textContent =
             `${percentage}%`;
 
-
-        // Details
 
         resultDetails.textContent =
             `${score} correct out of ${totalQuestions} questions.`;
 
 
-        // Message
-
-        if (
+        if(
             percentage >= 80
-        ) {
+        ){
 
             resultMessage.textContent =
                 "Excellent work! You reached your 80% target.";
 
-        } else if (
+        }else if(
             percentage >= 60
-        ) {
+        ){
 
             resultMessage.textContent =
                 "Good effort! Keep practicing to improve.";
 
-        } else {
+        }else{
 
             resultMessage.textContent =
                 "Keep practicing. You can improve your score.";
@@ -1637,12 +1668,12 @@ async function finishExam() {
 
 
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            top:0,
+            behavior:"smooth"
         });
 
 
-    } catch (error) {
+    }catch(error){
 
         console.error(
             "Submit quiz error:",
@@ -1656,14 +1687,11 @@ async function finishExam() {
         );
 
 
-    } finally {
+    }finally{
 
-        nextBtn.disabled =
-            false;
+        nextBtn.disabled = false;
 
-        nextBtn.textContent =
-            "Next";
-
+        prevBtn.disabled = false;
 
         updateNavigation();
 
@@ -1672,15 +1700,16 @@ async function finishExam() {
 }
 
 
-// ==========================================
-// REVIEW ANSWERS
-// ==========================================
+/* =====================================================
+   REVIEW
+===================================================== */
 
-function reviewExam() {
+function reviewExam(){
 
     resultCard.classList.add(
         "hidden"
     );
+
 
     quizCard.classList.remove(
         "hidden"
@@ -1691,18 +1720,18 @@ function reviewExam() {
 
 
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        top:0,
+        behavior:"smooth"
     });
 
 }
 
 
-// ==========================================
-// RESTART
-// ==========================================
+/* =====================================================
+   RESTART
+===================================================== */
 
-function restartPractice() {
+function restartPractice(){
 
     questions = [];
 
@@ -1719,35 +1748,46 @@ function restartPractice() {
     lastResultId = null;
 
 
-    // Reset setup
+    examInput.value = "";
 
-    examSelect.value =
+
+    jambButton.classList.remove(
+        "selected"
+    );
+
+
+    waecButton.classList.remove(
+        "selected"
+    );
+
+
+    selectedExamText.textContent =
         "";
+
+    selectedExamText.classList.add(
+        "hidden"
+    );
+
 
     subjectSelect.innerHTML =
         `<option value="">
-            Select examination first
+            Select JAMB or WAEC first
         </option>`;
+
 
     subjectSelect.disabled =
         true;
 
-
-    // Hide quiz
 
     quizCard.classList.add(
         "hidden"
     );
 
 
-    // Hide result
-
     resultCard.classList.add(
         "hidden"
     );
 
-
-    // Show setup
 
     setupCard.classList.remove(
         "hidden"
@@ -1758,18 +1798,18 @@ function restartPractice() {
 
 
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        top:0,
+        behavior:"smooth"
     });
 
 }
 
 
-// ==========================================
-// SHOW ERROR
-// ==========================================
+/* =====================================================
+   ERROR
+===================================================== */
 
-function showError(message) {
+function showError(message){
 
     errorBox.textContent =
         message;
@@ -1778,19 +1818,10 @@ function showError(message) {
         "hidden"
     );
 
-    errorBox.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
 }
 
 
-// ==========================================
-// HIDE ERROR
-// ==========================================
-
-function hideError() {
+function hideError(){
 
     errorBox.textContent =
         "";

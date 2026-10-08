@@ -1,20 +1,56 @@
 const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
 
-const databasePath = process.env.DB_PATH || path.join(__dirname, "..", "data", "studyhub.db");
-const db = new sqlite3.Database(databasePath, (err) => {
-    if (err) {
-        console.error("Database connection failed:", err.message);
-    } else {
-        console.log("Database connected successfully.");
+// =====================================================
+// DATABASE PATH
+// =====================================================
+
+// StudyHub NG database is stored in the project root:
+// C:\11\StudyHub-NG\studyhub.db
+
+const databasePath =
+    process.env.DB_PATH
+        ? path.resolve(process.env.DB_PATH)
+        : path.join(__dirname, "..", "studyhub.db");
+
+console.log("========================================");
+console.log("StudyHub NG Database");
+console.log("Database path:", databasePath);
+console.log("========================================");
+
+const db = new sqlite3.Database(
+    databasePath,
+    (err) => {
+
+        if (err) {
+
+            console.error(
+                "Database connection failed:",
+                err.message
+            );
+
+        } else {
+
+            console.log(
+                "Database connected successfully."
+            );
+
+        }
+
     }
-});
+);
+
+
+// =====================================================
+// DATABASE SETUP
+// =====================================================
 
 db.serialize(() => {
 
-    // =========================
+    // =================================================
     // USERS
-    // =========================
+    // =================================================
+
     db.run(`
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,9 +62,11 @@ db.serialize(() => {
         )
     `);
 
-    // =========================
+
+    // =================================================
     // QUESTIONS
-    // =========================
+    // =================================================
+
     db.run(`
         CREATE TABLE IF NOT EXISTS questions (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -47,9 +85,11 @@ db.serialize(() => {
         )
     `);
 
-    // =========================
+
+    // =================================================
     // RESULTS
-    // =========================
+    // =================================================
+
     db.run(`
         CREATE TABLE IF NOT EXISTS results (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -66,70 +106,208 @@ db.serialize(() => {
         )
     `);
 
-    // =========================
+
+    // =================================================
     // RESULTS MIGRATION
-    // =========================
-    db.all(`PRAGMA table_info(results)`, (err, columns) => {
+    // =================================================
 
-        if (err) {
-            console.error(
-                "Could not check results table:",
-                err.message
-            );
-            return;
+    db.all(
+        `PRAGMA table_info(results)`,
+        (err, columns) => {
+
+            if (err) {
+
+                console.error(
+                    "Could not check results table:",
+                    err.message
+                );
+
+                return;
+            }
+
+            const columnNames =
+                columns.map(
+                    column => column.name
+                );
+
+
+            // Add total_questions if missing
+
+            if (
+                !columnNames.includes(
+                    "total_questions"
+                )
+            ) {
+
+                db.run(`
+                    ALTER TABLE results
+                    ADD COLUMN total_questions INTEGER
+                    NOT NULL DEFAULT 0
+                `, (error) => {
+
+                    if (error) {
+
+                        console.error(
+                            "Could not add total_questions column:",
+                            error.message
+                        );
+
+                    } else {
+
+                        console.log(
+                            "Results total_questions column added."
+                        );
+
+                    }
+
+                });
+
+            }
+
+
+            // Add correct_answers if missing
+
+            if (
+                !columnNames.includes(
+                    "correct_answers"
+                )
+            ) {
+
+                db.run(`
+                    ALTER TABLE results
+                    ADD COLUMN correct_answers INTEGER
+                    NOT NULL DEFAULT 0
+                `, (error) => {
+
+                    if (error) {
+
+                        console.error(
+                            "Could not add correct_answers column:",
+                            error.message
+                        );
+
+                    } else {
+
+                        console.log(
+                            "Results correct_answers column added."
+                        );
+
+                    }
+
+                });
+
+            }
+
+
+            // Add percentage if missing
+
+            if (
+                !columnNames.includes(
+                    "percentage"
+                )
+            ) {
+
+                db.run(`
+                    ALTER TABLE results
+                    ADD COLUMN percentage INTEGER
+                    NOT NULL DEFAULT 0
+                `, (error) => {
+
+                    if (error) {
+
+                        console.error(
+                            "Could not add percentage column:",
+                            error.message
+                        );
+
+                    } else {
+
+                        console.log(
+                            "Results percentage column added."
+                        );
+
+                    }
+
+                });
+
+            }
+
+
+            // Add score if missing
+
+            if (
+                !columnNames.includes(
+                    "score"
+                )
+            ) {
+
+                db.run(`
+                    ALTER TABLE results
+                    ADD COLUMN score INTEGER
+                    NOT NULL DEFAULT 0
+                `, (error) => {
+
+                    if (error) {
+
+                        console.error(
+                            "Could not add score column:",
+                            error.message
+                        );
+
+                    } else {
+
+                        console.log(
+                            "Results score column added."
+                        );
+
+                    }
+
+                });
+
+            }
+
+
+            // Add total if missing
+
+            if (
+                !columnNames.includes(
+                    "total"
+                )
+            ) {
+
+                db.run(`
+                    ALTER TABLE results
+                    ADD COLUMN total INTEGER
+                    NOT NULL DEFAULT 0
+                `, (error) => {
+
+                    if (error) {
+
+                        console.error(
+                            "Could not add total column:",
+                            error.message
+                        );
+
+                    } else {
+
+                        console.log(
+                            "Results total column added."
+                        );
+
+                    }
+
+                });
+
+            }
+
         }
+    );
 
-        const columnNames = columns.map(column => column.name);
 
-        // Add score if old database does not have it
-        if (!columnNames.includes("score")) {
-
-            db.run(`
-                ALTER TABLE results
-                ADD COLUMN score INTEGER NOT NULL DEFAULT 0
-            `, (error) => {
-
-                if (error) {
-                    console.error(
-                        "Could not add score column:",
-                        error.message
-                    );
-                } else {
-                    console.log(
-                        "Results score column added."
-                    );
-                }
-
-            });
-        }
-
-        // Add total if old database does not have it
-        if (!columnNames.includes("total")) {
-
-            db.run(`
-                ALTER TABLE results
-                ADD COLUMN total INTEGER NOT NULL DEFAULT 0
-            `, (error) => {
-
-                if (error) {
-                    console.error(
-                        "Could not add total column:",
-                        error.message
-                    );
-                } else {
-                    console.log(
-                        "Results total column added."
-                    );
-                }
-
-            });
-        }
-
-    });
-
-    // =========================
+    // =================================================
     // REMOVE DUPLICATE QUESTIONS
-    // =========================
+    // =================================================
+
     db.run(`
         DELETE FROM questions
         WHERE id NOT IN (
@@ -156,9 +334,11 @@ db.serialize(() => {
 
     });
 
-    // =========================
+
+    // =================================================
     // PREVENT FUTURE DUPLICATES
-    // =========================
+    // =================================================
+
     db.run(`
         CREATE UNIQUE INDEX IF NOT EXISTS unique_question
         ON questions (exam, subject, question)
@@ -181,9 +361,11 @@ db.serialize(() => {
 
     });
 
-    // =========================
+
+    // =================================================
     // QUIZ ANSWERS
-    // =========================
+    // =================================================
+
     db.run(`
         CREATE TABLE IF NOT EXISTS quiz_answers (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -198,10 +380,16 @@ db.serialize(() => {
         )
     `);
 
+
     console.log(
         "Users, questions, results and quiz answers tables ready."
     );
 
 });
+
+
+// =====================================================
+// EXPORT DATABASE
+// =====================================================
 
 module.exports = db;
